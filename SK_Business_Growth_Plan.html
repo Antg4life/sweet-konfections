@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sweet Konfections — Complete Business Growth Plan | Launch AI Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--teal:#2db5a0;--teal-d:#1a8a78;--teal-dk:#0a2a20;--pink:#f06292;--pink-d:#c2185b;--cream:#fff9f5;--dark:#1a0a00;--red:#dc2626;--gold:#d97706;--green:#16a34a;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#fff;color:#1a1a1a;line-height:1.6;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a0a00,#0a2a20,#1a0a14);color:#fff;padding:52px 40px 44px;text-align:center;}
+.hero .from{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:10px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;line-height:1.15;}
+.hero h1 span{color:var(--teal);}
+.hero p{margin-top:12px;color:rgba(255,255,255,.65);font-size:15px;max-width:600px;margin-left:auto;margin-right:auto;}
+.hero-meta{display:flex;justify-content:center;gap:32px;margin-top:24px;flex-wrap:wrap;}
+.hero-meta .m{font-size:12px;color:rgba(255,255,255,.5);font-weight:600;letter-spacing:.06em;}
+.hero-meta .m span{color:rgba(255,255,255,.85);font-weight:700;}
+
+/* LAYOUT */
+.wrap{max-width:900px;margin:0 auto;padding:0 32px;}
+
+/* SECTION HEADERS */
+.section{padding:44px 0 0;}
+.section-label{font-size:10px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
+.section h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:#0a2a20;margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid #e5e7eb;}
+
+/* SCORECARD */
+.scorecard{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:32px;}
+.score-item{background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;padding:16px 14px;text-align:center;}
+.score-item.bad{border-color:#fca5a5;background:#fff5f5;}
+.score-item.ok{border-color:#fde68a;background:#fffbeb;}
+.score-item.good{border-color:#bbf7d0;background:#f0fdf4;}
+.score-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--green);display:block;}
+.score-num.bad{color:var(--red);}
+.score-num.ok{color:#b45309;}
+.score-lbl{font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.07em;margin-top:4px;line-height:1.4;}
+
+/* SWOT */
+.swot{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:12px;overflow:hidden;border:1.5px solid #e5e7eb;margin-bottom:32px;}
+.swot-box{padding:20px 22px;}
+.swot-box.s{background:#f0fdf4;border-right:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;}
+.swot-box.w{background:#fff5f5;border-bottom:1px solid #e5e7eb;}
+.swot-box.o{background:#e8f8f5;border-right:1px solid #e5e7eb;}
+.swot-box.t{background:#fafafa;}
+.swot-box h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;margin-bottom:10px;}
+.swot-box.s h3{color:#16a34a;}
+.swot-box.w h3{color:var(--red);}
+.swot-box.o h3{color:var(--teal-d);}
+.swot-box.t h3{color:#7c3aed;}
+.swot-box ul{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.swot-box ul li{font-size:13px;color:#374151;padding-left:18px;position:relative;line-height:1.5;}
+.swot-box ul li::before{position:absolute;left:0;font-weight:900;}
+.swot-box.s ul li::before{content:"✓";color:#16a34a;}
+.swot-box.w ul li::before{content:"✗";color:var(--red);}
+.swot-box.o ul li::before{content:"→";color:var(--teal);}
+.swot-box.t ul li::before{content:"!";color:#7c3aed;}
+
+/* SOCIAL */
+.social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:28px;}
+.social-card{border-radius:12px;padding:18px 16px;border:1.5px solid #e5e7eb;}
+.social-card .platform{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#6b7280;margin-bottom:8px;}
+.social-card .stat{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:#0a2a20;line-height:1.2;word-break:break-word;overflow-wrap:break-word;}
+.social-card .stat-lbl{font-size:11px;color:#9ca3af;font-weight:600;margin-bottom:10px;}
+.social-card .verdict{font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;display:inline-block;}
+.verdict.critical{background:#fee2e2;color:#dc2626;}
+.verdict.low{background:#fef3c7;color:#92400e;}
+.verdict.good{background:#dcfce7;color:#166534;}
+
+/* ISSUES */
+.issue-list{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
+.issue{background:#fff5f5;border:1.5px solid #fca5a5;border-left:5px solid var(--red);border-radius:8px;padding:14px 18px;}
+.issue h4{font-weight:800;font-size:14px;color:var(--red);margin-bottom:4px;}
+.issue p{font-size:13px;color:#374151;line-height:1.6;}
+.issue .fix{font-size:12px;color:#16a34a;font-weight:700;margin-top:6px;}
+
+/* OPPORTUNITY */
+.opp-list{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
+.opp{background:#e8f8f5;border:1.5px solid #6ee7d9;border-left:5px solid var(--teal);border-radius:8px;padding:14px 18px;}
+.opp h4{font-weight:800;font-size:14px;color:var(--teal-d);margin-bottom:4px;}
+.opp p{font-size:13px;color:#374151;line-height:1.6;}
+.opp .est{font-size:12px;color:var(--teal-d);font-weight:700;margin-top:6px;}
+
+/* ACTION GRID */
+.action-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px;}
+.action-card{border:1.5px solid #e5e7eb;border-radius:12px;overflow:hidden;}
+.action-card .ac-head{background:var(--teal);color:#fff;padding:12px 16px;font-weight:800;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;}
+.action-card .ac-head.pink{background:var(--pink-d);}
+.action-card .ac-head.gold{background:var(--gold);}
+.action-card .ac-head.dark{background:#1a0a00;}
+.action-card ul{list-style:none;padding:14px 16px;display:flex;flex-direction:column;gap:8px;}
+.action-card ul li{font-size:13px;color:#374151;padding-left:18px;position:relative;line-height:1.5;}
+.action-card ul li::before{content:"→";position:absolute;left:0;color:var(--pink);font-weight:700;}
+
+/* 90 DAY PHASES */
+.plan-phases{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:28px;}
+.phase{border-radius:12px;overflow:hidden;border:1.5px solid #e5e7eb;}
+.phase-head{padding:14px 16px;font-weight:900;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;color:#fff;}
+.phase-head.p1{background:#1e3a5f;}
+.phase-head.p2{background:var(--teal-d);}
+.phase-head.p3{background:var(--pink-d);}
+.phase ul{list-style:none;padding:14px 16px;display:flex;flex-direction:column;gap:7px;background:#f9fafb;}
+.phase ul li{font-size:12.5px;color:#374151;padding-left:16px;position:relative;line-height:1.5;}
+.phase ul li::before{content:"•";position:absolute;left:0;color:var(--teal);font-weight:900;}
+
+/* REVENUE TABLE */
+.rev-table{width:100%;border-collapse:collapse;margin-bottom:28px;font-size:13.5px;}
+.rev-table th{background:#0a2a20;color:#fff;padding:10px 14px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;}
+.rev-table td{padding:10px 14px;border-bottom:1px solid #e5e7eb;vertical-align:top;line-height:1.5;}
+.rev-table tr:nth-child(even) td{background:#f9fafb;}
+.rev-table .rev-num{color:var(--green);font-weight:800;font-family:'Playfair Display',serif;font-size:1.05rem;}
+.rev-table .badge{background:#dcfce7;color:#166534;font-size:10px;font-weight:800;padding:2px 7px;border-radius:20px;letter-spacing:.06em;}
+.rev-table .badge.new{background:#fef3c7;color:#92400e;}
+
+/* OFFER BOX */
+.offer-box{background:linear-gradient(135deg,#1a0a00,#0a2a20,#1a0a14);border-radius:16px;padding:36px 40px;color:#fff;margin-bottom:32px;}
+.offer-box h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;margin-bottom:8px;color:#fff;}
+.offer-box h2 span{color:var(--teal);}
+.offer-box p{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:20px;}
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px;}
+.offer-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:18px;}
+.offer-item h4{font-weight:800;color:var(--teal);margin-bottom:6px;font-size:14px;}
+.offer-item .price{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:#fff;line-height:1;margin-bottom:4px;}
+.offer-item .period{font-size:11px;color:rgba(255,255,255,.4);margin-bottom:10px;}
+.offer-item ul{list-style:none;display:flex;flex-direction:column;gap:5px;}
+.offer-item ul li{font-size:12.5px;color:rgba(255,255,255,.65);padding-left:16px;position:relative;}
+.offer-item .pay-btn{display:block;margin-top:14px;background:var(--teal);color:#fff;font-weight:800;font-size:12px;text-align:center;padding:9px 14px;border-radius:8px;text-decoration:none;letter-spacing:.04em;}
+.offer-item.highlight .pay-btn{background:var(--pink-d);}
+
+/* PAYMENT SECTION */
+.pay-section{background:#f9fafb;border:2px solid #e5e7eb;border-radius:16px;padding:32px;margin-bottom:32px;text-align:center;page-break-inside:avoid;break-inside:avoid;}
+.pay-section h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#0a2a20;margin-bottom:8px;}
+.pay-section p{font-size:13.5px;color:#6b7280;margin-bottom:24px;line-height:1.7;}
+.pay-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px;page-break-inside:avoid;break-inside:avoid;}
+.pay-method{border:1.5px solid #e5e7eb;border-radius:12px;padding:18px 14px;text-align:center;text-decoration:none;}
+.pay-method .pm-label{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#9ca3af;margin-bottom:6px;}
+.pay-method .pm-val{font-size:14px;font-weight:800;color:#0a2a20;line-height:1.4;}
+.pay-method .pm-sub{font-size:11px;color:#9ca3af;margin-top:4px;}
+.pay-method.zelle{border-color:#6d1ed4;background:#faf5ff;}
+.pay-method.zelle .pm-val{color:#6d1ed4;}
+.pay-method.cashapp{border-color:#00c244;background:#f0fdf4;}
+.pay-method.cashapp .pm-val{color:#00a63a;}
+.pay-method.call{border-color:var(--teal);background:#e8f8f5;}
+.pay-method.call .pm-val{color:var(--teal-d);}
+.pay-note{font-size:12px;color:#9ca3af;margin-top:8px;font-style:italic;}
+.offer-item ul li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:900;}
+.offer-item.highlight{border-color:var(--teal);background:rgba(45,181,160,.12);}
+
+/* PAGE BREAK CONTROL */
+.offer-item{page-break-inside:avoid;break-inside:avoid;}
+.phase{page-break-inside:avoid;break-inside:avoid;}
+.action-card{page-break-inside:avoid;break-inside:avoid;}
+.issue{page-break-inside:avoid;break-inside:avoid;}
+.opp{page-break-inside:avoid;break-inside:avoid;}
+.social-card{page-break-inside:avoid;break-inside:avoid;}
+.score-item{page-break-inside:avoid;break-inside:avoid;}
+.swot{page-break-inside:avoid;break-inside:avoid;}
+.rev-table{page-break-inside:avoid;break-inside:avoid;}
+h2{page-break-after:avoid;break-after:avoid;}
+.section-label{page-break-after:avoid;break-after:avoid;}
+
+/* FOOTER */
+.pg-footer{background:#0a2a20;color:rgba(255,255,255,.4);padding:24px 40px;text-align:center;font-size:12px;margin-top:48px;}
+.pg-footer strong{color:rgba(255,255,255,.65);}
+
+@media(max-width:640px){
+  .wrap{padding:0 16px;}
+  .swot,.action-grid,.offer-grid{grid-template-columns:1fr;}
+  .plan-phases{grid-template-columns:1fr;}
+  .hero{padding:36px 20px;}
+}
+@media print{
+  .hero,.swot-box,.action-card .ac-head,.phase-head,.offer-box,.pg-footer,.rev-table th{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .offer-item{page-break-inside:avoid;}
+  .phase{page-break-inside:avoid;}
+  .action-card{page-break-inside:avoid;}
+  .issue{page-break-inside:avoid;}
+  .opp{page-break-inside:avoid;}
+  .social-card{page-break-inside:avoid;}
+  .score-item{page-break-inside:avoid;}
+  .swot{page-break-inside:avoid;}
+  .rev-table{page-break-inside:avoid;}
+  h2{page-break-after:avoid;}
+  .section-label{page-break-after:avoid;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="from">Prepared by Launch AI Group · Anthony Whitner · Business Growth Consultant</div>
+  <h1>Sweet Konfections<br/><span>Complete Business Growth Plan</span></h1>
+  <p>A full analysis of your online presence, social media, revenue opportunities, and a step-by-step plan to grow your customer base and sales in the next 90 days.</p>
+  <div class="hero-meta">
+    <div class="m">Prepared For: <span>Shannon Jones</span></div>
+    <div class="m">Location: <span>Maryland · Delaware · DMV</span></div>
+    <div class="m">Date: <span>June 2026</span></div>
+    <div class="m">Prepared By: <span>Anthony Whitner · Launch AI Group</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- ═══════════════════════════════════════ -->
+<!--  1. WHERE YOU STAND TODAY              -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 1</div>
+  <h2>Where Sweet Konfections Stands Today — Honest Numbers</h2>
+
+  <div class="scorecard">
+    <div class="score-item good">
+      <span class="score-num">15+</span>
+      <div class="score-lbl">Years of Baking Experience</div>
+    </div>
+    <div class="score-item bad">
+      <span class="score-num bad">138</span>
+      <div class="score-lbl">Facebook Followers (low for 15+ yrs in business)</div>
+    </div>
+    <div class="score-item bad">
+      <span class="score-num bad">0</span>
+      <div class="score-lbl">Google Reviews Visible — major SEO gap</div>
+    </div>
+    <div class="score-item bad">
+      <span class="score-num bad">GoDaddy</span>
+      <div class="score-lbl">Current Website — can't update yourself, limited SEO</div>
+    </div>
+    <div class="score-item ok">
+      <span class="score-num ok">6+</span>
+      <div class="score-lbl">Festival Events Per Year — strong foot traffic</div>
+    </div>
+    <div class="score-item bad">
+      <span class="score-num bad">Bakesy</span>
+      <div class="score-lbl">Order Platform — taking a cut of every sale</div>
+    </div>
+  </div>
+
+  <!-- SWOT -->
+  <div class="swot">
+    <div class="swot-box s">
+      <h3>💪 Strengths</h3>
+      <ul>
+        <li>15+ years of baking — deep craft and real expertise</li>
+        <li>Grandmother's recipe heritage — powerful brand story</li>
+        <li>Food truck presence at 6+ Maryland &amp; Delaware festivals per year</li>
+        <li>Diverse product line: custom cakes, treats, funnel cake fries, fried desserts</li>
+        <li>Real event photos show professional booth setup</li>
+        <li>Active on Instagram, Facebook, and Threads</li>
+        <li>Signature item (funnel cake fries) is a festival crowd-puller</li>
+      </ul>
+    </div>
+    <div class="swot-box w">
+      <h3>⚠️ Weaknesses</h3>
+      <ul>
+        <li>Facebook has only 138 followers — very low for 15 years in business</li>
+        <li>No Google Business profile / reviews visible in search</li>
+        <li>Current GoDaddy site can't be updated without a developer</li>
+        <li>No email/text list — losing repeat customers after events</li>
+        <li>Orders go through Bakesy — a third-party platform you don't own or control</li>
+        <li>No Facebook cover photo or fully optimized profile</li>
+        <li>No automated follow-up when someone inquires online</li>
+      </ul>
+    </div>
+    <div class="swot-box o">
+      <h3>🚀 Opportunities</h3>
+      <ul>
+        <li>Build Google presence — "custom cakes near me" gets thousands of searches/month in MD</li>
+        <li>Every festival is a chance to capture 50–200 new followers with a simple QR code</li>
+        <li>Email/text list from event buyers = instant repeat sales</li>
+        <li>City SEO pages for Baltimore, Westminster, Delaware can drive organic orders</li>
+        <li>Direct ordering removes platform fees — more profit per sale</li>
+        <li>Holiday season (Oct–Dec) is peak cake demand — prime time to ramp marketing</li>
+        <li>Catering &amp; corporate orders are untapped — high ticket, recurring revenue</li>
+      </ul>
+    </div>
+    <div class="swot-box t">
+      <h3>🔺 Threats</h3>
+      <ul>
+        <li>Local competitors with stronger Google presence will outrank you in search</li>
+        <li>Festival-only visibility means revenue stops when events stop</li>
+        <li>Without a customer list, there's no way to reach past buyers</li>
+        <li>Bakesy could change their pricing, policies, or shut down — risk of losing your order channel overnight</li>
+        <li>No website control means slow updates if menu or pricing changes</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--  2. SOCIAL MEDIA ANALYSIS              -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 2</div>
+  <h2>Social Media — Current State Analysis</h2>
+
+  <div class="social-grid">
+    <div class="social-card">
+      <div class="platform">📘 Facebook</div>
+      <div class="stat">138</div>
+      <div class="stat-lbl">Followers · SweetKonfections2</div>
+      <span class="verdict critical">Critical — Needs Growth</span>
+      <p style="font-size:12px;color:#6b7280;margin-top:10px;line-height:1.6;">No cover photo, no pinned post, no regular content schedule. Page is technically live but not working to bring in customers. With 15 years of beautiful product work, this should be at 2,000+ followers.</p>
+    </div>
+    <div class="social-card">
+      <div class="platform">📸 Instagram</div>
+      <div class="stat">314</div>
+      <div class="stat-lbl">Followers · 125 Posts · @sweet.konfections</div>
+      <span class="verdict low">Needs Consistent Content</span>
+      <p style="font-size:12px;color:#6b7280;margin-top:10px;line-height:1.6;">314 followers with great product content — but no consistent posting schedule. 3x per week posting with Reels of decorating process and festival prep could grow this to 1,000+ followers in 90 days.</p>
+    </div>
+    <div class="social-card">
+      <div class="platform">🧵 Threads</div>
+      <div class="stat">@sweet.konfections</div>
+      <div class="stat-lbl">Handle confirmed</div>
+      <span class="verdict good">Active — Keep Going</span>
+      <p style="font-size:12px;color:#6b7280;margin-top:10px;line-height:1.6;">Threads is great for community building. Short posts about your baking process, festival dates, and customer shoutouts can drive traffic back to your website and Instagram.</p>
+    </div>
+    <div class="social-card">
+      <div class="platform">🌐 Website</div>
+      <div class="stat">GoDaddy</div>
+      <div class="stat-lbl">sweetkonfections.com</div>
+      <span class="verdict critical">Needs Replacement</span>
+      <p style="font-size:12px;color:#6b7280;margin-top:10px;line-height:1.6;">Current GoDaddy site is not SEO-optimized, can't be self-managed, and has no direct ordering. Replacing it with WordPress + Elementor gives you full control and opens up Google search traffic.</p>
+    </div>
+    <div class="social-card">
+      <div class="platform">📍 Google Business</div>
+      <div class="stat">0</div>
+      <div class="stat-lbl">Reviews visible</div>
+      <span class="verdict critical">Not Set Up / Inactive</span>
+      <p style="font-size:12px;color:#6b7280;margin-top:10px;line-height:1.6;">This is your biggest missed opportunity. A fully set up Google Business Profile with 10+ reviews can put Sweet Konfections on the map literally — showing up when people nearby search for custom cakes and desserts.</p>
+    </div>
+    <div class="social-card">
+      <div class="platform">🛒 Bakesy</div>
+      <div class="stat">Platform</div>
+      <div class="stat-lbl">Current order platform</div>
+      <span class="verdict low">Replace With Direct Orders</span>
+      <p style="font-size:12px;color:#6b7280;margin-top:10px;line-height:1.6;">Bakesy is a third-party platform — they control the rules, the pricing, and what happens to your storefront. A direct order form on your own website means you own the process completely — no middleman between you and your customer.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--  3. URGENT ISSUES                      -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 3</div>
+  <h2>Urgent Issues — Fix These First</h2>
+
+  <div class="issue-list">
+    <div class="issue">
+      <h4>🔴 No Google Business Profile / Reviews</h4>
+      <p>When someone searches "custom cakes Maryland" or "birthday cake Westminster MD" right now — Sweet Konfections doesn't appear. Google is where buying decisions happen. This is your #1 most urgent fix.</p>
+      <div class="fix">→ Fix: Set up Google Business Profile, verify your location, add photos, and ask your last 10 customers to leave a review. Takes 1 week, pays off for years.</div>
+    </div>
+    <div class="issue">
+      <h4>🔴 Facebook Profile Is Incomplete — 138 Followers</h4>
+      <p>No cover photo, no call-to-action button set up, no regular posting schedule. Customers who find you on Facebook see an incomplete profile and move on. This is losing you sales every day.</p>
+      <div class="fix">→ Fix: Add a professional cover photo (food truck or cake spread), set CTA button to "Order Now" linking to your website, and start a consistent posting schedule. We handle all of this for you.</div>
+    </div>
+    <div class="issue">
+      <h4>🔴 Bakesy Is Taking a Cut of Every Order</h4>
+      <p>Bakesy is a third-party platform — you're building your customer base on a storefront you don't own. If they change their pricing, add fees, or shut down, your ordering system disappears with it. A direct order form on your own website means you own the relationship with your customers completely.</p>
+      <div class="fix">→ Fix: Your new website includes a direct order form — free, no platform fees. Every dollar from every order goes straight to you.</div>
+    </div>
+    <div class="issue">
+      <h4>🔴 No Customer Email or Text List</h4>
+      <p>You're doing 6+ festivals a year with hundreds of people trying your food. An automated email or text follow-up system means every festival buyer can be reached again for new items, upcoming events, and holiday specials — turning one-time buyers into repeat customers automatically.</p>
+      <div class="fix">→ Fix: Add a simple QR code sign at your booth: "Text us for exclusive deals + event alerts." We set this up and automate the follow-up messages so you don't have to do anything.</div>
+    </div>
+    <div class="issue">
+      <h4>🟡 Website Can't Be Updated by You</h4>
+      <p>The current GoDaddy site requires a developer or tech knowledge to change anything — prices, photos, events, menu items. Every time something changes, you either pay someone or leave outdated info online.</p>
+      <div class="fix">→ Fix: Your new WordPress + Elementor site lets you click and type to update anything yourself in 2 minutes — no coding, no developer, no fees.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--  4. GROWTH OPPORTUNITIES               -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 4</div>
+  <h2>Growth Opportunities — Low Hanging Fruit</h2>
+
+  <div class="opp-list">
+    <div class="opp">
+      <h4>🎂 Custom Cake Orders Online — Direct from Google Search</h4>
+      <p>People in Baltimore, Westminster, and Delaware search for "custom birthday cake" and "dessert food truck" hundreds of times per month. With the right SEO setup and Google Business profile, Sweet Konfections can show up at the top of those searches — bringing you orders without spending on ads.</p>
+      <div class="est">→ Estimated impact: 5–15 new online inquiries per month within 90 days of SEO setup</div>
+    </div>
+    <div class="opp">
+      <h4>🚚 Festival QR Code → Email List → Repeat Sales</h4>
+      <p>At your next festival, put a small sign at the booth: "Want to know where we'll be next? Scan for event alerts + exclusive deals." Every person who scans gets added to your text/email list and receives automated follow-up messages. That's how a one-time festival buyer becomes a repeat customer.</p>
+      <div class="est">→ Estimated impact: 30–80 new subscribers per festival event</div>
+    </div>
+    <div class="opp">
+      <h4>🏢 Corporate & Event Catering — High Ticket Orders</h4>
+      <p>Companies in the Maryland and DC area regularly need desserts for office parties, corporate events, and team celebrations. A single corporate order can be $300–$1,000+. With a proper website and online presence, you can target this market with a single page and LinkedIn outreach.</p>
+      <div class="est">→ Estimated impact: 2–4 corporate orders per month = $600–$4,000 additional monthly revenue</div>
+    </div>
+    <div class="opp">
+      <h4>📸 Instagram Reels of Your Process = Free Viral Marketing</h4>
+      <p>Short videos of cake decorating, funnel cake fries being made at your truck, or cookie dipping consistently go viral in the food niche. One 30-second video can reach 10,000–100,000 people at no cost. Your products are visually stunning — this is one of the highest-ROI moves available to you right now.</p>
+      <div class="est">→ Estimated impact: 200–500 new Instagram followers per viral Reel, 10–30 new inquiries</div>
+    </div>
+    <div class="opp">
+      <h4>🎄 Holiday Season Pre-Orders — October Through December</h4>
+      <p>Thanksgiving, Christmas, and New Year's are the highest-demand weeks of the year for custom cakes, pies, and holiday treats. With an automated pre-order system and an email blast to your list in September, you can be fully booked for holiday orders before November even starts.</p>
+      <div class="est">→ Estimated impact: 20–40 holiday pre-orders secured in advance</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--  5. FREE ACTION ITEMS                  -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 5</div>
+  <h2>5 Things You Can Do This Week — All Free</h2>
+
+  <div class="action-grid">
+    <div class="action-card">
+      <div class="ac-head">📘 Facebook (Do Today)</div>
+      <ul>
+        <li>Add a professional cover photo — food truck shot or cake spread</li>
+        <li>Set your CTA button to "Send Message" or link to your website</li>
+        <li>Pin your best cake photo as a featured post</li>
+        <li>Post 3x this week: one product, one behind-the-scenes, one upcoming event</li>
+        <li>Invite all personal friends to like the business page</li>
+      </ul>
+    </div>
+    <div class="action-card">
+      <div class="ac-head pink">🌐 Google Business (This Week)</div>
+      <ul>
+        <li>Search "Google Business Profile" and claim Sweet Konfections</li>
+        <li>Add all your photos — cakes, truck, booth, treats</li>
+        <li>Set your service area (Maryland, Delaware, DMV)</li>
+        <li>Text 5 recent customers: "Can you leave us a quick Google review?"</li>
+        <li>Add your website link and hours to the listing</li>
+      </ul>
+    </div>
+    <div class="action-card">
+      <div class="ac-head gold">📸 Instagram Content</div>
+      <ul>
+        <li>Post a "meet the baker" story — your face builds trust and followers</li>
+        <li>Film a 30-second Reel of decorating a cake or making funnel cake fries</li>
+        <li>Add your website link to your Instagram bio</li>
+        <li>Use hashtags: #marylandbaker #custombaltimore #dessertfoodtruck #mdcakes</li>
+        <li>Share your next event date — people want to know where to find you</li>
+      </ul>
+    </div>
+    <div class="action-card">
+      <div class="ac-head dark">🎯 At Your Next Festival</div>
+      <ul>
+        <li>Print a small sign: "Follow us on Instagram @sweet.konfections"</li>
+        <li>Create a QR code that links to your website or Instagram</li>
+        <li>Collect phone numbers for a "VIP event alert" text list</li>
+        <li>Take photos of your booth setup to post on social</li>
+        <li>Ask happy customers on the spot: "Can you tag us on Instagram?"</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--  6. 90-DAY GROWTH PLAN                 -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 6</div>
+  <h2>Your 90-Day Growth Plan — Step by Step</h2>
+
+  <div class="plan-phases">
+    <div class="phase">
+      <div class="phase-head p1">📅 Days 1–30 · Foundation</div>
+      <ul>
+        <li>New WordPress + Elementor website live on your domain</li>
+        <li>Direct order form — you own your storefront, not a third-party platform</li>
+        <li>Google Business Profile set up and verified</li>
+        <li>Facebook profile fully optimized — cover photo, CTA, about section</li>
+        <li>Instagram bio updated with website link</li>
+        <li>First 5 Google reviews collected from recent customers</li>
+        <li>QR code sign created for booth</li>
+        <li>Social media posting schedule established (3x/week)</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-head p2">📅 Days 31–60 · Growth</div>
+      <ul>
+        <li>12 social posts published (Facebook + Instagram)</li>
+        <li>First 2 Instagram Reels posted (decorating / truck process)</li>
+        <li>Email/text list started — 50+ subscribers from events and website</li>
+        <li>First email campaign sent to list (upcoming events + menu highlights)</li>
+        <li>City SEO pages live: Baltimore, Westminster, Delaware</li>
+        <li>Google listing has 10+ reviews — appearing in local searches</li>
+        <li>AI chatbot answering inquiries 24/7 on website</li>
+        <li>Festival QR code driving consistent new follows</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-head p3">📅 Days 61–90 · Scale</div>
+      <ul>
+        <li>Holiday pre-order campaign launched via email + social</li>
+        <li>Corporate catering outreach via LinkedIn + local business groups</li>
+        <li>25+ Google reviews — consistent top-3 ranking in local search</li>
+        <li>Facebook growing 50–100 new followers per month</li>
+        <li>Instagram growing through consistent Reels content</li>
+        <li>Automated follow-up sequences converting inquiries to orders</li>
+        <li>Monthly performance report showing traffic, orders, and growth</li>
+        <li>Review what's working — double down for Q4 holiday season</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--  7. REVENUE OPPORTUNITY                -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 7</div>
+  <h2>Revenue Opportunity — What's Possible in 90 Days</h2>
+
+  <table class="rev-table">
+    <thead>
+      <tr>
+        <th>Revenue Source</th>
+        <th>Current State</th>
+        <th>With Growth Plan</th>
+        <th>Monthly Upside</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Custom Cake Orders</strong><br/><span style="font-size:12px;color:#6b7280;">Online + direct inquiries</span></td>
+        <td>Word of mouth only</td>
+        <td>5–10 new online orders/mo via Google + website</td>
+        <td class="rev-num">+$500–$1,500</td>
+        <td><span class="badge new">SEO</span></td>
+      </tr>
+      <tr>
+        <td><strong>Festival Sales</strong><br/><span style="font-size:12px;color:#6b7280;">Food truck + booth</span></td>
+        <td>Strong — automated follow-up can multiply repeat buyers</td>
+        <td>QR code list drives repeat buyers between events</td>
+        <td class="rev-num">+$200–$600</td>
+        <td><span class="badge">Automation</span></td>
+      </tr>
+      <tr>
+        <td><strong>Direct Orders</strong><br/><span style="font-size:12px;color:#6b7280;">Own your storefront — not a third-party platform</span></td>
+        <td>Losing 5–10% to Bakesy per order</td>
+        <td>100% of order revenue stays with you</td>
+        <td class="rev-num">+$50–$200 saved</td>
+        <td><span class="badge">Website</span></td>
+      </tr>
+      <tr>
+        <td><strong>Corporate / Event Catering</strong><br/><span style="font-size:12px;color:#6b7280;">New revenue channel</span></td>
+        <td>Not currently marketed</td>
+        <td>2–4 corporate orders per month via outreach + SEO</td>
+        <td class="rev-num">+$600–$2,000</td>
+        <td><span class="badge new">New</span></td>
+      </tr>
+      <tr>
+        <td><strong>Holiday Pre-Orders</strong><br/><span style="font-size:12px;color:#6b7280;">Oct–Dec campaign</span></td>
+        <td>No advance booking system</td>
+        <td>Pre-order campaign via email list — fully booked in advance</td>
+        <td class="rev-num">+$1,000–$3,000</td>
+        <td><span class="badge new">Seasonal</span></td>
+      </tr>
+      <tr style="background:#f0fdf4;">
+        <td colspan="3"><strong>Total Estimated Monthly Revenue Increase</strong></td>
+        <td class="rev-num" style="font-size:1.3rem;">$2,350–$7,300</td>
+        <td><span class="badge">90 Days</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:#9ca3af;margin-bottom:28px;">*Estimates based on average results for food/dessert businesses in similar markets. Individual results vary. These numbers represent realistic targets, not guarantees.</p>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--  8. OUR OFFER                          -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section" style="padding-bottom:44px;">
+  <div class="section-label">Section 8</div>
+  <h2>How We Help — Plans &amp; Pricing</h2>
+
+  <!-- MAINTENANCE TABLE -->
+  <table class="rev-table" style="margin-bottom:32px;">
+    <thead>
+      <tr><th>Plan</th><th>What's Included</th><th>Investment</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Website Launch Only</strong></td>
+        <td style="font-size:13px;">9-page site live on your domain — WordPress + Elementor. You manage it yourself with the free Get Started Guide. 30-day support window included.</td>
+        <td><span class="rev-num">$200 one-time</span></td>
+      </tr>
+      <tr>
+        <td><strong>Maintenance Plan</strong></td>
+        <td style="font-size:13px;">Site stays live + up to 2 updates per month (price changes, new photos, event updates, menu additions). You handle your own marketing. Perfect if you just want someone to keep the site current.</td>
+        <td><span class="rev-num">$79/mo</span></td>
+      </tr>
+      <tr>
+        <td><strong>Starter Plan</strong></td>
+        <td style="font-size:13px;">Unlimited site updates + 4 social posts/month (Facebook + Instagram) + Google Business Profile setup &amp; management + monthly SEO updates + monthly performance report.</td>
+        <td><span class="rev-num">$197/mo</span></td>
+      </tr>
+      <tr>
+        <td><strong>Growth Plan ⭐ Recommended</strong></td>
+        <td style="font-size:13px;">Everything in Starter + 12 social posts/month + Reels content + AI automation (follow-up texts &amp; emails) + email/text campaigns + city SEO pages + Google review system + festival marketing.</td>
+        <td><span class="rev-num">$397/mo</span></td>
+      </tr>
+      <tr>
+        <td><strong>Full Service</strong></td>
+        <td style="font-size:13px;">Everything in Growth + daily social content + Facebook &amp; Instagram paid ads + full AI automation suite + weekly email/text campaigns + corporate catering outreach + monthly strategy call with Anthony.</td>
+        <td><span class="rev-num">$597/mo</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- A LA CARTE -->
+  <table class="rev-table" style="margin-bottom:36px;">
+    <thead>
+      <tr><th colspan="2">À La Carte — One-Time Requests (No Monthly Plan Needed)</th><th>Price</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2"><strong>Single Page Update</strong> — price change, new photos, text edit on any page</td>
+        <td><span class="rev-num">$25</span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Add a New Product or Menu Item</strong> — new card with photo, description, price</td>
+        <td><span class="rev-num">$40</span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Add a New Page</strong> — seasonal menu, new service, landing page</td>
+        <td><span class="rev-num">$75</span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Update Events Calendar</strong> — add/remove events from "Find Our Truck" section</td>
+        <td><span class="rev-num">$20</span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Gallery Refresh</strong> — swap out up to 10 photos with new ones</td>
+        <td><span class="rev-num">$35</span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Hourly Rate</strong> — custom work, redesigns, new features, anything not listed above</td>
+        <td><span class="rev-num">$75/hr</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:13px;color:#6b7280;margin-bottom:36px;line-height:1.7;font-style:italic;">No long-term contracts. Cancel monthly plans with 30 days notice. The website is yours from day one — we never hold it hostage. À la carte requests are completed within 48–72 hours of payment.</p>
+
+  <div class="offer-box">
+    <h2>Ready to Grow Sweet Konfections? <span>Here's How We Do It.</span></h2>
+    <p>Every plan starts with the $200 Website Launch Fee — your fully built, live WordPress site delivered in 48 hours. Then choose the level of ongoing support that fits where you are right now.</p>
+
+    <div class="offer-grid">
+      <div class="offer-item">
+        <h4>🌐 Website Launch Only</h4>
+        <div class="price">$200</div>
+        <div class="period">one-time fee</div>
+        <ul>
+          <li>9-page website live on your domain</li>
+          <li>WordPress + Elementor — you manage it yourself</li>
+          <li>AI chatbot answering customers 24/7</li>
+          <li>Direct order form (no Bakesy fees)</li>
+          <li>All social media linked</li>
+          <li>SEO foundation setup</li>
+          <li>Free "Get Started" guide included</li>
+          <li>30-day support window</li>
+        </ul>
+        <a href="mailto:antg4life@yahoo.com?subject=Sweet%20Konfections%20%E2%80%94%20Website%20Launch%20%24200&body=Hi%20Anthony%2C%0A%0AI%27d%20like%20to%20move%20forward%20with%20the%20Website%20Launch%20Only%20plan%20(%24200%20one-time).%0A%0AHere%20is%20my%20info%3A%0A%0AMy%20domain%20name%3A%20sweetkonfections.com%0AMy%20domain%20registrar%20(GoDaddy%2C%20Namecheap%2C%20etc.)%3A%20%0AMy%20current%20hosting%20provider%3A%20%0ALogin%20email%20for%20hosting%2Fdomain%3A%20%0A%0AI%20am%20sending%20%24200%20via%20Zelle%20to%20(313)%20205-3355%20%2F%20antg4life%40yahoo.com%20now.%0A%0AThanks%2C%0AShannon" class="pay-btn">✉️ Choose This Plan — $200 · Email + Pay via Zelle</a>
+      </div>
+      <div class="offer-item">
+        <h4>🧁 Starter Plan</h4>
+        <div class="price">$197<span style="font-size:1rem;color:rgba(255,255,255,.4)">/mo</span></div>
+        <div class="period">+ $200 launch fee</div>
+        <ul>
+          <li>Everything in Launch</li>
+          <li>4 social posts/month (Facebook + Instagram)</li>
+          <li>Facebook page fully optimized</li>
+          <li>Google Business Profile setup + management</li>
+          <li>Monthly SEO updates</li>
+          <li>Monthly performance report</li>
+        </ul>
+        <a href="mailto:antg4life@yahoo.com?subject=Sweet%20Konfections%20%E2%80%94%20Starter%20Plan%20%24197%2Fmo&body=Hi%20Anthony%2C%0A%0AI%27d%20like%20to%20move%20forward%20with%20the%20Starter%20Plan%20(%24197%2Fmo%20%2B%20%24200%20launch%20fee).%0A%0AHere%20is%20my%20info%3A%0A%0AMy%20domain%20name%3A%20sweetkonfections.com%0AMy%20domain%20registrar%20(GoDaddy%2C%20Namecheap%2C%20etc.)%3A%20%0AMy%20current%20hosting%20provider%3A%20%0ALogin%20email%20for%20hosting%2Fdomain%3A%20%0A%0AI%20am%20sending%20%24200%20via%20Zelle%20to%20(313)%20205-3355%20%2F%20antg4life%40yahoo.com%20now.%0A%0AThanks%2C%0AShannon" class="pay-btn">✉️ Choose This Plan — $197/mo · Email + Pay via Zelle</a>
+      </div>
+      <div class="offer-item highlight">
+        <h4>🎉 Growth Plan — Most Popular</h4>
+        <div class="price">$397<span style="font-size:1rem;color:rgba(255,255,255,.4)">/mo</span></div>
+        <div class="period">+ $200 launch fee</div>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>12 social posts/month + Reels content</li>
+          <li>Facebook + Instagram fully managed</li>
+          <li>AI automation — follow-up texts &amp; emails</li>
+          <li>Email + text campaign to your customer list</li>
+          <li>City SEO pages for 12 locations</li>
+          <li>Google review generation system</li>
+          <li>Festival event marketing content</li>
+          <li>QR code list builder setup</li>
+        </ul>
+        <a href="mailto:antg4life@yahoo.com?subject=Sweet%20Konfections%20%E2%80%94%20Growth%20Plan%20%24397%2Fmo&body=Hi%20Anthony%2C%0A%0AI%27d%20like%20to%20move%20forward%20with%20the%20Growth%20Plan%20(%24397%2Fmo%20%2B%20%24200%20launch%20fee).%0A%0AHere%20is%20my%20info%3A%0A%0AMy%20domain%20name%3A%20sweetkonfections.com%0AMy%20domain%20registrar%20(GoDaddy%2C%20Namecheap%2C%20etc.)%3A%20%0AMy%20current%20hosting%20provider%3A%20%0ALogin%20email%20for%20hosting%2Fdomain%3A%20%0A%0AI%20am%20sending%20%24200%20via%20Zelle%20to%20(313)%20205-3355%20%2F%20antg4life%40yahoo.com%20now.%0A%0AThanks%2C%0AShannon" class="pay-btn">✉️ Choose This Plan — $397/mo · Email + Pay via Zelle</a>
+      </div>
+      <div class="offer-item">
+        <h4>🚀 Full Service</h4>
+        <div class="price">$597<span style="font-size:1rem;color:rgba(255,255,255,.4)">/mo</span></div>
+        <div class="period">+ $200 launch fee</div>
+        <ul>
+          <li>Everything in Growth</li>
+          <li>Daily social media content</li>
+          <li>Facebook + Instagram paid ads managed</li>
+          <li>Full AI automation suite</li>
+          <li>Weekly email + text campaigns</li>
+          <li>Corporate catering outreach</li>
+          <li>Holiday pre-order campaign</li>
+          <li>Monthly strategy call with Anthony</li>
+          <li>Same-day priority support</li>
+        </ul>
+        <a href="mailto:antg4life@yahoo.com?subject=Sweet%20Konfections%20%E2%80%94%20Full%20Service%20%24597%2Fmo&body=Hi%20Anthony%2C%0A%0AI%27d%20like%20to%20move%20forward%20with%20the%20Full%20Service%20plan%20(%24597%2Fmo%20%2B%20%24200%20launch%20fee).%0A%0AHere%20is%20my%20info%3A%0A%0AMy%20domain%20name%3A%20sweetkonfections.com%0AMy%20domain%20registrar%20(GoDaddy%2C%20Namecheap%2C%20etc.)%3A%20%0AMy%20current%20hosting%20provider%3A%20%0ALogin%20email%20for%20hosting%2Fdomain%3A%20%0A%0AI%20am%20sending%20%24200%20via%20Zelle%20to%20(313)%20205-3355%20%2F%20antg4life%40yahoo.com%20now.%0A%0AThanks%2C%0AShannon" class="pay-btn">✉️ Choose This Plan — $597/mo · Email + Pay via Zelle</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PAYMENT SECTION -->
+<div class="wrap" style="padding-bottom:44px;page-break-inside:avoid;break-inside:avoid;">
+  <div class="pay-section">
+    <h3>Ready to Get Started? Here's How to Pay</h3>
+    <p>Send payment using any method below. In your message or memo, write:<br/><strong>"Sweet Konfections — [Plan Name]"</strong> — your site goes live within 24–48 hours.</p>
+    <div style="background:#faf5ff;border:2px solid #6d1ed4;border-radius:12px;padding:20px 24px;margin-bottom:16px;">
+      <p style="font-size:13px;font-weight:800;color:#6d1ed4;margin-bottom:4px;">Step 1 — Click the "Choose This Plan" button on your plan above</p>
+      <p style="font-size:13px;color:#374151;line-height:1.7;">It opens a pre-filled email to Anthony with your plan selection and a form to enter your domain and hosting info. Fill it in and hit Send.</p>
+    </div>
+    <div style="background:#e8f8f5;border:2px solid var(--teal);border-radius:12px;padding:20px 24px;margin-bottom:16px;">
+      <p style="font-size:13px;font-weight:800;color:var(--teal-d);margin-bottom:4px;">Step 2 — Send payment via Zelle</p>
+      <p style="font-size:16px;font-weight:800;color:#0a2a20;margin:8px 0 4px;">📱 (313) 205-3355 &nbsp;·&nbsp; antg4life@yahoo.com</p>
+      <p style="font-size:13px;color:#374151;">Memo: <strong>Sweet Konfections — [Plan Name]</strong> — your site goes live within 24–48 hours of payment confirmation.</p>
+    </div>
+    <div class="pay-methods">
+      <a href="tel:4434750455" class="pay-method call">
+        <div class="pm-label">📞 Questions First?</div>
+        <div class="pm-val">(443) 475-0455</div>
+        <div class="pm-sub">Business line</div>
+        <div class="pm-sub" style="margin-top:6px;font-weight:700;color:var(--teal-d);">Tap to Call Anthony</div>
+      </a>
+      <a href="mailto:antg4life@yahoo.com" class="pay-method call">
+        <div class="pm-label">✉️ Email</div>
+        <div class="pm-val">antg4life@yahoo.com</div>
+        <div class="pm-sub">Questions or changes</div>
+        <div class="pm-sub" style="margin-top:6px;font-weight:700;color:var(--teal-d);">Tap to Email</div>
+      </a>
+    </div>
+    <p class="pay-note">No long-term contracts. Cancel monthly plans with 30 days notice. The website is yours from day one — we never hold it hostage. À la carte requests completed within 48–72 hours of payment.</p>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<div class="pg-footer">
+  <strong>Launch AI Group</strong> · Prepared by Anthony Whitner · (443) 475-0455 · antg4life@yahoo.com<br/>
+  <span style="margin-top:6px;display:block;">Confidential — Prepared exclusively for Shannon Jones / Sweet Konfections, LLC · June 2026</span>
+</div>
+
+</body>
+</html>

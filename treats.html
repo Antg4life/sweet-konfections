@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Treats & Sweets | Sweet Konfections Maryland</title>
+<meta name="description" content="Candy apples, cake pops, chocolate-dipped strawberries, cookies, and more. Handcrafted treats for every occasion in Maryland."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/shared.css"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#2db5a0;--teal-d:#1a8a78;--teal-l:#e8f8f5;--pink:#f06292;--pink-d:#c2185b;--pink-l:#fce4ec;--yellow:#ffd54f;--cream:#fff9f5;--dark:#1a0a00;--gray:#6b7280;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,249,245,.97);backdrop-filter:blur(16px);border-bottom:2px solid #f3e8df;box-shadow:0 2px 16px -4px rgba(45,181,160,.1);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{font-family:'Dancing Script',cursive;font-size:1.7rem;font-weight:700;color:var(--teal);line-height:1;}
+.nav-logo span{color:var(--pink);display:block;font-size:1rem;}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-link{font-size:13px;font-weight:600;color:#5d4037;padding:7px 12px;border-radius:8px;transition:background .2s,color .2s;}
+.nav-link:hover,.nav-link.active{background:var(--teal-l);color:var(--teal-d);}
+.nav-cta{background:var(--pink);color:#fff!important;border-radius:20px;padding:9px 20px!important;font-size:13px;font-weight:700;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.ham span{display:block;width:24px;height:2.5px;background:var(--teal-d);border-radius:2px;}
+#mob-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #f3e8df;padding:12px 0 20px;box-shadow:0 8px 24px -4px rgba(0,0,0,.1);}
+#mob-nav.open{display:block;}
+#mob-nav a{display:block;padding:12px 24px;font-weight:600;color:#5d4037;font-size:15px;border-bottom:1px solid #fdf6f0;}
+#mob-nav a:last-child{background:var(--pink);color:#fff;margin:12px 16px 0;border-radius:10px;text-align:center;border-bottom:none;}
+.page-hero{background:linear-gradient(135deg,#fff0f5,#fff9f0);padding:60px 24px;text-align:center;}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--dark);margin-bottom:12px;}
+.page-hero p{font-size:15px;color:#5d4037;max-width:540px;margin:0 auto 28px;line-height:1.8;}
+.btn-pink{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--pink),var(--pink-d));color:#fff;font-weight:800;font-size:15px;padding:14px 28px;border-radius:12px;box-shadow:0 6px 24px -6px rgba(240,98,146,.5);}
+.section{padding:64px 24px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;color:var(--dark);margin-bottom:14px;}
+.treats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.treat-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px -6px rgba(0,0,0,.08);transition:transform .25s,box-shadow .25s;}
+.treat-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px -8px rgba(0,0,0,.14);}
+.treat-img{width:100%;height:220px;object-fit:cover;display:block;}
+.treat-body{padding:18px 20px;}
+.treat-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:8px;}
+.tag-pink{background:var(--pink-l);color:var(--pink-d);}
+.tag-teal{background:var(--teal-l);color:var(--teal-d);}
+.tag-yellow{background:#fff8e1;color:#e65100;}
+.treat-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:var(--dark);margin-bottom:6px;}
+.treat-card p{font-size:12.5px;color:var(--gray);line-height:1.6;margin-bottom:12px;}
+.treat-price{font-size:13px;font-weight:800;color:var(--teal);}
+.cta-banner{background:linear-gradient(135deg,var(--teal),var(--teal-d));padding:56px 24px;text-align:center;}
+.cta-banner h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;margin-bottom:12px;}
+.cta-banner p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:28px;line-height:1.7;}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--teal-d);font-weight:800;font-size:15px;padding:14px 32px;border-radius:12px;box-shadow:0 6px 24px -6px rgba(0,0,0,.2);}
+footer{background:#1a0a00;color:rgba(255,255,255,.5);padding:28px 24px;text-align:center;font-size:13px;}
+footer a{color:var(--teal);}
+@media(max-width:700px){.treats-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.ham{display:flex!important;}}
+@media(max-width:500px){.treats-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Sweet<span>Konfections ✨</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="treats.html" class="nav-link active">Treats</a>
+      <a href="traditional-cakes.html" class="nav-link">Cakes & Pies</a>
+      <a href="custom-cakes.html" class="nav-link">Custom Cakes</a>
+      <a href="party-packages.html" class="nav-link">Party Packages</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="order.html" class="nav-cta nav-link">Order Now 🎂</a>
+    </div>
+    <button class="ham" onclick="document.getElementById('mob-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+  <div id="mob-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="treats.html">🍬 Treats</a>
+    <a href="traditional-cakes.html">🥧 Cakes & Pies</a>
+    <a href="custom-cakes.html">🎨 Custom Cakes</a>
+    <a href="party-packages.html">🎉 Party Packages</a>
+    <a href="gallery.html">📸 Gallery</a>
+    <a href="testimonials.html">⭐ Testimonials</a>
+    <a href="order.html">🎂 Order Now</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="eyebrow">Sweet Treats</p>
+  <h1>Handcrafted Treats That Steal the Show</h1>
+  <p>From candy apples to cake pops — every treat is made fresh to order and designed to be as beautiful as it is delicious. Perfect for dessert tables, party favors, and gifting.</p>
+  <a href="order.html" class="btn-pink">🍬 Order Treats Now</a>
+</div>
+
+<section class="section" style="background:#fff;">
+  <div class="section-inner">
+    <p class="eyebrow">Our Menu</p>
+    <h2 class="section-title">Fresh-Made Treats for Every Occasion</h2>
+    <div class="treats-grid">
+      <div class="treat-card">
+        <img class="treat-img" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-9bf1ddc.png" alt="Sweet Konfections Cake Pops" loading="lazy"/>
+        <div class="treat-body">
+          <span class="treat-tag tag-teal">Party Favorite</span>
+          <h3>Cake Pops</h3>
+          <p>Freshly baked candy-coated cake on a stick. Flavors: vanilla, chocolate, strawberry, red velvet, lemon, and snickerdoodle.</p>
+          <p class="treat-price">$23/dozen & up</p>
+        </div>
+      </div>
+      <div class="treat-card">
+        <img class="treat-img" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-d3d4394.png" alt="Sweet Konfections Cake Pop Cycles" loading="lazy"/>
+        <div class="treat-body">
+          <span class="treat-tag tag-pink">Unique & Fun</span>
+          <h3>Cake Pop Cycles</h3>
+          <p>Moist bicycle-themed cake pop treats — a creative twist on the classic. Vanilla, chocolate, strawberry, red velvet, lemon, and snickerdoodle.</p>
+          <p class="treat-price">$33/dozen & up</p>
+        </div>
+      </div>
+      <div class="treat-card">
+        <img class="treat-img" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-e4aab52.png" alt="Sweet Konfections Candy Coated Pretzels" loading="lazy"/>
+        <div class="treat-body">
+          <span class="treat-tag tag-yellow">Sweet & Salty</span>
+          <h3>Candy Coated Pretzels</h3>
+          <p>Sweet, salty &amp; crunchy pretzel rods coated in candy and chocolate. Great for dessert tables and party favors.</p>
+          <p class="treat-price">$25 & up</p>
+        </div>
+      </div>
+      <div class="treat-card">
+        <img class="treat-img" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-72c6c07.png" alt="Sweet Konfections Chocolate Dipped Cookies" loading="lazy"/>
+        <div class="treat-body">
+          <span class="treat-tag tag-pink">Made Fresh</span>
+          <h3>Chocolate Dipped Cream Cookies</h3>
+          <p>Fresh, crunchy cream-filled cookies dipped in chocolate and creatively decorated. Perfect for gifts and dessert displays.</p>
+          <p class="treat-price">$25 & up</p>
+        </div>
+      </div>
+      <div class="treat-card">
+        <img class="treat-img" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-ede0177.png" alt="Sweet Konfections Chocolate Covered Strawberries" loading="lazy"/>
+        <div class="treat-body">
+          <span class="treat-tag tag-teal">Crowd Pleaser</span>
+          <h3>Chocolate Covered Strawberries</h3>
+          <p>Fresh, juicy &amp; elegantly decorated strawberries. Customizable colors and optional toppings — perfect for gifts or any event.</p>
+          <p class="treat-price">$30 & up</p>
+        </div>
+      </div>
+      <div class="treat-card">
+        <img class="treat-img" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-a1e91e3.png" alt="Sweet Konfections Chocolate Covered Rice Crispy Treats" loading="lazy"/>
+        <div class="treat-body">
+          <span class="treat-tag tag-yellow">Rich & Fun</span>
+          <h3>Chocolate Covered Rice Crispy Treats</h3>
+          <p>Fresh, crispy &amp; designed to perfection. A crowd favorite that ships beautifully for gifting and event dessert tables.</p>
+          <p class="treat-price">$33 & up</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Ready to Add Sweets to Your Event?</h2>
+  <p>All treats are made fresh to order. Minimum order requirements apply. Place your order at least 5–7 days in advance for best availability.</p>
+  <a href="order.html" class="btn-white">🍬 Place Your Treat Order</a>
+</div>
+
+<footer>
+  <p>© 2026 Sweet Konfections · Maryland, Delaware &amp; the DMV · <a href="index.html">Home</a> · <a href="order.html">Order</a> · Website by <strong>Launch AI Group</strong></p>
+</footer>
+</body>
+</html>

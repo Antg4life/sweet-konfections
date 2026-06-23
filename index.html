@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sweet Konfections | Custom Cakes, Treats & Dessert Food Truck — Maryland & Delaware</title>
+<meta name="description" content="Sweet Konfections — custom cakes, handcrafted treats, and dessert food truck serving Maryland, Baltimore, and Delaware. Birthdays, weddings, corporate events, and festivals."/>
+<meta name="keywords" content="custom cakes Maryland, dessert food truck Baltimore, custom birthday cake Maryland, candy apples, cake pops, party packages Maryland, food truck Delaware, sweet konfections"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Sweet Konfections | Custom Cakes & Dessert Food Truck"/>
+<meta property="og:description" content="Handcrafted custom cakes, treats, and a full dessert food truck experience. Serving Maryland, Baltimore & Delaware for birthdays, weddings, and events."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://sweetkonfections.com"/>
+<meta property="og:image" content="https://www.instagram.com/sweet.konfections"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Sweet Konfections | Custom Cakes & Dessert Food Truck"/>
+<meta name="twitter:description" content="Custom cakes, handcrafted treats, and food truck events — Maryland, Baltimore & Delaware."/>
+<link rel="canonical" href="https://sweetkonfections.com"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "Sweet Konfections",
+  "description": "Custom cakes, handcrafted treats, and dessert food truck serving Maryland, Baltimore, and Delaware for birthdays, weddings, corporate events, and festivals.",
+  "url": "https://sweetkonfections.com",
+  "email": "info@sweetkonfections.org",
+  "image": "https://www.instagram.com/sweet.konfections",
+  "servesCuisine": "Desserts, Custom Cakes, Bakery",
+  "areaServed": ["Maryland", "Baltimore", "Delaware", "Washington DC"],
+  "sameAs": [
+    "https://www.instagram.com/sweet.konfections",
+    "https://www.threads.net/@sweet.konfections",
+    "https://www.facebook.com/SweetKonfections2",
+    "https://www.tiktok.com/@sweetkonfections"
+  ],
+  "priceRange": "$$",
+  "paymentAccepted": "Credit Card, Zelle, Cash"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --teal:#2db5a0;--teal-d:#1a8a78;--teal-l:#e8f8f5;
+  --pink:#f06292;--pink-d:#c2185b;--pink-l:#fce4ec;
+  --yellow:#ffd54f;--yellow-d:#f9a825;
+  --cream:#fff9f5;--warm:#fff3e8;
+  --dark:#1a0a00;--mid:#5d3a1a;--gray:#6b7280;
+}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;height:auto;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,249,245,.97);backdrop-filter:blur(16px);border-bottom:2px solid #f3e8df;box-shadow:0 2px 16px -4px rgba(45,181,160,.1);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{font-family:'Dancing Script',cursive;font-size:1.7rem;font-weight:700;color:var(--teal);line-height:1;}
+.nav-logo span{color:var(--pink);display:block;font-size:1rem;}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-link{font-size:13px;font-weight:600;color:#5d4037;padding:7px 12px;border-radius:8px;transition:background .2s,color .2s;white-space:nowrap;}
+.nav-link:hover,.nav-link.active{background:var(--teal-l);color:var(--teal-d);}
+.nav-cta{background:var(--pink);color:#fff!important;border-radius:20px;padding:9px 20px!important;font-size:13px;font-weight:700;box-shadow:0 4px 14px -4px rgba(240,98,146,.5);transition:transform .2s,box-shadow .2s!important;}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 18px -4px rgba(240,98,146,.6)!important;background:var(--pink)!important;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.ham span{display:block;width:24px;height:2.5px;background:var(--teal-d);border-radius:2px;transition:all .25s;}
+#mob-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #f3e8df;padding:12px 0 20px;box-shadow:0 8px 24px -4px rgba(0,0,0,.1);}
+#mob-nav.open{display:block;}
+#mob-nav a{display:block;padding:12px 24px;font-weight:600;color:#5d4037;font-size:15px;border-bottom:1px solid #fdf6f0;}
+#mob-nav a:last-child{background:var(--pink);color:#fff;margin:12px 16px 0;border-radius:10px;text-align:center;border-bottom:none;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#fff0f5,#fff9f0,#f0faf9);padding:0;min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(240,98,146,.12),transparent 70%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(45,181,160,.12),transparent 70%);pointer-events:none;}
+.hero-inner{max-width:1200px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--pink-l);border-radius:20px;padding:7px 16px;font-size:12px;font-weight:700;color:var(--pink-d);margin-bottom:20px;box-shadow:0 2px 12px -2px rgba(240,98,146,.15);}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:20px;}
+.hero h1 em{font-style:normal;color:var(--teal);}
+.hero h1 .script{font-family:'Dancing Script',cursive;color:var(--pink);font-size:1.1em;}
+.hero-sub{font-size:16px;color:#5d4037;line-height:1.8;margin-bottom:32px;max-width:480px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-pink{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--pink),var(--pink-d));color:#fff;font-weight:800;font-size:15px;padding:16px 32px;border-radius:12px;box-shadow:0 6px 24px -6px rgba(240,98,146,.5);transition:transform .2s,box-shadow .2s;}
+.btn-pink:hover{transform:translateY(-3px);box-shadow:0 10px 28px -6px rgba(240,98,146,.6);}
+.btn-teal{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#fff;font-weight:800;font-size:15px;padding:16px 32px;border-radius:12px;box-shadow:0 6px 24px -6px rgba(45,181,160,.4);transition:transform .2s,box-shadow .2s;}
+.btn-teal:hover{transform:translateY(-3px);box-shadow:0 10px 28px -6px rgba(45,181,160,.5);}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;border:2px solid var(--teal);color:var(--teal-d);font-weight:700;font-size:15px;padding:14px 28px;border-radius:12px;transition:background .2s,color .2s;}
+.btn-outline:hover{background:var(--teal-l);}
+
+/* Hero visual */
+.hero-visual{position:relative;}
+.hero-img-main{width:100%;border-radius:24px;box-shadow:0 24px 64px -12px rgba(45,181,160,.25);aspect-ratio:4/5;background:linear-gradient(145deg,var(--pink-l),var(--teal-l));display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-img-main img{width:100%;height:100%;object-fit:cover;border-radius:24px;}
+.hero-float-1{position:absolute;top:-20px;right:-20px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 8px 28px -6px rgba(0,0,0,.15);font-size:13px;font-weight:700;color:var(--dark);}
+.hero-float-1 .num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--teal);display:block;line-height:1;}
+.hero-float-2{position:absolute;bottom:24px;left:-28px;background:linear-gradient(135deg,var(--pink),var(--pink-d));border-radius:16px;padding:14px 18px;box-shadow:0 8px 28px -6px rgba(240,98,146,.4);color:#fff;}
+.hero-float-2 p{font-size:12px;font-weight:700;opacity:.85;}
+.hero-float-2 strong{font-size:15px;display:block;}
+
+/* TRUST BAR */
+.trust-bar{background:linear-gradient(135deg,var(--teal),var(--teal-d));padding:20px 24px;}
+.trust-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-around;gap:24px;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:10px;color:#fff;}
+.trust-item .icon{font-size:1.3rem;}
+.trust-item p{font-size:13px;font-weight:700;white-space:nowrap;}
+
+/* SECTION */
+.section{padding:80px 24px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:var(--dark);margin-bottom:14px;}
+.section-sub{font-size:15px;color:var(--gray);line-height:1.8;max-width:580px;margin-bottom:40px;}
+
+/* MENU HIGHLIGHTS */
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.menu-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px -6px rgba(0,0,0,.08);transition:transform .25s,box-shadow .25s;cursor:pointer;}
+.menu-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px -8px rgba(0,0,0,.14);}
+.menu-card-img{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;overflow:hidden;}
+.menu-card-img img{width:100%;height:100%;object-fit:cover;}
+.menu-card-body{padding:18px 20px;}
+.menu-card-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:8px;}
+.tag-pink{background:var(--pink-l);color:var(--pink-d);}
+.tag-teal{background:var(--teal-l);color:var(--teal-d);}
+.tag-yellow{background:#fff8e1;color:#e65100;}
+.menu-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:var(--dark);margin-bottom:5px;}
+.menu-card p{font-size:12.5px;color:var(--gray);line-height:1.6;}
+.menu-card-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--teal);margin-top:10px;}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.about-img{border-radius:24px;aspect-ratio:1;background:linear-gradient(145deg,var(--pink-l),var(--yellow));display:flex;align-items:center;justify-content:center;font-size:6rem;overflow:hidden;box-shadow:0 24px 60px rgba(240,98,146,.18);}
+.about-img img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:24px;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;}
+.about-stat{background:var(--cream);border:1.5px solid #f3e8df;border-radius:12px;padding:16px;}
+.about-stat .num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--teal);line-height:1;margin-bottom:3px;}
+.about-stat p{font-size:12px;color:var(--gray);font-weight:600;}
+
+/* PARTY PACKAGES TEASER */
+.packages-bg{background:linear-gradient(145deg,#fff3f8,#f0faf9);}
+.packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.pkg-card{background:#fff;border-radius:20px;padding:28px 22px;border:2px solid transparent;text-align:center;transition:border-color .2s,box-shadow .2s,transform .2s;position:relative;}
+.pkg-card:hover{border-color:var(--pink);transform:translateY(-4px);box-shadow:0 16px 40px -8px rgba(240,98,146,.15);}
+.pkg-card.popular{border-color:var(--teal);box-shadow:0 8px 32px -8px rgba(45,181,160,.2);}
+.pkg-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#fff;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 14px;border-radius:20px;white-space:nowrap;}
+.pkg-icon{font-size:2.5rem;margin-bottom:12px;}
+.pkg-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;color:var(--dark);margin-bottom:6px;}
+.pkg-price{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--teal);line-height:1;margin-bottom:10px;}
+.pkg-price span{font-size:13px;font-weight:400;color:var(--gray);font-family:'Inter',sans-serif;}
+.pkg-includes{font-size:12.5px;color:var(--gray);line-height:1.8;margin-bottom:16px;}
+.pkg-btn{display:block;background:var(--teal-l);color:var(--teal-d);font-weight:700;font-size:13px;padding:10px;border-radius:10px;transition:background .2s;}
+.pkg-btn:hover{background:var(--teal);color:#fff;}
+
+/* SOCIAL PROOF */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.review-card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 2px 16px -4px rgba(0,0,0,.07);}
+.stars{color:#ffd54f;font-size:15px;margin-bottom:8px;}
+.review-text{font-size:13.5px;color:#374151;line-height:1.7;margin-bottom:14px;font-style:italic;}
+.review-author{display:flex;align-items:center;gap:10px;}
+.review-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0;}
+.review-name{font-size:13px;font-weight:700;color:var(--dark);}
+.review-date{font-size:11px;color:var(--gray);}
+
+/* FOOD TRUCK SECTION */
+.truck-section{background:linear-gradient(135deg,#1a0a00,#3d1a00,#1a3d30);padding:80px 24px;}
+.truck-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.truck-content h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:#fff;margin-bottom:16px;}
+.truck-content p{font-size:15px;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:28px;}
+.truck-features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;}
+.truck-feature{display:flex;align-items:flex-start;gap:10px;}
+.truck-feature .check{color:var(--teal);font-size:16px;font-weight:900;flex-shrink:0;margin-top:2px;}
+.truck-feature p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.5;}
+.truck-visual{border-radius:24px;aspect-ratio:1;background:linear-gradient(145deg,rgba(45,181,160,.2),rgba(240,98,146,.2));display:flex;align-items:center;justify-content:center;font-size:8rem;border:2px solid rgba(255,255,255,.1);overflow:hidden;}
+.truck-visual img{width:100%;height:100%;object-fit:cover;border-radius:24px;}
+
+/* FIND OUR TRUCK */
+.find-truck{background:#fff;padding:80px 24px;}
+.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;}
+.event-card{background:var(--cream);border:2px solid #f3e8df;border-radius:20px;padding:22px 20px;transition:border-color .2s,transform .2s,box-shadow .2s;position:relative;overflow:hidden;}
+.event-card:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 12px 32px -8px rgba(45,181,160,.15);}
+.event-card.next-up{border-color:var(--pink);background:linear-gradient(145deg,#fff9f5,#fff0f5);}
+.event-card.next-up::before{content:'NEXT UP';position:absolute;top:14px;right:14px;background:var(--pink);color:#fff;font-size:9px;font-weight:800;letter-spacing:.12em;padding:3px 10px;border-radius:20px;}
+.event-date{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.event-date .month{background:var(--teal);color:#fff;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:6px 6px 0 0;text-align:center;min-width:40px;}
+.event-date .day{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--dark);line-height:1;}
+.event-date .year{font-size:11px;color:var(--gray);font-weight:600;}
+.event-cal{background:var(--teal-l);border-radius:10px;padding:6px 10px;text-align:center;min-width:52px;}
+.event-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:var(--dark);margin-bottom:6px;line-height:1.3;}
+.event-location{font-size:12.5px;color:var(--gray);margin-bottom:4px;}
+.event-time{font-size:12px;color:var(--teal-d);font-weight:700;margin-bottom:16px;}
+.event-dir{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--teal-d);background:var(--teal-l);padding:7px 14px;border-radius:8px;text-decoration:none;transition:background .2s;}
+.event-dir:hover{background:var(--teal);color:#fff;}
+.event-past{opacity:.55;pointer-events:none;}
+.no-events{text-align:center;padding:48px 24px;color:var(--gray);font-size:15px;}
+.follow-cta{background:linear-gradient(135deg,var(--teal-l),var(--pink-l));border-radius:16px;padding:24px 28px;margin-top:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.follow-cta p{font-size:14px;font-weight:600;color:#5d4037;line-height:1.6;}
+.follow-cta strong{display:block;font-size:16px;color:var(--dark);margin-bottom:4px;}
+@media(max-width:900px){.events-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.events-grid{grid-template-columns:1fr;}.follow-cta{flex-direction:column;text-align:center;}}
+
+/* SOCIAL MEDIA */
+.social-section{background:#fff;padding:60px 24px;}
+.social-inner{max-width:800px;margin:0 auto;text-align:center;}
+.social-icons{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:28px;flex-wrap:wrap;}
+.social-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:12px;font-weight:700;font-size:14px;transition:transform .2s,box-shadow .2s;}
+.social-btn:hover{transform:translateY(-3px);}
+.social-fb{background:#1877f2;color:#fff;box-shadow:0 4px 16px -4px rgba(24,119,242,.4);}
+.social-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;box-shadow:0 4px 16px -4px rgba(220,39,67,.4);}
+.social-tiktok{background:#000;color:#fff;box-shadow:0 4px 16px -4px rgba(0,0,0,.3);}
+.social-yt{background:#ff0000;color:#fff;box-shadow:0 4px 16px -4px rgba(255,0,0,.4);}
+.social-threads{background:#000;color:#fff;box-shadow:0 4px 16px -4px rgba(0,0,0,.3);}
+
+/* AI CHAT */
+#ai-chat-btn{position:fixed;bottom:24px;right:24px;z-index:999;width:60px;height:60px;background:linear-gradient(135deg,var(--pink),var(--pink-d));border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 24px -4px rgba(240,98,146,.6);transition:transform .2s;border:none;}
+#ai-chat-btn:hover{transform:scale(1.1);}
+#ai-chat-btn svg{width:28px;height:28px;fill:#fff;}
+#ai-chat-window{position:fixed;bottom:96px;right:24px;width:340px;background:#fff;border-radius:20px;box-shadow:0 16px 48px -8px rgba(0,0,0,.2);z-index:998;display:none;overflow:hidden;font-family:'Inter',sans-serif;}
+#ai-chat-window.open{display:flex;flex-direction:column;}
+.chat-header{background:linear-gradient(135deg,var(--teal),var(--teal-d));padding:16px 20px;display:flex;align-items:center;gap:12px;}
+.chat-avatar{width:38px;height:38px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.chat-header-info p{font-size:14px;font-weight:800;color:#fff;margin-bottom:1px;}
+.chat-header-info span{font-size:11px;color:rgba(255,255,255,.7);}
+.chat-close{margin-left:auto;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.7);font-size:1.2rem;line-height:1;}
+.chat-messages{padding:16px;display:flex;flex-direction:column;gap:10px;min-height:220px;max-height:280px;overflow-y:auto;}
+.chat-msg{max-width:85%;padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.55;}
+.chat-msg.bot{background:var(--teal-l);color:#0d3d30;border-bottom-left-radius:4px;align-self:flex-start;}
+.chat-msg.user{background:linear-gradient(135deg,var(--pink),var(--pink-d));color:#fff;border-bottom-right-radius:4px;align-self:flex-end;}
+.chat-quick{padding:0 16px 12px;display:flex;flex-wrap:wrap;gap:6px;}
+.chat-quick button{background:var(--teal-l);border:1px solid var(--teal);color:var(--teal-d);font-size:11.5px;font-weight:600;padding:6px 12px;border-radius:20px;cursor:pointer;transition:background .2s;}
+.chat-quick button:hover{background:var(--teal);color:#fff;}
+.chat-input-row{padding:12px 16px;border-top:1px solid #f3e8df;display:flex;gap:8px;}
+.chat-input-row input{flex:1;border:1.5px solid #e5e7eb;border-radius:10px;padding:10px 14px;font-size:13px;outline:none;font-family:inherit;}
+.chat-input-row input:focus{border-color:var(--teal);}
+.chat-send{background:var(--pink);color:#fff;border:none;border-radius:10px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;}
+
+/* NEWSLETTER */
+.newsletter{background:linear-gradient(135deg,var(--pink-l),var(--teal-l));padding:64px 24px;}
+.newsletter-inner{max-width:600px;margin:0 auto;text-align:center;}
+.newsletter h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--dark);margin-bottom:10px;}
+.newsletter p{font-size:14px;color:var(--gray);margin-bottom:24px;line-height:1.7;}
+.newsletter-form{display:flex;gap:10px;max-width:420px;margin:0 auto;}
+.newsletter-form input{flex:1;border:2px solid #e5e7eb;border-radius:10px;padding:14px 16px;font-size:14px;outline:none;font-family:inherit;background:#fff;}
+.newsletter-form input:focus{border-color:var(--teal);}
+.newsletter-form button{background:var(--pink);color:#fff;border:none;border-radius:10px;padding:14px 24px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;}
+
+/* FOOTER */
+footer{background:#1a0a00;color:rgba(255,255,255,.7);padding:48px 24px 24px;}
+.footer-inner{max-width:1100px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-brand .logo{font-family:'Dancing Script',cursive;font-size:1.8rem;color:var(--teal);margin-bottom:10px;}
+.footer-brand p{font-size:13px;line-height:1.8;color:rgba(255,255,255,.5);}
+.footer-col h4{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px;}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.6);margin-bottom:8px;transition:color .2s;}
+.footer-col a:hover{color:var(--teal);}
+.footer-social{display:flex;gap:10px;margin-top:16px;}
+.footer-social a{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background .2s;}
+.footer-social a:hover{background:var(--teal);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(255,255,255,.3);}
+
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px;}
+  .hero-visual{display:none;}
+  .about-grid{grid-template-columns:1fr;}
+  .truck-inner{grid-template-columns:1fr;}
+  .truck-visual{display:none;}
+  .menu-grid,.packages-grid,.reviews-grid{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  .menu-grid,.packages-grid,.reviews-grid{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+  .ham{display:flex!important;}
+  .nav-inner{position:relative;}
+  #ai-chat-window{width:calc(100vw - 32px);right:16px;}
+  .newsletter-form{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Sweet<span>Konfections ✨</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="treats.html" class="nav-link">Treats</a>
+      <a href="traditional-cakes.html" class="nav-link">Cakes & Pies</a>
+      <a href="custom-cakes.html" class="nav-link">Custom Cakes</a>
+      <a href="party-packages.html" class="nav-link">Party Packages</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="order.html" class="nav-cta nav-link">Order Now 🎂</a>
+    </div>
+    <button class="ham" onclick="document.getElementById('mob-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+  <div id="mob-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="treats.html">🍬 Treats</a>
+    <a href="traditional-cakes.html">🥧 Cakes & Pies</a>
+    <a href="custom-cakes.html">🎨 Custom Cakes</a>
+    <a href="party-packages.html">🎉 Party Packages</a>
+    <a href="gallery.html">📸 Gallery</a>
+    <a href="testimonials.html">⭐ Testimonials</a>
+    <a href="consultation.html">📅 Book Consultation</a>
+    <a href="order.html">🎂 Order Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">🚚 Maryland & Delaware's Sweetest Food Truck</div>
+      <h1>Every Occasion Deserves Something <em>Unforgettably</em> <span class="script">Sweet</span></h1>
+      <p class="hero-sub">Custom cakes, handcrafted treats, and a full dessert experience — brought directly to your event. Birthdays, weddings, corporate events, and everything in between.</p>
+      <div class="hero-btns">
+        <a href="order.html" class="btn-pink">🎂 Place Your Order</a>
+        <a href="party-packages.html" class="btn-outline">🎉 View Party Packages</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-main">
+        <img src="images/cake-unicorn.jpg" alt="Sweet Konfections Custom Unicorn Cake"/>
+      </div>
+      <div class="hero-float-1">
+        <span class="num">500+</span>
+        Happy Customers
+      </div>
+      <div class="hero-float-2">
+        <p>⭐⭐⭐⭐⭐</p>
+        <strong>5-Star Rated</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="icon">🎂</span><p>Custom Cakes for Any Occasion</p></div>
+    <div class="trust-item"><span class="icon">🚚</span><p>Food Truck Available for Events</p></div>
+    <div class="trust-item"><span class="icon">⭐</span><p>500+ 5-Star Reviews</p></div>
+    <div class="trust-item"><span class="icon">📍</span><p>Maryland · Delaware · DMV</p></div>
+    <div class="trust-item"><span class="icon">🎉</span><p>Weddings · Birthdays · Corporate</p></div>
+  </div>
+</div>
+
+<!-- MENU HIGHLIGHTS -->
+<section class="section" style="background:#fff;">
+  <div class="section-inner">
+    <p class="eyebrow">What We Create</p>
+    <h2 class="section-title">Made Fresh. Made with Love.</h2>
+    <p class="section-sub">Every item is handcrafted to order — no mass production, no shortcuts. Just real ingredients and real passion for making your celebration unforgettable.</p>
+    <div class="menu-grid">
+      <a href="treats.html" class="menu-card">
+        <div class="menu-card-img">
+          <img src="images/cupcakes-purple-gold.jpg" alt="Sweet Konfections Treats — Purple Cupcakes"/>
+        </div>
+        <div class="menu-card-body">
+          <span class="menu-card-tag tag-pink">Fan Favorite</span>
+          <h3>Treats & Sweets</h3>
+          <p>Candy apples, cake pops, chocolate-dipped strawberries, cookies, brownies, and so much more — perfect for parties and events.</p>
+          <span class="menu-card-link">Explore Treats →</span>
+        </div>
+      </a>
+      <a href="traditional-cakes.html" class="menu-card">
+        <div class="menu-card-img">
+          <img src="images/cake-strawberry-shortcake.jpg" alt="Sweet Konfections Traditional Cakes & Pies"/>
+        </div>
+        <div class="menu-card-body">
+          <span class="menu-card-tag tag-teal">Classic &amp; Timeless</span>
+          <h3>Traditional Cakes & Pies</h3>
+          <p>Southern-style cakes and pies made from scratch with love. Red velvet, sweet potato pie, pound cake, peach cobbler, and more.</p>
+          <span class="menu-card-link">See Cakes &amp; Pies →</span>
+        </div>
+      </a>
+      <a href="custom-cakes.html" class="menu-card">
+        <div class="menu-card-img">
+          <img src="images/cake-rose-heels.jpg" alt="Sweet Konfections Custom Cakes"/>
+        </div>
+        <div class="menu-card-body">
+          <span class="menu-card-tag tag-yellow">Signature Service</span>
+          <h3>Custom Cakes</h3>
+          <p>Designed just for you — from elegant wedding tiers to sculpted birthday masterpieces. Send us your vision and we'll bring it to life.</p>
+          <span class="menu-card-link">Order Custom Cake →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PARTY PACKAGES -->
+<section class="section packages-bg">
+  <div class="section-inner">
+    <p class="eyebrow">Party Packages</p>
+    <h2 class="section-title">Bring the Sweet Konfections Experience to Your Event</h2>
+    <p class="section-sub">From intimate gatherings to full event setups — we have a package that fits your vision and your budget.</p>
+    <div class="packages-grid">
+      <div class="pkg-card">
+        <div class="pkg-icon">🧁</div>
+        <div class="pkg-name">Sweetie Package</div>
+        <div class="pkg-price">Starting at<br/><span>Contact for Pricing</span></div>
+        <div class="pkg-includes">Perfect for small gatherings up to 25 guests. Includes a custom cake or dessert assortment, setup, and delivery.</div>
+        <a href="party-packages.html" class="pkg-btn">View Details</a>
+      </div>
+      <div class="pkg-card popular">
+        <div class="pkg-badge">Most Popular</div>
+        <div class="pkg-icon">🎉</div>
+        <div class="pkg-name">Konfections Party</div>
+        <div class="pkg-price">Starting at<br/><span>Contact for Pricing</span></div>
+        <div class="pkg-includes">Full dessert spread for up to 50 guests. Custom cake + treat table + candy bar + food truck experience.</div>
+        <a href="party-packages.html" class="pkg-btn">View Details</a>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-icon">🚚</div>
+        <div class="pkg-name">Food Truck Event</div>
+        <div class="pkg-price">Starting at<br/><span>Contact for Pricing</span></div>
+        <div class="pkg-includes">Full food truck booking for corporate events, festivals, weddings, and private parties. Serves 50–200+ guests.</div>
+        <a href="party-packages.html" class="pkg-btn">View Details</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="consultation.html" class="btn-teal">📅 Book a Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" style="background:#fff;">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="images/shannon-headshot.webp" alt="Shannon Jones — Owner &amp; Lead Baker, Sweet Konfections"/>
+      </div>
+      <div>
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">Generational Baking — Homemade Cakes, Pies, Cobblers &amp; Treats</h2>
+        <p style="font-size:15px;color:#5d4037;line-height:1.85;margin-bottom:16px;">My name is Shannon, and I am the owner and lead baker of Sweet Konfections, LLC. I have over 15 years of experience in baking and providing excellent customer service. Without my supportive friends &amp; family, I would not be where I am today, so I thank my loved ones for all their words of encouragement and for supporting my small business.</p>
+        <p style="font-size:15px;color:var(--gray);line-height:1.85;margin-bottom:16px;">My grandmother inspired me to become a baker many years ago. One of my fondest memories, I remember using an old-fashioned hand mixer to bring eggs to a peak for her homemade lemon meringue pie. I am so grateful to have shared this experience with her, and most grateful to be able to continue her legacy by sharing her delicious family recipes with others.</p>
+        <p style="font-size:15px;color:var(--gray);line-height:1.85;margin-bottom:28px;">Sweet Konfections, LLC takes pride in providing delicious desserts to our customers and community. Our desserts are made from high-quality ingredients and freshly homemade with love. We create a product that tastes just as good as it looks!</p>
+        <a href="consultation.html" class="btn-pink">Book a Consultation 💕</a>
+        <div class="about-stats">
+          <div class="about-stat"><div class="num">15+</div><p>Years Baking</p></div>
+          <div class="about-stat"><div class="num">5★</div><p>Average Rating</p></div>
+          <div class="about-stat"><div class="num">500+</div><p>Happy Customers</p></div>
+          <div class="about-stat"><div class="num">100%</div><p>Made Fresh to Order</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD TRUCK -->
+<section class="truck-section">
+  <div class="truck-inner">
+    <div class="truck-content">
+      <p style="font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;">Food Truck Experience</p>
+      <h2>Bring the Sweetness Directly to Your Event</h2>
+      <p>The Sweet Konfections food truck is available for private events, corporate gatherings, festivals, weddings, and more. We come to you — fully stocked and ready to delight your guests.</p>
+      <div class="truck-features">
+        <div class="truck-feature"><span class="check">✓</span><p>Corporate events & office parties</p></div>
+        <div class="truck-feature"><span class="check">✓</span><p>Weddings & private celebrations</p></div>
+        <div class="truck-feature"><span class="check">✓</span><p>Festivals & community events</p></div>
+        <div class="truck-feature"><span class="check">✓</span><p>Birthday parties & quinceañeras</p></div>
+        <div class="truck-feature"><span class="check">✓</span><p>School events & fundraisers</p></div>
+        <div class="truck-feature"><span class="check">✓</span><p>Custom menu for your event</p></div>
+      </div>
+      <a href="consultation.html" class="btn-teal">🚚 Book the Food Truck</a>
+    </div>
+    <div class="truck-visual"><img src="images/food-truck-front.jpg" alt="Sweet Konfections Food Truck"/></div>
+  </div>
+</section>
+
+<!-- FIND OUR TRUCK -->
+<section class="find-truck">
+  <div class="section-inner">
+    <p class="eyebrow">Where We'll Be</p>
+    <h2 class="section-title">Find Our Truck 🚚</h2>
+    <p class="section-sub">Come find us at festivals, community events, and pop-ups across Maryland, Baltimore, and Delaware. Check back often — we update this regularly!</p>
+
+    <div class="events-grid" id="events-grid">
+
+      <div class="event-card next-up">
+        <div class="event-date">
+          <div class="event-cal">
+            <div class="month">Sep</div>
+            <div class="day">4–6</div>
+            <div class="year">2026</div>
+          </div>
+          <div>
+            <div class="event-name">Foodees Fest</div>
+            <div class="event-location">📍 National Harbor, MD</div>
+            <div class="event-time">🕛 All Day · Fri–Sun</div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=National+Harbor+MD" target="_blank" class="event-dir">📍 Get Directions</a>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date">
+          <div class="event-cal">
+            <div class="month">Jun</div>
+            <div class="day">14</div>
+            <div class="year">2026</div>
+          </div>
+          <div>
+            <div class="event-name">Reggae in the Park — Delaware</div>
+            <div class="event-location">📍 Delaware International Festival</div>
+            <div class="event-time">🕛 12PM – 6PM</div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=Reggae+in+the+Park+Delaware" target="_blank" class="event-dir">📍 Get Directions</a>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date">
+          <div class="event-cal" style="--teal:#2db5a0;">
+            <div class="month" style="background:var(--pink);">Jun</div>
+            <div class="day">28</div>
+            <div class="year">2026</div>
+          </div>
+          <div>
+            <div class="event-name">MoveWell Festival</div>
+            <div class="event-location">📍 Carroll Park, Baltimore MD</div>
+            <div class="event-time">🕛 12PM – 4PM</div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=Carroll+Park+Baltimore+MD" target="_blank" class="event-dir">📍 Get Directions</a>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date">
+          <div class="event-cal">
+            <div class="month">Jun</div>
+            <div class="day">6</div>
+            <div class="year">2026</div>
+          </div>
+          <div>
+            <div class="event-name">Maryland Wine Festival</div>
+            <div class="event-location">📍 Carroll County Farm Museum, Westminster MD</div>
+            <div class="event-time">🕛 11AM – 5PM</div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=Carroll+County+Farm+Museum+Westminster+MD" target="_blank" class="event-dir">📍 Get Directions</a>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date">
+          <div class="event-cal">
+            <div class="month">Oct</div>
+            <div class="day">25</div>
+            <div class="year">2025</div>
+          </div>
+          <div>
+            <div class="event-name">Hentastic Harvest</div>
+            <div class="event-location">📍 Westminster, MD</div>
+            <div class="event-time">🕛 All Day</div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=Westminster+MD" target="_blank" class="event-dir">📍 Get Directions</a>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date">
+          <div class="event-cal">
+            <div class="month">Sep</div>
+            <div class="day">20</div>
+            <div class="year">2025</div>
+          </div>
+          <div>
+            <div class="event-name">Charm City Live</div>
+            <div class="event-location">📍 War Memorial Plaza, Downtown Baltimore</div>
+            <div class="event-time">🕛 12PM – 9PM</div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=War+Memorial+Plaza+Baltimore+MD" target="_blank" class="event-dir">📍 Get Directions</a>
+      </div>
+
+    </div>
+
+    <div class="follow-cta">
+      <div>
+        <strong>Always Know Where We Are</strong>
+        <p>Follow us on Instagram and Facebook for real-time location updates, pop-up announcements, and last-minute events. We post every stop!</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="https://www.instagram.com/sweet.konfections" target="_blank" class="btn-pink" style="font-size:13px;padding:12px 20px;">📸 Follow on Instagram</a>
+        <a href="https://www.facebook.com/SweetKonfections2" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#1877f2;color:#fff;font-weight:700;font-size:13px;padding:12px 20px;border-radius:12px;">📘 Follow on Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" style="background:var(--cream);">
+  <div class="section-inner">
+    <p class="eyebrow">What Customers Say</p>
+    <h2 class="section-title">They Said It Best</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"The custom cake for my daughter's birthday was absolutely stunning — and even better tasting! Everyone at the party was asking where I got it. Sweet Konfections is on another level."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:var(--pink-l);color:var(--pink-d);">T</div>
+          <div><p class="review-name">Tamara J.</p><p class="review-date">Birthday Party · Google Review</p></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"Booked the food truck for our company picnic and it was the highlight of the entire event. The spread was incredible — people are still talking about it months later!"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:var(--teal-l);color:var(--teal-d);">M</div>
+          <div><p class="review-name">Marcus D.</p><p class="review-date">Corporate Event · Google Review</p></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"I've ordered from Sweet Konfections three times now and every single time the desserts arrive perfect, on time, and more beautiful than I imagined. My go-to for every event."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:#fff8e1;color:#e65100;">A</div>
+          <div><p class="review-name">Angela R.</p><p class="review-date">Repeat Customer · Facebook</p></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="testimonials.html" class="btn-outline">Read All Reviews →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section class="social-section">
+  <div class="social-inner">
+    <p class="eyebrow">Follow Along</p>
+    <h2 class="section-title" style="text-align:center;">See the Sweet Life on Social</h2>
+    <p style="text-align:center;font-size:14px;color:var(--gray);line-height:1.8;">Follow us for behind-the-scenes baking, new creations, event recaps, special deals, and giveaways. Tag us in your Sweet Konfections moments — we love seeing our treats in the wild!</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/sweet.konfections" target="_blank" class="social-btn social-ig">📸 Instagram</a>
+      <a href="https://www.threads.net/@sweet.konfections" target="_blank" class="social-btn social-threads">🧵 Threads</a>
+      <a href="https://www.facebook.com/SweetKonfections2" target="_blank" class="social-btn social-fb">📘 Facebook</a>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--gray);margin-top:20px;">Use <strong style="color:var(--teal);">#SweetKonfections</strong> when you share your order!</p>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <p class="eyebrow" style="text-align:center;">Stay in the Know</p>
+    <h2>First to Know. First to Order.</h2>
+    <p>Get exclusive deals, new menu drops, seasonal specials, and early access to party packages — straight to your inbox.</p>
+    <form class="newsletter-form" onsubmit="this.innerHTML='<p style=\'font-weight:700;color:var(--teal);padding:14px;\'>🎉 You\'re on the list!</p>';return false;">
+      <input type="email" placeholder="your@email.com" required/>
+      <button type="submit">Join Us 🎂</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Sweet Konfections</div>
+        <p>Maryland's premier custom cake and dessert food truck. Making every celebration unforgettable — one sweet creation at a time. Serving Maryland, Delaware &amp; the DMV.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/sweet.konfections" target="_blank">📸</a>
+          <a href="https://www.threads.net/@sweet.konfections" target="_blank">🧵</a>
+          <a href="https://www.facebook.com/SweetKonfections2" target="_blank">📘</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <a href="treats.html">Treats & Sweets</a>
+        <a href="traditional-cakes.html">Traditional Cakes & Pies</a>
+        <a href="custom-cakes.html">Custom Cakes</a>
+        <a href="party-packages.html">Party Packages</a>
+      </div>
+      <div class="footer-col">
+        <h4>Order</h4>
+        <a href="order.html">Place Your Order</a>
+        <a href="consultation.html">Book Consultation</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="testimonials.html">Testimonials</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:">📞 Call Us</a>
+        <a href="mailto:hello@sweetkonfections.com">✉️ Email Us</a>
+        <a href="consultation.html">📅 Book a Consult</a>
+        <a href="order.html">🎂 Order Now</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sweet Konfections. All rights reserved. Serving Maryland, Delaware & the DMV.</p>
+      <p>Website by <strong style="color:var(--teal);">Launch AI Group</strong></p>
+    </div>
+  </div>
+</footer>
+
+<!-- AI CHATBOT -->
+<button id="ai-chat-btn" onclick="document.getElementById('ai-chat-window').classList.toggle('open')" title="Chat with us">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+</button>
+
+<div id="ai-chat-window">
+  <div class="chat-header">
+    <div class="chat-avatar">🎂</div>
+    <div class="chat-header-info">
+      <p>Sweet Konfections</p>
+      <span>🟢 We're here to help!</span>
+    </div>
+    <button class="chat-close" onclick="document.getElementById('ai-chat-window').classList.remove('open')">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-msgs">
+    <div class="chat-msg bot">Hi there! 🎉 Welcome to Sweet Konfections! I'm here to help you order, plan your event, or answer any questions. What can I help you with today?</div>
+  </div>
+  <div class="chat-quick" id="chat-quick">
+    <button onclick="quickChat('I want to order a custom cake')">🎂 Custom Cake</button>
+    <button onclick="quickChat('Tell me about party packages')">🎉 Party Packages</button>
+    <button onclick="quickChat('Book the food truck')">🚚 Food Truck</button>
+    <button onclick="quickChat('What are your prices?')">💰 Pricing</button>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chat-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendChat()"/>
+    <button class="chat-send" onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<script>
+const replies = {
+  'custom cake': "We'd love to create something special for you! 🎨 Custom cakes start at $75 and are designed just for you. <a href='custom-cakes.html' style='color:var(--teal);font-weight:700;'>Click here to start your order →</a>",
+  'party package': "We have 3 packages — Sweetie, Konfections Party, and Food Truck Event! Each can be customized for your guest count. <a href='party-packages.html' style='color:var(--teal);font-weight:700;'>See all packages →</a>",
+  'food truck': "The Sweet Konfections food truck is available for events of all sizes! 🚚 Let's chat about your date and guest count. <a href='consultation.html' style='color:var(--teal);font-weight:700;'>Book a free consultation →</a>",
+  'price': "Pricing depends on your order and event size. The best way is a quick consultation so we can give you an exact quote! <a href='consultation.html' style='color:var(--teal);font-weight:700;'>Book your free consult →</a>",
+  'order': "Ready to order? 🎂 Head to our order page and we'll get started! <a href='order.html' style='color:var(--teal);font-weight:700;'>Place Your Order →</a>",
+  'default': "Great question! 😊 For the fastest answer, feel free to <a href='consultation.html' style='color:var(--teal);font-weight:700;'>book a free consultation</a> or <a href='order.html' style='color:var(--teal);font-weight:700;'>place an order here</a>. We'd love to help make your event amazing!"
+};
+function quickChat(msg){
+  document.getElementById('chat-quick').style.display='none';
+  addMsg(msg,'user');
+  setTimeout(()=>{
+    const key=Object.keys(replies).find(k=>msg.toLowerCase().includes(k))||'default';
+    addMsg(replies[key],'bot');
+  },600);
+}
+function sendChat(){
+  const inp=document.getElementById('chat-input');
+  const msg=inp.value.trim();
+  if(!msg)return;
+  document.getElementById('chat-quick').style.display='none';
+  addMsg(msg,'user');
+  inp.value='';
+  setTimeout(()=>{
+    const key=Object.keys(replies).find(k=>msg.toLowerCase().includes(k))||'default';
+    addMsg(replies[key],'bot');
+  },700);
+}
+function addMsg(text,type){
+  const msgs=document.getElementById('chat-msgs');
+  const div=document.createElement('div');
+  div.className='chat-msg '+type;
+  div.innerHTML=text;
+  msgs.appendChild(div);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+</script>
+</body>
+</html>

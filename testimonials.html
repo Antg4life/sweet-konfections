@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Reviews & Testimonials | Sweet Konfections Maryland</title>
+<meta name="description" content="Read what customers are saying about Sweet Konfections. 5-star reviews for custom cakes, treats, party packages, and food truck events in Maryland."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#2db5a0;--teal-d:#1a8a78;--teal-l:#e8f8f5;--pink:#f06292;--pink-d:#c2185b;--pink-l:#fce4ec;--yellow:#ffd54f;--cream:#fff9f5;--dark:#1a0a00;--gray:#6b7280;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,249,245,.97);backdrop-filter:blur(16px);border-bottom:2px solid #f3e8df;}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{font-family:'Dancing Script',cursive;font-size:1.7rem;font-weight:700;color:var(--teal);line-height:1;}
+.nav-logo span{color:var(--pink);display:block;font-size:1rem;}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-link{font-size:13px;font-weight:600;color:#5d4037;padding:7px 12px;border-radius:8px;transition:background .2s,color .2s;}
+.nav-link:hover,.nav-link.active{background:var(--teal-l);color:var(--teal-d);}
+.nav-cta{background:var(--pink);color:#fff!important;border-radius:20px;padding:9px 20px!important;font-size:13px;font-weight:700;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.ham span{display:block;width:24px;height:2.5px;background:var(--teal-d);border-radius:2px;}
+#mob-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #f3e8df;padding:12px 0 20px;}
+#mob-nav.open{display:block;}
+#mob-nav a{display:block;padding:12px 24px;font-weight:600;color:#5d4037;font-size:15px;border-bottom:1px solid #fdf6f0;}
+#mob-nav a:last-child{background:var(--pink);color:#fff;margin:12px 16px 0;border-radius:10px;text-align:center;border-bottom:none;}
+.hero{background:linear-gradient(135deg,#fff0f5,#f0faf9,#fff8e1);padding:64px 24px;text-align:center;}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--dark);margin-bottom:12px;}
+.hero p{font-size:15px;color:#5d4037;max-width:520px;margin:0 auto;line-height:1.8;}
+.rating-bar{background:linear-gradient(135deg,var(--teal),var(--teal-d));padding:20px 24px;}
+.rating-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-around;gap:24px;flex-wrap:wrap;}
+.rating-stat{text-align:center;color:#fff;}
+.rating-stat .big{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;}
+.rating-stat p{font-size:12px;opacity:.8;margin-top:4px;}
+.rating-stat .stars{color:var(--yellow);font-size:1rem;letter-spacing:2px;}
+.section{padding:64px 24px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;color:var(--dark);margin-bottom:10px;}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.review-card{background:#fff;border-radius:20px;padding:24px;box-shadow:0 4px 24px -6px rgba(0,0,0,.07);display:flex;flex-direction:column;}
+.review-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;}
+.reviewer{display:flex;align-items:center;gap:12px;}
+.avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0;}
+.reviewer-name{font-size:14px;font-weight:800;color:var(--dark);}
+.reviewer-detail{font-size:12px;color:var(--gray);margin-top:2px;}
+.review-source{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;}
+.google{background:#fef3c7;color:#d97706;}
+.facebook{background:#eff6ff;color:#1d4ed8;}
+.stars{color:var(--yellow);font-size:14px;letter-spacing:1px;margin-bottom:10px;}
+.review-text{font-size:13.5px;color:#374151;line-height:1.75;flex:1;font-style:italic;}
+.review-occasion{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;background:var(--teal-l);color:var(--teal-d);padding:4px 10px;border-radius:20px;margin-top:14px;}
+.featured-review{background:linear-gradient(135deg,#fff0f5,#f0faf9);padding:64px 24px;}
+.featured-inner{max-width:740px;margin:0 auto;text-align:center;}
+.quote-mark{font-family:'Playfair Display',serif;font-size:5rem;color:var(--pink);line-height:.8;margin-bottom:8px;opacity:.4;}
+.featured-text{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:700;color:var(--dark);line-height:1.55;margin-bottom:24px;font-style:italic;}
+.featured-author{font-size:14px;font-weight:700;color:var(--teal-d);}
+.featured-author span{display:block;font-size:12px;font-weight:500;color:var(--gray);margin-top:2px;}
+.leave-review{background:#fff;padding:64px 24px;text-align:center;}
+.leave-review h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--dark);margin-bottom:10px;}
+.leave-review p{font-size:14px;color:var(--gray);line-height:1.7;max-width:500px;margin:0 auto 28px;}
+.review-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
+.btn-google{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid #e5e7eb;color:#374151;font-weight:700;font-size:14px;padding:13px 24px;border-radius:12px;box-shadow:0 2px 12px -4px rgba(0,0,0,.1);}
+.btn-fb{display:inline-flex;align-items:center;gap:8px;background:#1877f2;color:#fff;font-weight:700;font-size:14px;padding:13px 24px;border-radius:12px;}
+.cta-banner{background:linear-gradient(135deg,var(--pink),var(--pink-d));padding:56px 24px;text-align:center;}
+.cta-banner h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;margin-bottom:10px;}
+.cta-banner p{font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--pink-d);font-weight:800;font-size:15px;padding:14px 32px;border-radius:12px;}
+footer{background:#1a0a00;color:rgba(255,255,255,.5);padding:28px 24px;text-align:center;font-size:13px;}
+footer a{color:var(--teal);}
+@media(max-width:900px){.reviews-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.ham{display:flex!important;}}
+@media(max-width:560px){.reviews-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Sweet<span>Konfections ✨</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="treats.html" class="nav-link">Treats</a>
+      <a href="traditional-cakes.html" class="nav-link">Cakes & Pies</a>
+      <a href="custom-cakes.html" class="nav-link">Custom Cakes</a>
+      <a href="party-packages.html" class="nav-link">Party Packages</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="order.html" class="nav-cta nav-link">Order Now 🎂</a>
+    </div>
+    <button class="ham" onclick="document.getElementById('mob-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+  <div id="mob-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="treats.html">🍬 Treats</a>
+    <a href="traditional-cakes.html">🥧 Cakes & Pies</a>
+    <a href="custom-cakes.html">🎨 Custom Cakes</a>
+    <a href="party-packages.html">🎉 Party Packages</a>
+    <a href="gallery.html">📸 Gallery</a>
+    <a href="testimonials.html">⭐ Testimonials</a>
+    <a href="order.html">🎂 Order Now</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <p class="eyebrow">Customer Reviews</p>
+  <h1>Don't Take Our Word for It</h1>
+  <p>Our customers say it best. Read what Maryland families, event planners, and businesses have to say about the Sweet Konfections experience.</p>
+</div>
+
+<div class="rating-bar">
+  <div class="rating-inner">
+    <div class="rating-stat"><div class="big">5.0</div><div class="stars">★★★★★</div><p>Average Rating</p></div>
+    <div class="rating-stat"><div class="big">500+</div><p>Happy Customers</p></div>
+    <div class="rating-stat"><div class="big">100%</div><p>Would Recommend</p></div>
+    <div class="rating-stat"><div class="big">10+</div><p>Years in Business</p></div>
+  </div>
+</div>
+
+<!-- Featured Quote -->
+<div class="featured-review">
+  <div class="featured-inner">
+    <div class="quote-mark">"</div>
+    <p class="featured-text">Sweet Konfections didn't just make a cake — they made a memory. Every single guest at my daughter's birthday was speechless when they saw it. And the taste? Even better than it looked.</p>
+    <p class="featured-author">Tamara J. <span>Birthday Party Customer · Verified Google Review</span></p>
+  </div>
+</div>
+
+<section class="section" style="background:#fff;">
+  <div class="section-inner">
+    <p class="eyebrow" style="text-align:center;">Verified Reviews</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:32px;">What Our Customers Are Saying</h2>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <div class="avatar" style="background:var(--pink-l);color:var(--pink-d);">T</div>
+            <div><p class="reviewer-name">Tamara J.</p><p class="reviewer-detail">Birthday Party</p></div>
+          </div>
+          <span class="review-source google">Google</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"The custom cake for my daughter's birthday was absolutely stunning — and even better tasting! Everyone at the party was asking where I got it. Sweet Konfections is on another level. I'll be ordering for every birthday going forward."</p>
+        <span class="review-occasion">🎂 Custom Birthday Cake</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <div class="avatar" style="background:var(--teal-l);color:var(--teal-d);">M</div>
+            <div><p class="reviewer-name">Marcus D.</p><p class="reviewer-detail">Corporate Event</p></div>
+          </div>
+          <span class="review-source facebook">Facebook</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Booked the food truck for our company picnic and it was the highlight of the entire event. The spread was incredible — people are still talking about it. Easy to work with and the setup was flawless."</p>
+        <span class="review-occasion">🚚 Food Truck Booking</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <div class="avatar" style="background:#fff8e1;color:#e65100;">A</div>
+            <div><p class="reviewer-name">Angela R.</p><p class="reviewer-detail">Repeat Customer</p></div>
+          </div>
+          <span class="review-source google">Google</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I've ordered from Sweet Konfections multiple times now and every single order arrives perfect, on time, and more beautiful than I imagined. They are my go-to for every event. No one else even comes close."</p>
+        <span class="review-occasion">🍬 Repeat Customer</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <div class="avatar" style="background:var(--pink-l);color:var(--pink-d);">D</div>
+            <div><p class="reviewer-name">Denise W.</p><p class="reviewer-detail">Baby Shower</p></div>
+          </div>
+          <span class="review-source google">Google</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"They did the full dessert table for my sister's baby shower and it was absolutely gorgeous. The cake pops and candy apples were a massive hit. Every detail matched our theme perfectly. SO professional."</p>
+        <span class="review-occasion">👶 Baby Shower Package</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <div class="avatar" style="background:var(--teal-l);color:var(--teal-d);">K</div>
+            <div><p class="reviewer-name">Kimberly S.</p><p class="reviewer-detail">Wedding</p></div>
+          </div>
+          <span class="review-source facebook">Facebook</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Our wedding cake was beyond what I dreamed of. I sent a picture from Pinterest and they created something even better. The flavors were incredible — vanilla with raspberry filling. Every guest complimented it."</p>
+        <span class="review-occasion">💍 Wedding Cake</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <div class="avatar" style="background:#fff8e1;color:#e65100;">R</div>
+            <div><p class="reviewer-name">Robert L.</p><p class="reviewer-detail">Graduation Party</p></div>
+          </div>
+          <span class="review-source google">Google</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Ordered a graduation cake for my son and it was a showstopper. His school colors, the year, his name — everything was perfect. The red velvet flavor had people going back for seconds and thirds."</p>
+        <span class="review-occasion">🎓 Graduation Cake</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <div class="avatar" style="background:var(--pink-l);color:var(--pink-d);">L</div>
+            <div><p class="reviewer-name">Latoya M.</p><p class="reviewer-detail">Sweet 16</p></div>
+          </div>
+          <span class="review-source facebook">Facebook</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"My daughter's Sweet 16 was unforgettable and Sweet Konfections was a big reason why. The cake was 3 tiers, all pink and gold, with her name in lights. She literally cried when she saw it. HIGHLY recommend!"</p>
+        <span class="review-occasion">🎂 Sweet 16 Cake</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <div class="avatar" style="background:var(--teal-l);color:var(--teal-d);">C</div>
+            <div><p class="reviewer-name">Cheryl H.</p><p class="reviewer-detail">Holiday Order</p></div>
+          </div>
+          <span class="review-source google">Google</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Ordered sweet potato pies and pound cake for our Thanksgiving and everyone thought I baked them myself. They were absolutely divine — flavorful, fresh, and just like homemade. Will definitely be ordering again for Christmas!"</p>
+        <span class="review-occasion">🥧 Traditional Baked Goods</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer">
+            <div class="avatar" style="background:#fff8e1;color:#e65100;">J</div>
+            <div><p class="reviewer-name">James T.</p><p class="reviewer-detail">Office Party</p></div>
+          </div>
+          <span class="review-source facebook">Facebook</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Ordered a dessert gift box assortment for our office and my coworkers were blown away. Professional packaging, everything was fresh, and the variety was incredible. This is now our go-to for office celebrations."</p>
+        <span class="review-occasion">🎁 Corporate Gift Box</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="leave-review">
+  <p class="eyebrow" style="text-align:center;">Share Your Experience</p>
+  <h2>Had a Great Experience?</h2>
+  <p>We'd love to hear from you! Leave us a review on Google or Facebook — it helps other families in Maryland and Delaware find us and plan their perfect celebration.</p>
+  <div class="review-btns">
+    <a href="#" class="btn-google">⭐ Leave a Google Review</a>
+    <a href="https://www.facebook.com/SweetKonfections2" target="_blank" class="btn-fb">📘 Review on Facebook</a>
+    <a href="https://www.instagram.com/sweet.konfections" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);color:#fff;font-weight:700;font-size:14px;padding:13px 24px;border-radius:12px;text-decoration:none;">📸 Tag Us on Instagram</a>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <h2>Ready to Create Your Own Sweet Memory?</h2>
+  <p>Join hundreds of happy customers across Maryland. Order your custom cake, treats, or book a party package today.</p>
+  <a href="order.html" class="btn-white">🎂 Place Your Order</a>
+</div>
+
+<footer>
+  <p>© 2026 Sweet Konfections · Maryland, Delaware &amp; the DMV · <a href="mailto:info@sweetkonfections.org">info@sweetkonfections.org</a> · Website by <strong>Launch AI Group</strong></p>
+</footer>
+</body>
+</html>

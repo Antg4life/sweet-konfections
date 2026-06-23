@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sweet Konfections — We Built Something for You | Launch AI Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#2db5a0;--teal-d:#1a8a78;--teal-l:#e8f8f5;--pink:#f06292;--pink-d:#c2185b;--pink-l:#fce4ec;--cream:#fff9f5;--dark:#1a0a00;--gray:#6b7280;}
+body{font-family:'Inter',sans-serif;background:#f3f4f6;color:#1f2937;line-height:1.6;}
+.wrapper{max-width:760px;margin:0 auto;padding:32px 16px;}
+.top-label{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);margin-bottom:24px;}
+.email-card{background:#fff;border-radius:20px;overflow:hidden;margin-bottom:24px;box-shadow:0 4px 28px -8px rgba(0,0,0,.1);}
+.email-header{background:linear-gradient(135deg,#1a0a00,#3d0a1a,#0a1a10);padding:32px 28px;text-align:center;position:relative;overflow:hidden;}
+.email-header::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(240,98,146,.15),transparent 70%);}
+.email-header::after{content:'';position:absolute;bottom:-30px;left:-30px;width:160px;height:160px;background:radial-gradient(circle,rgba(45,181,160,.12),transparent 70%);}
+.header-logo{font-family:'Dancing Script',cursive;font-size:1.5rem;color:var(--teal);margin-bottom:16px;position:relative;z-index:1;}
+.email-header h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:10px;position:relative;z-index:1;}
+.email-header p{font-size:14px;color:rgba(255,255,255,.65);position:relative;z-index:1;}
+.email-body{padding:32px 28px;}
+.email-body p{margin-bottom:16px;font-size:15px;color:#374151;line-height:1.8;}
+.greeting{font-size:16px;color:#1a0a00;font-weight:700;}
+.highlight-box{background:var(--teal-l);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;padding:16px 18px;margin:20px 0;}
+.highlight-box p{margin:0;font-size:13.5px;color:#0d3d30;line-height:1.7;}
+.highlight-box strong{display:block;font-size:14px;font-weight:800;color:var(--teal-d);margin-bottom:6px;}
+
+/* BUILT SECTION */
+.built-section{background:var(--cream);border-radius:16px;padding:24px;margin:20px 0;}
+.built-section h2{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#1a0a00;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #f3e8df;}
+.pages-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.page-item{display:flex;align-items:flex-start;gap:10px;background:#fff;border-radius:10px;padding:12px 14px;}
+.page-icon{font-size:1.3rem;flex-shrink:0;}
+.page-item h3{font-size:13px;font-weight:800;color:#1a0a00;margin-bottom:2px;}
+.page-item p{font-size:12px;color:var(--gray);line-height:1.5;margin:0;}
+
+/* PLANS PREVIEW */
+.plans-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0;}
+.plan-mini{border-radius:12px;padding:16px;text-align:center;}
+.plan-mini.starter{background:#f9fafb;border:1.5px solid #e5e7eb;}
+.plan-mini.growth{background:var(--teal-l);border:1.5px solid var(--teal);}
+.plan-mini.full{background:var(--pink-l);border:1.5px solid var(--pink);}
+.plan-mini .name{font-size:13px;font-weight:800;color:#1a0a00;margin-bottom:4px;}
+.plan-mini .price{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--teal);line-height:1;}
+.plan-mini .period{font-size:11px;color:var(--gray);}
+
+/* LAUNCH FEE */
+.launch-fee-box{background:linear-gradient(135deg,var(--teal-l),#f0fdf4);border:2px solid var(--teal);border-radius:14px;padding:20px;text-align:center;margin:16px 0;}
+.launch-fee-box .amount{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:var(--teal);line-height:1;}
+.launch-fee-box h3{font-size:14px;font-weight:800;color:var(--teal-d);margin-bottom:6px;}
+.launch-fee-box p{font-size:13px;color:var(--gray);line-height:1.7;margin:0;}
+
+/* REVIEW CHECKLIST */
+.checklist-section{background:#fff;border-radius:16px;padding:24px;margin:20px 0;border:1.5px solid #f3e8df;}
+.checklist-section h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;color:#1a0a00;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #f3e8df;}
+.check-group{margin-bottom:16px;}
+.check-group h3{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+.check-list{list-style:none;}
+.check-list li{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;color:#374151;padding:5px 0;line-height:1.5;}
+.check-list li::before{content:"☐";font-size:14px;flex-shrink:0;color:var(--teal);margin-top:1px;}
+
+/* PHOTO REQUEST */
+.photo-box{background:linear-gradient(135deg,#fff0f5,#f0faf9);border:1.5px solid var(--pink-l);border-radius:14px;padding:20px;margin:16px 0;}
+.photo-box h3{font-size:14px;font-weight:800;color:var(--pink-d);margin-bottom:8px;}
+.photo-box p{font-size:13.5px;color:#374151;line-height:1.7;margin:0;}
+.photo-box a{color:var(--teal);font-weight:700;}
+
+/* CTA */
+.cta-row{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap;}
+.cta-btn-teal{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:10px;text-decoration:none;}
+.cta-btn-pink{display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:10px;text-decoration:none;}
+.cta-btn-outline{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--teal);color:var(--teal-d);font-weight:700;font-size:14px;padding:11px 20px;border-radius:10px;text-decoration:none;}
+
+/* SIG */
+.sig{border-top:1px solid #f3e8df;padding-top:20px;margin-top:24px;}
+.sig p{margin-bottom:6px;font-size:14px;color:#374151;}
+.sig .name{font-size:15px;font-weight:800;color:#1a0a00;}
+
+/* INSTRUCTIONS */
+.instructions{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px 24px;margin-bottom:24px;}
+.instructions .label{font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gray);margin-bottom:12px;}
+.tip-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px;color:#374151;}
+.tip-item{display:flex;gap:10px;align-items:flex-start;line-height:1.6;}
+.tip-check{color:var(--teal);font-weight:900;font-size:14px;flex-shrink:0;margin-top:2px;}
+
+/* META */
+.meta{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 20px;margin-bottom:16px;display:grid;grid-template-columns:80px 1fr;gap:6px;font-size:13px;}
+.meta .label{font-weight:800;color:var(--gray);}
+.meta .value{color:#374151;}
+
+@media(max-width:600px){.pages-grid,.plans-row,.tip-grid{grid-template-columns:1fr;}.cta-row{flex-direction:column;}}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <p class="top-label">Sweet Konfections — Welcome Package · Launch AI Group</p>
+
+  <!-- EMAIL META -->
+  <div class="meta">
+    <span class="label">To:</span>     <span class="value">Shannon · info@sweetkonfections.org</span>
+    <span class="label">From:</span>   <span class="value">Anthony Whitner &lt;antg4life@yahoo.com&gt;</span>
+    <span class="label">Subject:</span><span class="value">We built something for Sweet Konfections — take a look when you get a chance 🎂</span>
+  </div>
+
+  <!-- INSTRUCTIONS -->
+  <div class="instructions">
+    <p class="label">How to Use This Package</p>
+    <div class="tip-grid">
+      <div class="tip-item"><span class="tip-check">✓</span><span>Send this file as a link or attachment — open in any browser</span></div>
+      <div class="tip-item"><span class="tip-check">✓</span><span>Share website link so she can click through all 9 pages</span></div>
+      <div class="tip-item"><span class="tip-check">✓</span><span>Ask her to go through the Review Checklist section — her feedback before launch is valuable</span></div>
+      <div class="tip-item"><span class="tip-check">✓</span><span>Ask her to DM or email 10–15 of her best Instagram photos for the gallery</span></div>
+    </div>
+  </div>
+
+  <!-- EMAIL -->
+  <div class="email-card">
+    <div class="email-header">
+      <div class="header-logo">Launch AI Group</div>
+      <h1>Sweet Konfections — We Put Something Together For You 🎂</h1>
+      <p>A full website built before we even asked — here's what we made</p>
+    </div>
+
+    <div class="email-body">
+
+      <p class="greeting">Hi Shannon,</p>
+
+      <p>Hope you're doing well! I wanted to share something with you that I think you're really going to love.</p>
+
+      <p>We spent some time looking at your brand, your menu, and everything you've built with Sweet Konfections — and honestly, we were impressed. You've got an amazing product, a loyal following on Instagram, and a food truck experience that people clearly love. But the digital side wasn't quite matching the quality of what you actually do.</p>
+
+      <p>So we went ahead and built it.</p>
+
+      <div class="highlight-box">
+        <strong>Here's what we built for Sweet Konfections:</strong>
+        A complete 9-page website — homepage, full menu pages, custom cake ordering, party packages, gallery, testimonials, consultation booking, and an online order form. All branded to your colors, your vibe, and your customers. Plus an AI chatbot so visitors can get answers 24/7.
+      </div>
+
+      <!-- WHAT'S BUILT -->
+      <div class="built-section">
+        <h2>📋 9 Pages — All Built & Ready</h2>
+        <div class="pages-grid">
+          <div class="page-item"><span class="page-icon">🏠</span><div><h3>Homepage</h3><p>Full hero, trust bar, menu preview, food truck section, AI chat, social links</p></div></div>
+          <div class="page-item"><span class="page-icon">🍬</span><div><h3>Treats Page</h3><p>Candy apples, cake pops, strawberries, cookies, gift boxes, and more</p></div></div>
+          <div class="page-item"><span class="page-icon">🥧</span><div><h3>Cakes & Pies</h3><p>Red velvet, sweet potato pie, pound cake, peach cobbler, and seasonal</p></div></div>
+          <div class="page-item"><span class="page-icon">🎨</span><div><h3>Custom Cakes</h3><p>Custom order form with flavor, occasion, servings, and design details</p></div></div>
+          <div class="page-item"><span class="page-icon">🎉</span><div><h3>Party Packages</h3><p>Sweetie Package, Konfections Party, and Food Truck Event with full FAQ</p></div></div>
+          <div class="page-item"><span class="page-icon">🎂</span><div><h3>Order Page</h3><p>Direct order form that replaces Bakesy — no platform fee on your sales</p></div></div>
+          <div class="page-item"><span class="page-icon">📅</span><div><h3>Consultation</h3><p>Free consult booking form — captures name, phone, event type, and date</p></div></div>
+          <div class="page-item"><span class="page-icon">📸</span><div><h3>Gallery</h3><p>Filterable photo gallery ready for your real photos from Instagram</p></div></div>
+          <div class="page-item"><span class="page-icon">⭐</span><div><h3>Testimonials</h3><p>Full reviews page with rating stats and Google/Facebook review links</p></div></div>
+        </div>
+      </div>
+
+      <!-- PHOTO REQUEST -->
+      <div class="photo-box">
+        <h3>📸 One Thing We Need From You</h3>
+        <p>Your Instagram <strong>@sweet.konfections</strong> has gorgeous photos of your cakes, treats, and food truck. The gallery and homepage are ready — we just need your best 10–15 photos to swap in the placeholders. Send them our way and we'll have the full site looking exactly like your real work before we go live.</p>
+      </div>
+
+      <p>We also noticed you're using Bakesy.app for online ordering. That platform charges a fee on every sale you make. Our new order page routes everything directly to you — no middleman, no platform fees. You keep 100%.</p>
+
+      <!-- PLANS -->
+      <p>In terms of what this looks like going forward, here are your options:</p>
+
+      <div class="launch-fee-box">
+        <div class="amount">$200</div>
+        <h3>Website Launch Fee — One Time</h3>
+        <p>We build it, set it up on <strong>WordPress + Elementor</strong> on your domain, and send you a free step-by-step "Get Started" guide so you can manage it yourself. You can update photos, prices, menu items, and events with zero coding. Need a hands-on walkthrough? Add a live session for $100. You own it completely.</p>
+      </div>
+
+      <p style="text-align:center;font-size:13px;color:var(--gray);">— or if you want us to handle the ongoing growth side —</p>
+
+      <div class="plans-row">
+        <div class="plan-mini starter">
+          <p class="name">Starter</p>
+          <p class="price">$197</p>
+          <p class="period">/month</p>
+          <p style="font-size:11px;color:var(--gray);margin-top:6px;line-height:1.5;">Website + 4 social posts/month + basic SEO</p>
+        </div>
+        <div class="plan-mini growth">
+          <p class="name" style="color:var(--teal-d);">Growth ⭐</p>
+          <p class="price">$397</p>
+          <p class="period">/month</p>
+          <p style="font-size:11px;color:#374151;margin-top:6px;line-height:1.5;">8 posts + Reels + city SEO + holiday campaigns</p>
+        </div>
+        <div class="plan-mini full">
+          <p class="name" style="color:var(--pink-d);">Full Service</p>
+          <p class="price" style="color:var(--pink);">$597</p>
+          <p class="period">/month</p>
+          <p style="font-size:11px;color:#374151;margin-top:6px;line-height:1.5;">Full social management + automation + SEO buildout</p>
+        </div>
+      </div>
+
+      <p>No rush on any of this — no pressure at all. Just wanted to show you what's possible and let you decide what makes sense. Even if you just want the website for now and want to revisit the rest later, that's completely fine with us.</p>
+
+      <!-- REVIEW CHECKLIST -->
+      <div class="checklist-section">
+        <h2>📋 Please Review Before We Launch</h2>
+        <p style="font-size:13px;color:var(--gray);margin-bottom:14px;line-height:1.7;">Take a few minutes to click through the demo site and check these items. This is your brand — we want it perfect before anything goes live.</p>
+
+        <div class="check-group">
+          <h3>Menu & Pricing Info</h3>
+          <ul class="check-list">
+            <li>Are all the treat types listed correctly on the Treats page?</li>
+            <li>Are all the cake and pie varieties accurate on the Cakes & Pies page?</li>
+            <li>Do the party package descriptions match what you actually offer?</li>
+            <li>Are there any menu items we're missing that should be added?</li>
+          </ul>
+        </div>
+
+        <div class="check-group">
+          <h3>Contact & Business Info</h3>
+          <ul class="check-list">
+            <li>Is info@sweetkonfections.org the correct contact email?</li>
+            <li>What's your business phone number? (We'll add it to all pages)</li>
+            <li>Is Maryland your only service area, or do you serve DC/Virginia too?</li>
+            <li>Do you want a physical address listed, or just the service area?</li>
+          </ul>
+        </div>
+
+        <div class="check-group">
+          <h3>Social Media Links</h3>
+          <ul class="check-list">
+            <li>Instagram: @sweet.konfections — is this the correct handle?</li>
+            <li>What's your Facebook business page URL?</li>
+            <li>Do you have a TikTok account for Sweet Konfections?</li>
+            <li>Any other social platforms you want linked?</li>
+          </ul>
+        </div>
+
+        <div class="check-group">
+          <h3>Pages to Click Through</h3>
+          <ul class="check-list">
+            <li>Homepage — does everything feel like YOUR brand?</li>
+            <li>Custom Cakes — are the flavor options accurate?</li>
+            <li>Party Packages — are the package descriptions right?</li>
+            <li>Gallery — do you have 10+ photos to share from Instagram?</li>
+            <li>Testimonials — any reviews you want us to feature specifically?</li>
+          </ul>
+        </div>
+
+        <div class="check-group">
+          <h3>Anything We Missed?</h3>
+          <ul class="check-list">
+            <li>Any page or feature you wish was included that we didn't build?</li>
+            <li>Anything about the design you'd like changed — colors, tone, layout?</li>
+            <li>Any seasonal offerings or special items we should add?</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Just hit reply to this email or call/text me directly with your feedback. I'll have every update made same day or next day — that's the commitment.</p>
+
+      <div class="cta-row">
+        <a href="index.html" class="cta-btn-teal" target="_blank">🌐 View the Website</a>
+        <a href="SK_Proposal.html" class="cta-btn-pink" target="_blank">📋 View Full Proposal</a>
+        <a href="mailto:antg4life@yahoo.com" class="cta-btn-outline">✉️ Send Feedback</a>
+      </div>
+
+      <p>No rush. No pressure. Take your time, click through everything, and let us know what you think. We're rooting for Sweet Konfections — and we're here whenever you're ready.</p>
+
+      <div class="sig">
+        <p class="name">Anthony Whitner</p>
+        <p>Founder, Launch AI Group</p>
+        <p style="color:var(--gray);">📞 (443) 475-0455</p>
+        <p style="color:var(--gray);">✉️ antg4life@yahoo.com</p>
+        <p style="margin-top:12px;font-size:13px;color:#9ca3af;">P.S. — The proposal doc (SK_Proposal.html) breaks down exactly what we found, all 8 creative ways to grow revenue, the Bakesy replacement strategy, city SEO pages, and full plan pricing. Worth a read when you have 10 minutes.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TIPS -->
+  <div class="instructions">
+    <p class="label">Sending Tips</p>
+    <div class="tip-grid">
+      <div class="tip-item"><span class="tip-check">✓</span><span>Open this file in Chrome, File → Print → Save as PDF to email it, or share the file directly</span></div>
+      <div class="tip-item"><span class="tip-check">✓</span><span>Also share the <strong>index.html</strong> link or all 9 HTML files in a zip so she can preview the site</span></div>
+      <div class="tip-item"><span class="tip-check">✓</span><span>Keep the tone like you're sharing something cool with a fellow business owner — not selling</span></div>
+      <div class="tip-item"><span class="tip-check">✓</span><span>The review checklist is key — it gets her engaged AND gives you the info you need before launch</span></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

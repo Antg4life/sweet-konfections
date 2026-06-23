@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sweet Konfections — Get Started Guide | Launch AI Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#2db5a0;--teal-d:#1a8a78;--teal-l:#e8f8f5;--pink:#f06292;--pink-d:#c2185b;--pink-l:#fce4ec;--cream:#fff9f5;--dark:#1a0a00;--gray:#6b7280;}
+body{font-family:'Inter',sans-serif;background:#f3f4f6;color:#1f2937;line-height:1.6;}
+a{text-decoration:none;color:var(--teal);}
+.wrapper{max-width:820px;margin:0 auto;padding:32px 16px;}
+
+/* COVER */
+.cover{background:linear-gradient(135deg,#1a0a00,#3d0a1a,#0a1a10);border-radius:20px;padding:52px 36px;text-align:center;margin-bottom:24px;position:relative;overflow:hidden;}
+.cover::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(240,98,146,.15),transparent 70%);}
+.cover::after{content:'';position:absolute;bottom:-40px;left:-40px;width:240px;height:240px;background:radial-gradient(circle,rgba(45,181,160,.12),transparent 70%);}
+.cover-logo{font-family:'Dancing Script',cursive;font-size:1.4rem;color:var(--teal);margin-bottom:16px;position:relative;z-index:1;}
+.cover h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px;position:relative;z-index:1;}
+.cover h1 span{color:var(--teal);}
+.cover p{font-size:15px;color:rgba(255,255,255,.6);position:relative;z-index:1;max-width:520px;margin:0 auto;}
+.cover-badge{display:inline-block;background:rgba(45,181,160,.15);border:1px solid rgba(45,181,160,.3);color:var(--teal);font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px;position:relative;z-index:1;}
+
+/* BLOCKS */
+.block{background:#fff;border-radius:16px;padding:32px;margin-bottom:18px;}
+.block-teal{background:var(--teal-l);border-radius:16px;padding:32px;margin-bottom:18px;border:1.5px solid rgba(45,181,160,.25);}
+.block-pink{background:var(--pink-l);border-radius:16px;padding:32px;margin-bottom:18px;border:1.5px solid rgba(240,98,146,.2);}
+.block-dark{background:linear-gradient(135deg,#1a0a00,#0a1a10);border-radius:16px;padding:32px;margin-bottom:18px;}
+.block-cream{background:var(--cream);border-radius:16px;padding:32px;margin-bottom:18px;border:1.5px solid #f3e8df;}
+
+.eyebrow{font-size:10px;font-weight:800;letter-spacing:.25em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+.eyebrow-pink{color:var(--pink-d);}
+h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:900;color:var(--dark);margin-bottom:10px;}
+.block-dark h2{color:#fff;}
+.lead{font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:20px;}
+.block-dark .lead{color:rgba(255,255,255,.65);}
+
+/* LOGIN BOX */
+.login-box{background:#fff;border:2px dashed var(--teal);border-radius:12px;padding:20px 24px;}
+.login-row{display:grid;grid-template-columns:120px 1fr;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid #f3e8df;font-size:14px;}
+.login-row:last-child{border-bottom:none;}
+.login-label{font-weight:800;color:var(--gray);font-size:12px;}
+.login-val{color:var(--dark);font-weight:600;background:var(--teal-l);padding:6px 12px;border-radius:8px;font-size:13px;}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:16px;}
+.step{display:flex;gap:16px;align-items:flex-start;}
+.step-num{background:var(--teal);color:#fff;font-weight:900;font-size:14px;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.step-body h3{font-size:15px;font-weight:800;color:var(--dark);margin-bottom:4px;}
+.step-body p{font-size:13.5px;color:var(--gray);line-height:1.65;}
+.step-body .tip{display:inline-block;background:var(--teal-l);color:var(--teal-d);font-size:11px;font-weight:700;padding:2px 10px;border-radius:20px;margin-top:6px;}
+
+/* CHECKLIST */
+.checklist{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.checklist li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#374151;line-height:1.6;}
+.check-circle{width:22px;height:22px;border:2px solid var(--teal);border-radius:50%;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;}
+.checked{background:var(--teal);}
+.checked::after{content:'✓';color:#fff;font-size:11px;font-weight:900;}
+
+/* QUICK UPDATES */
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.quick-card{background:#fff;border-radius:14px;padding:18px;border:1.5px solid #f3e8df;}
+.quick-card h3{font-size:13px;font-weight:800;color:var(--dark);margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.quick-card p{font-size:12.5px;color:var(--gray);line-height:1.6;}
+.quick-card code{display:block;background:#f1f5f9;border-radius:6px;padding:6px 10px;font-size:12px;color:var(--teal-d);margin-top:8px;font-family:monospace;}
+
+/* GROWTH SECTION */
+.growth-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px;}
+.growth-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px;}
+.growth-card h3{font-size:13px;font-weight:800;color:#fff;margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.growth-card p{font-size:12.5px;color:rgba(255,255,255,.6);line-height:1.6;}
+
+/* PLANS */
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;}
+.plan{border-radius:16px;padding:22px;text-align:center;position:relative;}
+.plan-free{background:var(--cream);border:2px solid #e5e7eb;}
+.plan-starter{background:#fff;border:2px solid #e5e7eb;}
+.plan-growth{background:var(--teal-l);border:2.5px solid var(--teal);}
+.plan-full{background:var(--pink-l);border:2px solid var(--pink);}
+.popular-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 12px;border-radius:20px;white-space:nowrap;}
+.plan-icon{font-size:1.8rem;margin-bottom:8px;}
+.plan-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:var(--dark);margin-bottom:4px;}
+.plan-price{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--teal);line-height:1;}
+.plan-period{font-size:11px;color:var(--gray);margin-bottom:10px;}
+.plan-list{list-style:none;text-align:left;font-size:12px;color:#374151;line-height:1.9;}
+.plan-list li::before{content:'✓ ';color:var(--teal);font-weight:900;}
+
+/* PAYMENT */
+.pay-box{background:var(--teal-l);border:2px solid var(--teal);border-radius:14px;padding:22px;text-align:center;margin-top:20px;}
+.pay-box .amount{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--teal);line-height:1;margin-bottom:6px;}
+.pay-box p{font-size:13px;color:#374151;line-height:1.7;}
+.pay-zelle{font-size:16px;font-weight:800;color:var(--teal-d);margin:10px 0;}
+
+/* SUPPORT */
+.support-row{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap;}
+.support-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:700;font-size:13px;}
+.btn-teal{background:var(--teal);color:#fff;}
+.btn-pink{background:var(--pink);color:#fff;}
+.btn-dark{background:#1a0a00;color:#fff;}
+
+@media(max-width:640px){.quick-grid,.growth-grid,.plans-grid{grid-template-columns:1fr;}.login-row{grid-template-columns:1fr;gap:4px;}}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- COVER -->
+  <div class="cover">
+    <p class="cover-badge">Launch AI Group · Client Guide</p>
+    <p class="cover-logo">Sweet Konfections</p>
+    <h1>Your <span>Get Started</span> Guide</h1>
+    <p>Everything you need to manage your new website, grow your social media, and get the most out of your Launch AI Group partnership.</p>
+  </div>
+
+  <!-- WELCOME -->
+  <div class="block">
+    <p class="eyebrow">Welcome</p>
+    <h2>Congratulations — Your Site is Live 🎉</h2>
+    <p class="lead">Your new Sweet Konfections website is fully built and live on your domain. This guide gives you everything you need to manage it yourself, update your content, and grow your online presence. Save this page — you'll refer back to it often.</p>
+    <ul class="checklist">
+      <li><div class="check-circle checked"></div>9-page website live on sweetkonfections.com</li>
+      <li><div class="check-circle checked"></div>WordPress + Elementor installed — you're in full control</li>
+      <li><div class="check-circle checked"></div>AI chatbot answering customer questions 24/7</li>
+      <li><div class="check-circle checked"></div>Direct order form (no Bakesy fees — every dollar goes to you)</li>
+      <li><div class="check-circle checked"></div>All social media linked — Instagram, Threads, Facebook</li>
+      <li><div class="check-circle checked"></div>SEO setup — customers in Maryland, Baltimore & Delaware can find you</li>
+      <li><div class="check-circle checked"></div>"Find Our Truck" event schedule section live on homepage</li>
+    </ul>
+  </div>
+
+  <!-- LOGIN INFO -->
+  <div class="block-teal">
+    <p class="eyebrow">Your Access</p>
+    <h2>Your WordPress Login</h2>
+    <p class="lead" style="margin-bottom:16px;">Bookmark this URL and save your login. This is where you manage everything on your site.</p>
+    <div class="login-box">
+      <div class="login-row">
+        <span class="login-label">Website URL</span>
+        <span class="login-val">sweetkonfections.com</span>
+      </div>
+      <div class="login-row">
+        <span class="login-label">Dashboard Login</span>
+        <span class="login-val">sweetkonfections.com/wp-admin</span>
+      </div>
+      <div class="login-row">
+        <span class="login-label">Username</span>
+        <span class="login-val">[ provided by Launch AI Group ]</span>
+      </div>
+      <div class="login-row">
+        <span class="login-label">Password</span>
+        <span class="login-val">[ provided by Launch AI Group ]</span>
+      </div>
+      <div class="login-row">
+        <span class="login-label">Support Email</span>
+        <span class="login-val">antg4life@yahoo.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW TO MANAGE -->
+  <div class="block">
+    <p class="eyebrow">Managing Your Site</p>
+    <h2>How to Update Your Website</h2>
+    <p class="lead">WordPress + Elementor makes updates as easy as clicking and typing. No coding, no tech skills needed.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Log into your WordPress Dashboard</h3>
+          <p>Go to <strong>sweetkonfections.com/wp-admin</strong> and enter your username and password. You'll land on the main dashboard.</p>
+          <span class="tip">Bookmark this page on your phone and computer</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Open the page you want to edit</h3>
+          <p>In the left menu click <strong>Pages</strong>, find the page you want to change (Home, Treats, Gallery, etc.), and click <strong>Edit with Elementor</strong>.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Click anything to edit it</h3>
+          <p>In Elementor, just click on any text to change the words, or click an image to swap it out. Everything is drag-and-drop.</p>
+          <span class="tip">Changes are live only after you click the green "Publish" button</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Save and publish</h3>
+          <p>When you're done, click the green <strong>Publish</strong> button at the bottom left of the Elementor panel. Your changes go live immediately.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK UPDATE GUIDE -->
+  <div class="block-cream">
+    <p class="eyebrow">Quick Reference</p>
+    <h2>Most Common Updates</h2>
+    <p class="lead">These are the things you'll update most often. Each one takes less than 2 minutes.</p>
+    <div class="quick-grid">
+      <div class="quick-card">
+        <h3>🎂 Update a Price</h3>
+        <p>Go to Pages → find the product page → Edit with Elementor → click the price text → type the new price → Publish.</p>
+        <code>Pages → Treats (or Cakes) → Edit → click price → update → Publish</code>
+      </div>
+      <div class="quick-card">
+        <h3>📸 Swap a Photo</h3>
+        <p>Click the image in Elementor → click the photo icon → upload your new photo from your phone or computer → Publish.</p>
+        <code>Click image → upload new photo → Publish</code>
+      </div>
+      <div class="quick-card">
+        <h3>🚚 Add a New Event</h3>
+        <p>Go to your Homepage → Find Our Truck section → click an existing event card → duplicate it → update the date, name, and location → Publish.</p>
+        <code>Home → Find Our Truck → duplicate card → edit → Publish</code>
+      </div>
+      <div class="quick-card">
+        <h3>🖼️ Add Gallery Photos</h3>
+        <p>Go to Pages → Gallery → Edit with Elementor → click any gallery item → upload new photo → update the label → Publish.</p>
+        <code>Pages → Gallery → click photo → upload → Publish</code>
+      </div>
+      <div class="quick-card">
+        <h3>📝 Update Your About Section</h3>
+        <p>Go to Pages → Home → Edit with Elementor → scroll to the "Our Story" section → click the text → edit → Publish.</p>
+        <code>Home → Our Story section → click text → edit → Publish</code>
+      </div>
+      <div class="quick-card">
+        <h3>📦 Add a New Product</h3>
+        <p>Go to the relevant page → Edit with Elementor → right-click an existing product card → Duplicate → update the photo, name, description, and price → Publish.</p>
+        <code>Product page → right-click card → Duplicate → edit → Publish</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIRST WEEK CHECKLIST -->
+  <div class="block">
+    <p class="eyebrow">Action Items</p>
+    <h2>5 Things to Do in Your First Week</h2>
+    <p class="lead">These quick steps will make your site feel completely yours and help customers find you faster.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Upload your best cake photos to the Gallery</h3>
+          <p>The gallery is the first thing new customers explore. Add your most recent custom cakes, cupcakes, and food truck shots from Instagram. Aim for 20–30 real photos.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Add your next 3 upcoming events to "Find Our Truck"</h3>
+          <p>Customers love knowing where to find you. Keeping this section updated drives real foot traffic to your booth and truck.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Share your new website link on Instagram and Facebook</h3>
+          <p>Post: <em>"We just launched our new website! 🎂 Visit sweetkonfections.com to browse our menu, view the gallery, and place your order."</em> — and add the link to your Instagram bio.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Update your Facebook page profile and cover photo</h3>
+          <p>A complete Facebook profile builds trust and helps customers find you in search. Add a clear profile photo (your logo or a great product shot) and a cover photo showing your truck or a beautiful cake spread.</p>
+          <span class="tip">This takes 5 minutes and makes a huge first impression</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h3>Ask your 5 most recent customers to leave a Google review</h3>
+          <p>Text them directly: <em>"Hey! I just launched a new website — would you mind leaving a quick Google review for Sweet Konfections? It really helps! 🙏"</em> Five new reviews can double your local search visibility.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GROWTH SECTION -->
+  <div class="block-dark">
+    <p class="eyebrow" style="color:var(--teal);">Grow Your Business</p>
+    <h2>Ready to Take It to the Next Level?</h2>
+    <p class="lead">Your website is just the foundation. Here's what we can handle for you so you can focus on what you do best — creating incredible desserts.</p>
+    <div class="growth-grid">
+      <div class="growth-card">
+        <h3>📘 Facebook & Instagram Growth</h3>
+        <p>We create and post branded content for you — event announcements, product spotlights, festival recaps, and engagement posts. Consistent posting grows your audience and brings repeat customers back.</p>
+      </div>
+      <div class="growth-card">
+        <h3>🔍 Local SEO — Be Found on Google</h3>
+        <p>We build out city-specific pages for Baltimore, Westminster, Delaware, and surrounding areas so when someone searches "custom cakes near me" or "dessert food truck Maryland" — you show up at the top.</p>
+      </div>
+      <div class="growth-card">
+        <h3>🤖 AI Automation</h3>
+        <p>Automated follow-up messages after someone fills out your order form, appointment reminders, review request texts, and lead nurture sequences — all running in the background while you bake.</p>
+      </div>
+      <div class="growth-card">
+        <h3>📧 Email & Text Campaigns</h3>
+        <p>Monthly emails and text blasts to your customer list announcing new menu items, upcoming festivals, holiday specials, and limited-time offers. Keeps your regulars coming back.</p>
+      </div>
+      <div class="growth-card">
+        <h3>📢 Paid Ads Management</h3>
+        <p>Facebook and Instagram ads targeting people in Maryland, Baltimore, Delaware, and DMV who are searching for custom cakes and event catering. We run and manage the ads for you.</p>
+      </div>
+      <div class="growth-card">
+        <h3>🎪 Festival & Event Marketing</h3>
+        <p>Pre-event social posts, countdowns, event-day check-in posts, and post-event recap content — so every festival you attend builds more followers and future customers.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="block">
+    <p class="eyebrow">Your Options</p>
+    <h2>Plans That Grow With You</h2>
+    <p class="lead">Every plan is built on top of your live website. Choose the level of support that fits where you are right now — you can always upgrade later.</p>
+
+    <div class="plans-grid">
+
+      <div class="plan plan-free">
+        <div class="plan-icon">🌐</div>
+        <p class="plan-name">Launch Only</p>
+        <p class="plan-price" style="font-size:1.6rem;">$200</p>
+        <p class="plan-period">one-time</p>
+        <ul class="plan-list">
+          <li>9-page website live</li>
+          <li>WordPress + Elementor</li>
+          <li>AI chatbot included</li>
+          <li>Order form (no fees)</li>
+          <li>Social links + SEO setup</li>
+          <li>This Get Started Guide</li>
+          <li>30-day support window</li>
+        </ul>
+      </div>
+
+      <div class="plan plan-starter">
+        <div class="plan-icon">🧁</div>
+        <p class="plan-name">Starter</p>
+        <p class="plan-price">$197</p>
+        <p class="plan-period">per month + $200 launch</p>
+        <ul class="plan-list">
+          <li>Everything in Launch</li>
+          <li>4 social posts/month</li>
+          <li>Facebook page optimization</li>
+          <li>Monthly SEO updates</li>
+          <li>Google Business management</li>
+          <li>Monthly performance report</li>
+        </ul>
+      </div>
+
+      <div class="plan plan-growth" style="position:relative;">
+        <div class="popular-tag">Most Popular</div>
+        <div class="plan-icon">🎉</div>
+        <p class="plan-name">Growth</p>
+        <p class="plan-price">$397</p>
+        <p class="plan-period">per month + $200 launch</p>
+        <ul class="plan-list">
+          <li>Everything in Starter</li>
+          <li>12 social posts/month</li>
+          <li>Facebook + Instagram content</li>
+          <li>AI automation setup</li>
+          <li>Email/text campaigns</li>
+          <li>City SEO pages (12 cities)</li>
+          <li>Review generation system</li>
+          <li>Festival event marketing</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="plan plan-full" style="border-radius:16px;padding:22px;margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;">
+      <div style="text-align:center;">
+        <div class="plan-icon">🚀</div>
+        <p class="plan-name">Full Service</p>
+        <p class="plan-price">$597</p>
+        <p class="plan-period" style="font-size:11px;color:var(--gray);">per month + $200 launch</p>
+      </div>
+      <ul class="plan-list" style="columns:2;gap:20px;">
+        <li>Everything in Growth</li>
+        <li>Daily social media content</li>
+        <li>Facebook + Instagram ads managed</li>
+        <li>Full AI automation suite</li>
+        <li>Weekly email + text campaigns</li>
+        <li>Complete SEO domination</li>
+        <li>Monthly strategy call</li>
+        <li>Priority support — same day response</li>
+      </ul>
+    </div>
+
+    <p style="text-align:center;font-size:13px;color:var(--gray);margin-top:14px;line-height:1.7;">Already paid the $200 Launch Fee? It applies toward any monthly plan you choose within 60 days.</p>
+  </div>
+
+  <!-- PAYMENT -->
+  <div class="block-teal">
+    <p class="eyebrow">To Get Started</p>
+    <h2>Ready to Launch or Upgrade?</h2>
+    <p class="lead">Send payment via Zelle and your site goes live within 24–48 hours. For monthly plans, your first month starts on the day we receive payment.</p>
+    <div class="pay-box">
+      <p style="font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-d);margin-bottom:6px;">Send via Zelle</p>
+      <p class="pay-zelle">📱 (313) 205-3355</p>
+      <p class="pay-zelle" style="margin-top:-6px;">✉️ antg4life@yahoo.com</p>
+      <p style="font-size:13px;color:var(--gray);margin-top:10px;">Memo: <strong>Sweet Konfections — [Launch / Starter / Growth / Full Service]</strong></p>
+    </div>
+  </div>
+
+  <!-- SUPPORT -->
+  <div class="block">
+    <p class="eyebrow">Support</p>
+    <h2>Need Help? We're Here.</h2>
+    <p class="lead">Questions about updating your site, adding new content, or anything else — reach out any time. We typically respond within a few hours.</p>
+    <div class="support-row">
+      <a href="mailto:antg4life@yahoo.com" class="support-btn btn-teal">✉️ Email Us</a>
+      <a href="tel:4434750455" class="support-btn btn-dark">📞 (443) 475-0455</a>
+      <a href="https://www.facebook.com/SweetKonfections2" target="_blank" class="support-btn btn-pink">📘 Message on Facebook</a>
+    </div>
+    <p style="font-size:13px;color:var(--gray);margin-top:16px;line-height:1.7;">Need a live walkthrough of your WordPress dashboard? We offer a hands-on screen share session for <strong>$100</strong> — we'll walk through everything together until you feel 100% confident.</p>
+  </div>
+
+</div>
+</body>
+</html>

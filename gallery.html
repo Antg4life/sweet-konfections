@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Gallery | Sweet Konfections Maryland</title>
+<meta name="description" content="Browse Sweet Konfections gallery — custom cakes, treats, party setups, and food truck moments. Maryland, Baltimore & Delaware's favorite dessert experience."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#2db5a0;--teal-d:#1a8a78;--teal-l:#e8f8f5;--pink:#f06292;--pink-d:#c2185b;--pink-l:#fce4ec;--cream:#fff9f5;--dark:#1a0a00;--gray:#6b7280;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,249,245,.97);backdrop-filter:blur(16px);border-bottom:2px solid #f3e8df;}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{font-family:'Dancing Script',cursive;font-size:1.7rem;font-weight:700;color:var(--teal);line-height:1;}
+.nav-logo span{color:var(--pink);display:block;font-size:1rem;}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-link{font-size:13px;font-weight:600;color:#5d4037;padding:7px 12px;border-radius:8px;transition:background .2s,color .2s;}
+.nav-link:hover,.nav-link.active{background:var(--teal-l);color:var(--teal-d);}
+.nav-cta{background:var(--pink);color:#fff!important;border-radius:20px;padding:9px 20px!important;font-size:13px;font-weight:700;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.ham span{display:block;width:24px;height:2.5px;background:var(--teal-d);border-radius:2px;}
+#mob-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #f3e8df;padding:12px 0 20px;}
+#mob-nav.open{display:block;}
+#mob-nav a{display:block;padding:12px 24px;font-weight:600;color:#5d4037;font-size:15px;border-bottom:1px solid #fdf6f0;}
+#mob-nav a:last-child{background:var(--pink);color:#fff;margin:12px 16px 0;border-radius:10px;text-align:center;border-bottom:none;}
+.hero{background:linear-gradient(135deg,#fff0f5,#f0faf9);padding:56px 24px;text-align:center;}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--dark);margin-bottom:10px;}
+.hero p{font-size:15px;color:#5d4037;max-width:520px;margin:0 auto;line-height:1.8;}
+.filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:28px 24px 0;}
+.filter-btn{background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:8px 18px;font-size:13px;font-weight:600;color:var(--gray);cursor:pointer;transition:all .2s;}
+.filter-btn:hover,.filter-btn.active{background:var(--pink);border-color:var(--pink);color:#fff;}
+.gallery-section{padding:32px 24px 64px;}
+.gallery-inner{max-width:1100px;margin:0 auto;}
+.gallery-grid{columns:3;gap:18px;}
+.gallery-item{break-inside:avoid;margin-bottom:18px;border-radius:16px;overflow:hidden;position:relative;cursor:pointer;box-shadow:0 4px 20px -6px rgba(0,0,0,.1);transition:transform .25s,box-shadow .25s;}
+.gallery-item:hover{transform:scale(1.02);box-shadow:0 12px 36px -6px rgba(0,0,0,.18);}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;}
+.gallery-item .label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);padding:20px 14px 10px;color:#fff;font-size:12px;font-weight:700;transform:translateY(100%);transition:transform .25s;}
+.gallery-item:hover .label{transform:translateY(0);}
+.tall{aspect-ratio:3/4;}
+.wide{aspect-ratio:4/3;}
+.square{aspect-ratio:1;}
+.social-cta{background:linear-gradient(135deg,#1a0a00,#3d1a00);padding:56px 24px;text-align:center;}
+.social-cta h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;margin-bottom:10px;}
+.social-cta p{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:28px;line-height:1.7;}
+.social-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.social-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:700;font-size:13px;}
+.fb{background:#1877f2;color:#fff;}
+.ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;}
+.tt{background:#000;color:#fff;}
+.order-cta{background:linear-gradient(135deg,var(--pink),var(--pink-d));padding:56px 24px;text-align:center;}
+.order-cta h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:#fff;margin-bottom:10px;}
+.order-cta p{font-size:15px;color:rgba(255,255,255,.85);margin-bottom:24px;}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--pink-d);font-weight:800;font-size:15px;padding:14px 32px;border-radius:12px;}
+footer{background:#1a0a00;color:rgba(255,255,255,.5);padding:28px 24px;text-align:center;font-size:13px;}
+footer a{color:var(--teal);}
+@media(max-width:700px){.gallery-grid{columns:2;}.nav-links{display:none;}.ham{display:flex!important;}}
+@media(max-width:420px){.gallery-grid{columns:1;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Sweet<span>Konfections ✨</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="treats.html" class="nav-link">Treats</a>
+      <a href="traditional-cakes.html" class="nav-link">Cakes & Pies</a>
+      <a href="custom-cakes.html" class="nav-link">Custom Cakes</a>
+      <a href="party-packages.html" class="nav-link">Party Packages</a>
+      <a href="gallery.html" class="nav-link active">Gallery</a>
+      <a href="order.html" class="nav-cta nav-link">Order Now 🎂</a>
+    </div>
+    <button class="ham" onclick="document.getElementById('mob-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+  <div id="mob-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="treats.html">🍬 Treats</a>
+    <a href="traditional-cakes.html">🥧 Cakes & Pies</a>
+    <a href="custom-cakes.html">🎨 Custom Cakes</a>
+    <a href="party-packages.html">🎉 Party Packages</a>
+    <a href="gallery.html">📸 Gallery</a>
+    <a href="testimonials.html">⭐ Testimonials</a>
+    <a href="order.html">🎂 Order Now</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <p class="eyebrow">Our Work</p>
+  <h1>Every Creation Tells a Story</h1>
+  <p>Browse our portfolio of custom cakes, handcrafted treats, party setups, and food truck moments. Each piece is made with love and designed to make your celebration unforgettable.</p>
+</div>
+
+<div class="filters">
+  <button class="filter-btn active" onclick="filterGallery('all',this)">All</button>
+  <button class="filter-btn" onclick="filterGallery('custom-cakes',this)">Custom Cakes</button>
+  <button class="filter-btn" onclick="filterGallery('cupcakes',this)">Cupcakes</button>
+  <button class="filter-btn" onclick="filterGallery('treats',this)">Treats & Cookies</button>
+  <button class="filter-btn" onclick="filterGallery('truck',this)">Food Truck</button>
+  <button class="filter-btn" onclick="filterGallery('events',this)">Events</button>
+</div>
+
+<section class="gallery-section">
+  <div class="gallery-inner">
+    <div class="gallery-grid" id="gallery-grid">
+
+      <!-- Custom Cakes -->
+      <div class="gallery-item tall" data-cat="custom-cakes">
+        <img src="images/cake-unicorn.jpg" alt="Custom Unicorn Birthday Cake"/>
+        <div class="label">Custom Unicorn Birthday Cake</div>
+      </div>
+      <div class="gallery-item square" data-cat="cupcakes">
+        <img src="images/cupcakes-purple-gold.jpg" alt="Purple Cupcakes with Gold Roses"/>
+        <div class="label">Purple & Gold Rose Cupcakes</div>
+      </div>
+      <div class="gallery-item wide" data-cat="treats">
+        <img src="images/funnel-cake-fries.jpg" alt="Funnel Cake Fries"/>
+        <div class="label">Funnel Cake Fries — Food Truck Signature</div>
+      </div>
+      <div class="gallery-item square" data-cat="custom-cakes">
+        <img src="images/cake-spiderman.jpg" alt="Spider-Man Birthday Cake"/>
+        <div class="label">Spidey & Amazing Friends Birthday Cake</div>
+      </div>
+      <div class="gallery-item wide" data-cat="events">
+        <img src="images/food-truck-front.jpg" alt="Sweet Konfections Food Truck at Event"/>
+        <div class="label">Sweet Konfections Food Truck — Festival</div>
+      </div>
+      <div class="gallery-item square" data-cat="cupcakes">
+        <img src="images/cupcakes-mickey.jpg" alt="Mickey Mouse Themed Cupcakes"/>
+        <div class="label">Mickey Mouse Themed Cupcakes</div>
+      </div>
+      <div class="gallery-item tall" data-cat="custom-cakes">
+        <img src="images/cake-rose-heels.jpg" alt="Elegant Rose & High Heel Custom Cake"/>
+        <div class="label">Elegant Rose & High Heel Celebration Cake</div>
+      </div>
+      <div class="gallery-item square" data-cat="treats">
+        <img src="images/cookie-smores.jpg" alt="S'mores Stuffed Cookie"/>
+        <div class="label">S'mores Stuffed Cookie</div>
+      </div>
+      <div class="gallery-item wide" data-cat="events">
+        <img src="images/festival-booth.jpg" alt="Sweet Konfections Festival Booth"/>
+        <div class="label">Sweet Konfections Festival Booth</div>
+      </div>
+      <div class="gallery-item square" data-cat="custom-cakes">
+        <img src="images/cake-nurse-graduation.jpg" alt="Nurse Graduation Custom Cake"/>
+        <div class="label">Nurse Graduation Custom Cake — BSN</div>
+      </div>
+      <div class="gallery-item square" data-cat="treats">
+        <img src="images/cookie-butterfinger.jpg" alt="Butterfinger Stuffed Cookie"/>
+        <div class="label">Butterfinger Stuffed Cookie</div>
+      </div>
+      <div class="gallery-item wide" data-cat="cupcakes">
+        <img src="images/cupcakes-teal.jpg" alt="Teal and Cream Cupcakes"/>
+        <div class="label">Teal & Cream Wedding Cupcakes</div>
+      </div>
+      <div class="gallery-item tall" data-cat="custom-cakes">
+        <img src="images/cake-jojo-siwa.jpg" alt="JoJo Siwa Themed Cake"/>
+        <div class="label">JoJo Siwa Themed Birthday Cake</div>
+      </div>
+      <div class="gallery-item square" data-cat="treats">
+        <img src="images/fried-dessert.jpg" alt="Fried Dessert with Whipped Cream"/>
+        <div class="label">Fried Dessert — Food Truck Special</div>
+      </div>
+      <div class="gallery-item wide" data-cat="events">
+        <img src="images/festival-booth-city.jpg" alt="Sweet Konfections City Festival Booth"/>
+        <div class="label">City Festival Vendor Booth</div>
+      </div>
+      <div class="gallery-item square" data-cat="custom-cakes">
+        <img src="images/cake-strawberry-shortcake.jpg" alt="Strawberry Shortcake"/>
+        <div class="label">Fresh Strawberry Shortcake</div>
+      </div>
+      <div class="gallery-item square" data-cat="treats">
+        <img src="images/choc-cookies.jpg" alt="Chocolate Drizzle Cookies"/>
+        <div class="label">Chocolate Drizzle Cookies</div>
+      </div>
+      <div class="gallery-item wide" data-cat="truck">
+        <img src="images/food-truck-side.jpg" alt="Sweet Konfections Food Truck Side View"/>
+        <div class="label">Sweet Konfections — Funnel Cake Fries Truck</div>
+      </div>
+      <div class="gallery-item square" data-cat="treats">
+        <img src="images/cookie-banana-pudding.jpg" alt="Banana Pudding Cookie"/>
+        <div class="label">Banana Pudding Cookie</div>
+      </div>
+      <div class="gallery-item square" data-cat="cupcakes">
+        <img src="images/bundt-cake-whipped.jpg" alt="Bundt Cake with Whipped Cream"/>
+        <div class="label">Bundt Cake with Whipped Cream & Drizzle</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="social-cta">
+  <h2>Follow Us for Daily Sweet Inspo</h2>
+  <p>See new creations every week — behind-the-scenes baking, finished orders, and customer celebrations. Tag us in your Sweet Konfections moments!</p>
+  <div class="social-btns">
+    <a href="https://www.instagram.com/sweet.konfections" target="_blank" class="social-btn ig">📸 Instagram</a>
+    <a href="https://www.threads.net/@sweet.konfections" target="_blank" class="social-btn tt">🧵 Threads</a>
+    <a href="https://www.facebook.com/SweetKonfections2" target="_blank" class="social-btn fb">📘 Facebook</a>
+  </div>
+  <p style="margin-top:18px;font-size:13px;color:rgba(255,255,255,.4);">Use <strong style="color:var(--teal);">#SweetKonfections</strong> when you share!</p>
+</div>
+
+<div class="order-cta">
+  <h2>Love What You See?</h2>
+  <p>Let's create something just as beautiful for your next event. Place your order or book a free consultation today.</p>
+  <a href="order.html" class="btn-white">🎂 Place Your Order</a>
+</div>
+
+<footer>
+  <p>© 2026 Sweet Konfections · Maryland · <a href="mailto:info@sweetkonfections.org">info@sweetkonfections.org</a> · Website by <strong>Launch AI Group</strong></p>
+</footer>
+
+<script>
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    if (cat === 'all' || item.dataset.cat === cat) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

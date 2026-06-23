@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sweet Konfections — Growth Proposal | Launch AI Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=Barlow+Semi+Condensed:wght@700;900&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --teal:#2db5a0;--teal-d:#1a8a78;--teal-l:#e8f8f5;
+  --pink:#f06292;--pink-d:#c2185b;--pink-l:#fce4ec;
+  --cream:#fff9f5;--dark:#1a0a00;--gray:#6b7280;
+  --gold:#d4a017;--gold-l:#fef9e7;
+}
+body{font-family:'Inter',sans-serif;background:#f3f4f6;color:#1f2937;line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+
+/* COVER */
+.cover{background:linear-gradient(145deg,#1a0a00,#3d0a1a,#0a1a10);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 24px;text-align:center;position:relative;overflow:hidden;}
+.cover::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(240,98,146,.15),transparent 70%);pointer-events:none;}
+.cover::after{content:'';position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(45,181,160,.12),transparent 70%);pointer-events:none;}
+.cover-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;}
+.cover-badge{display:inline-block;background:rgba(45,181,160,.15);border:1px solid rgba(45,181,160,.3);color:var(--teal);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:8px 20px;border-radius:20px;margin-bottom:28px;}
+.cover h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:16px;}
+.cover h1 span{color:var(--teal);}
+.cover-sub{font-size:16px;color:rgba(255,255,255,.6);margin-bottom:40px;line-height:1.8;}
+.cover-divider{width:60px;height:3px;background:linear-gradient(135deg,var(--pink),var(--teal));margin:0 auto 40px;border-radius:2px;}
+.cover-meta{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;}
+.cover-meta-item p{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:4px;}
+.cover-meta-item strong{font-size:15px;color:rgba(255,255,255,.8);}
+
+/* LAYOUT */
+.wrapper{max-width:900px;margin:0 auto;padding:0 20px;}
+
+/* SECTION BLOCKS */
+.block{background:#fff;border-radius:16px;padding:36px;margin:0 auto 24px;max-width:900px;}
+.block-alt{background:var(--cream);border-radius:16px;padding:36px;margin:0 auto 24px;max-width:900px;border:1.5px solid #f3e8df;}
+.block-dark{background:linear-gradient(145deg,#1a0a00,#3d0a1a);border-radius:16px;padding:36px;margin:0 auto 24px;max-width:900px;}
+
+.section-label{font-size:10px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+.block h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#1a0a00;margin-bottom:10px;}
+.block-dark h2{color:#fff;}
+.lead{font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:24px;}
+.spacer{padding:24px 20px 0;}
+
+/* PAIN POINTS */
+.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.pain-item{display:flex;align-items:flex-start;gap:12px;background:#fff7f0;border-radius:12px;padding:14px 16px;}
+.pain-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px;}
+.pain-item p{font-size:13px;color:#374151;line-height:1.55;}
+.pain-item strong{display:block;font-size:12px;font-weight:800;color:#1a0a00;margin-bottom:2px;}
+
+/* WHAT WE BUILT */
+.built-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.built-card{background:var(--teal-l);border-radius:14px;padding:18px;text-align:center;border:1.5px solid rgba(45,181,160,.2);}
+.built-icon{font-size:1.8rem;margin-bottom:8px;}
+.built-card h3{font-size:13px;font-weight:800;color:var(--teal-d);margin-bottom:4px;}
+.built-card p{font-size:12px;color:#374151;line-height:1.5;}
+
+/* BAKESY REPLACEMENT */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
+.compare-card{border-radius:14px;padding:20px;}
+.compare-bad{background:#fff5f5;border:1.5px solid #fecaca;}
+.compare-good{background:#f0fdf4;border:1.5px solid #a7f3d0;}
+.compare-card h3{font-size:13px;font-weight:800;margin-bottom:10px;}
+.compare-bad h3{color:#dc2626;}
+.compare-good h3{color:var(--teal-d);}
+.compare-list{list-style:none;}
+.compare-list li{display:flex;align-items:flex-start;gap:8px;font-size:12.5px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,.05);line-height:1.5;}
+.compare-list li:last-child{border-bottom:none;}
+.x{color:#dc2626;font-weight:900;flex-shrink:0;}
+.check{color:var(--teal);font-weight:900;flex-shrink:0;}
+
+/* MARKETING IDEAS */
+.ideas-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.idea-card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 12px -4px rgba(0,0,0,.07);border-left:3px solid var(--pink);}
+.idea-card h3{font-size:13px;font-weight:800;color:#1a0a00;margin-bottom:6px;}
+.idea-card p{font-size:12.5px;color:var(--gray);line-height:1.6;}
+.idea-card .tag{display:inline-block;font-size:10px;font-weight:700;background:var(--pink-l);color:var(--pink-d);padding:2px 8px;border-radius:10px;margin-bottom:6px;}
+
+/* CITY PAGES */
+.cities-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.city-pill{background:#fff;border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;text-align:center;font-size:12px;font-weight:700;color:#374151;}
+.city-pill .emoji{display:block;font-size:1.4rem;margin-bottom:4px;}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.price-card{border-radius:18px;padding:26px;text-align:center;position:relative;}
+.price-card.starter{background:var(--cream);border:2px solid #e5e7eb;}
+.price-card.growth{background:linear-gradient(145deg,#e8f8f5,#f0fdf4);border:2.5px solid var(--teal);}
+.price-card.full{background:linear-gradient(145deg,#fce4ec,#fff0f5);border:2px solid var(--pink);}
+.popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 14px;border-radius:20px;white-space:nowrap;}
+.price-icon{font-size:2rem;margin-bottom:10px;}
+.price-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;color:#1a0a00;margin-bottom:4px;}
+.price-amount{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--teal);line-height:1;}
+.price-period{font-size:12px;color:var(--gray);margin-bottom:14px;}
+.price-launch{background:rgba(45,181,160,.1);border-radius:8px;padding:8px 12px;margin-bottom:14px;}
+.price-launch p{font-size:12px;font-weight:700;color:var(--teal-d);}
+.price-includes{list-style:none;text-align:left;}
+.price-includes li{display:flex;align-items:flex-start;gap:8px;font-size:12.5px;color:#374151;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.05);line-height:1.5;}
+.price-includes li:last-child{border-bottom:none;}
+.checkmark{color:var(--teal);font-weight:900;font-size:13px;flex-shrink:0;margin-top:1px;}
+
+/* LAUNCH FEE */
+.launch-fee-box{background:linear-gradient(135deg,var(--teal-l),#f0fdf4);border:2px solid var(--teal);border-radius:16px;padding:28px;text-align:center;}
+.launch-fee-box .amount{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:var(--teal);line-height:1;}
+.launch-fee-box h3{font-size:1.1rem;font-weight:800;color:var(--teal-d);margin-bottom:8px;}
+.launch-fee-box p{font-size:13px;color:var(--gray);line-height:1.7;margin-bottom:14px;}
+.launch-fee-includes{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:left;margin-top:14px;}
+.launch-fee-includes .item{display:flex;align-items:flex-start;gap:8px;font-size:12.5px;color:#374151;line-height:1.4;}
+
+/* WHO WE ARE */
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.cred-tile{background:var(--teal-l);border-radius:12px;padding:16px;text-align:center;}
+.cred-tile .icon{font-size:1.6rem;margin-bottom:6px;}
+.cred-tile p{font-size:12px;font-weight:700;color:var(--teal-d);line-height:1.4;}
+
+/* CTA */
+.cta-section{background:linear-gradient(145deg,var(--teal),var(--teal-d));border-radius:16px;padding:44px 36px;text-align:center;margin:0 auto 40px;max-width:900px;}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;margin-bottom:10px;}
+.cta-section p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:24px;line-height:1.7;}
+.payment-box{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:16px 20px;display:inline-block;text-align:center;}
+.payment-box p{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:4px;}
+.payment-box strong{font-size:16px;color:#fff;}
+
+@media(max-width:800px){.pain-grid,.built-grid,.ideas-grid,.pricing-grid,.cred-grid{grid-template-columns:1fr 1fr;}.cities-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.pain-grid,.compare-grid,.ideas-grid,.pricing-grid,.launch-fee-includes,.cover-meta{grid-template-columns:1fr;}.built-grid,.cred-grid{grid-template-columns:1fr 1fr;}.cities-grid{grid-template-columns:repeat(2,1fr);}.block,.block-alt,.block-dark{padding:24px 18px;}}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-inner">
+    <div class="cover-badge">Growth Proposal — Confidential</div>
+    <h1>Sweet Konfections<br/><span>Your Brand. Upgraded.</span></h1>
+    <div class="cover-divider"></div>
+    <p class="cover-sub">A complete digital growth strategy built specifically for Sweet Konfections — new website, branded ordering system, AI automation, social media growth, and city-level SEO to bring more customers straight to you.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><p>Prepared by</p><strong>Launch AI Group</strong></div>
+      <div class="cover-meta-item"><p>Prepared for</p><strong>Sweet Konfections</strong></div>
+      <div class="cover-meta-item"><p>Date</p><strong>June 2026</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="spacer"></div>
+
+<!-- WHO WE ARE -->
+<div class="block">
+  <p class="section-label">About Launch AI Group</p>
+  <h2>We Help Small Businesses Grow — With Strategy, Tech, and Heart</h2>
+  <p class="lead">Launch AI Group is a business development and digital marketing firm specializing in helping small and minority-owned businesses build their brand, automate operations, and grow revenue in 2026. We're not an agency — we're a growth partner. We sit at the table with you.</p>
+  <div class="cred-grid">
+    <div class="cred-tile"><div class="icon">📈</div><p>Marketing & Brand Strategy</p></div>
+    <div class="cred-tile"><div class="icon">🤖</div><p>AI Automation & Lead Generation</p></div>
+    <div class="cred-tile"><div class="icon">🌐</div><p>Website Design & Development</p></div>
+    <div class="cred-tile"><div class="icon">📱</div><p>Social Media Growth</p></div>
+    <div class="cred-tile"><div class="icon">💼</div><p>Business Development Consulting</p></div>
+    <div class="cred-tile"><div class="icon">🏆</div><p>Event Business Consulting</p></div>
+  </div>
+  <p style="font-size:13px;color:var(--gray);margin-top:20px;line-height:1.7;">Our team brings 15+ years of marketing experience, an MBA background, and deep expertise in finance, operations, and business strategy. We've worked with businesses across food service, retail, professional services, and event industries.</p>
+  <div style="margin-top:16px;padding:14px 18px;background:#f9fafb;border-radius:10px;border-left:3px solid var(--teal);">
+    <p style="font-size:13px;color:#374151;line-height:1.7;"><strong>Our mission:</strong> Helping small Black-owned businesses compete at the highest level by giving them the same digital tools, strategy, and automation that big brands use — at prices that make sense for a growing business.</p>
+  </div>
+</div>
+
+<!-- WHAT WE SEE -->
+<div class="block-alt">
+  <p class="section-label">Current Situation</p>
+  <h2>What We Found When We Looked at Sweet Konfections Online</h2>
+  <p class="lead">You've built something real — loyal customers, a thriving festival circuit, and a strong community following across Maryland, Baltimore, and Delaware. But the digital side isn't matching the quality and hustle of what you actually do. Here's what we noticed:</p>
+  <div style="background:linear-gradient(135deg,#e8f8f5,#f0fdf4);border-radius:12px;padding:16px 18px;margin-bottom:18px;border-left:3px solid var(--teal);display:flex;align-items:flex-start;gap:12px;">
+    <span style="font-size:1.4rem;flex-shrink:0;">🚚</span>
+    <div><strong style="display:block;font-size:13px;font-weight:800;color:var(--teal-d);margin-bottom:4px;">The Opportunity: Festivals + Private Events</strong><p style="font-size:13px;color:#374151;line-height:1.65;margin:0;">Sweet Konfections already has a strong festival presence across Maryland, Baltimore, and Delaware — AFRAM, Moonewell, Hentastic Harvest, wine festivals, and more. The next step is pairing that visibility with a private event booking pipeline: weddings, corporate parties, and celebrations that book weeks in advance, pay more per event, and create predictable income alongside the festival circuit.</p></div>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-item">
+      <span class="pain-icon">🛒</span>
+      <div><strong>Bakesy.app Ordering System</strong><p>Third-party platform takes a cut of every sale. No brand control, no customer data, no customization. You're building their customer list, not yours.</p></div>
+    </div>
+    <div class="pain-item">
+      <span class="pain-icon">🌐</span>
+      <div><strong>Website Needs a Refresh</strong><p>Current site doesn't reflect the quality of your product or your festival reach. Customers judge your business within 3 seconds of landing on your page.</p></div>
+    </div>
+    <div class="pain-item">
+      <span class="pain-icon">📍</span>
+      <div><strong>No Local SEO Pages</strong><p>When people in Baltimore, Westminster, or Wilmington DE search "dessert food truck near me," you're not showing up — even though you've already been there.</p></div>
+    </div>
+    <div class="pain-item">
+      <span class="pain-icon">🤖</span>
+      <div><strong>No Automated Follow-Up</strong><p>Festival visitors who scan a QR code or visit your site but don't book right away disappear. Automated follow-ups recover that interest and convert it into revenue.</p></div>
+    </div>
+    <div class="pain-item">
+      <span class="pain-icon">📲</span>
+      <div><strong>Festival Traffic Not Being Captured</strong><p>Hundreds of people see the truck at every festival. Without a QR code or signup system, that foot traffic evaporates. We turn every festival into a list-building event.</p></div>
+    </div>
+    <div class="pain-item">
+      <span class="pain-icon">💸</span>
+      <div><strong>No Private Event Booking Pipeline</strong><p>Private events pay more and are more predictable than festivals. A booking funnel on your website turns every site visitor into a potential $500–$2,000 event booking.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT WE BUILT -->
+<div class="block">
+  <p class="section-label">What's Already Done</p>
+  <h2>We Built Your New Website — 9 Pages, Ready to Launch</h2>
+  <p class="lead">Before this meeting, we built a complete 9-page website for Sweet Konfections. Not a template — a fully custom site designed specifically for your brand, your menu, and your customers. Here's what's included:</p>
+  <div class="built-grid">
+    <div class="built-card"><div class="built-icon">🏠</div><h3>Homepage</h3><p>High-conversion homepage with AI chatbot, social links, trust bar, and mobile CTA</p></div>
+    <div class="built-card"><div class="built-icon">🍬</div><h3>Treats Page</h3><p>Full treats menu — candy apples, cake pops, cookies, strawberries, gift boxes</p></div>
+    <div class="built-card"><div class="built-icon">🥧</div><h3>Cakes & Pies</h3><p>Traditional baked goods — red velvet, sweet potato pie, pound cake, and more</p></div>
+    <div class="built-card"><div class="built-icon">🎨</div><h3>Custom Cakes</h3><p>Custom cake order form with occasion selector, flavor, servings, budget, and vision description</p></div>
+    <div class="built-card"><div class="built-icon">🎉</div><h3>Party Packages</h3><p>3 packages with full FAQ — Sweetie, Konfections Party, and Food Truck Event</p></div>
+    <div class="built-card"><div class="built-icon">🎂</div><h3>Order Page</h3><p>Direct online order form with sidebar quick links — replaces Bakesy with zero platform fees</p></div>
+    <div class="built-card"><div class="built-icon">📅</div><h3>Consultation Page</h3><p>Booking form for free consultations — captures lead info and event details automatically</p></div>
+    <div class="built-card"><div class="built-icon">📸</div><h3>Gallery</h3><p>Filterable photo gallery — custom cakes, treats, party setups, food truck (ready for your real photos)</p></div>
+    <div class="built-card"><div class="built-icon">⭐</div><h3>Testimonials</h3><p>Full reviews page with rating bar, featured quote, and Google/Facebook review links</p></div>
+  </div>
+  <div style="margin-top:22px;background:var(--teal-l);border-radius:12px;padding:16px 20px;display:flex;align-items:flex-start;gap:12px;">
+    <span style="font-size:1.3rem;flex-shrink:0;">📷</span>
+    <p style="font-size:13px;color:#0d3d30;line-height:1.7;"><strong>Photo note:</strong> Your gallery currently has placeholder images. Your Instagram <strong>@sweet.konfections</strong> has incredible photos of your cakes, treats, and food truck — share your favorites with us and we'll swap the placeholders out before launch. The site will reflect exactly the quality of work you actually do.</p>
+  </div>
+</div>
+
+<!-- BAKESY REPLACEMENT -->
+<div class="block-alt">
+  <p class="section-label">The Bakesy Problem</p>
+  <h2>Stop Paying a Platform Fee on Every Sale You Made</h2>
+  <p class="lead">Bakesy.app is a generic ordering platform that takes a cut of your revenue, controls your customer data, and puts your brand in a box. Here's what changes when you own your own ordering system:</p>
+  <div class="compare-grid">
+    <div class="compare-card compare-bad">
+      <h3>❌ Bakesy.app (Current)</h3>
+      <ul class="compare-list">
+        <li><span class="x">✗</span> Platform fee on every transaction</li>
+        <li><span class="x">✗</span> You don't own your customer list</li>
+        <li><span class="x">✗</span> Generic branding — looks like everyone else</li>
+        <li><span class="x">✗</span> No automated follow-up on abandoned carts</li>
+        <li><span class="x">✗</span> Limited customization and control</li>
+        <li><span class="x">✗</span> Powered by their brand, not yours</li>
+      </ul>
+    </div>
+    <div class="compare-card compare-good">
+      <h3>✅ Launch AI Platform (New)</h3>
+      <ul class="compare-list">
+        <li><span class="check">✓</span> Zero platform fees — 100% revenue stays with you</li>
+        <li><span class="check">✓</span> Full customer database — you own every contact</li>
+        <li><span class="check">✓</span> Fully branded to Sweet Konfections</li>
+        <li><span class="check">✓</span> Automated order confirmations and reminders</li>
+        <li><span class="check">✓</span> Complete control over pricing and promotions</li>
+        <li><span class="check">✓</span> Powered by your brand</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- MARKETING IDEAS -->
+<div class="block">
+  <p class="section-label">Revenue Growth Strategy</p>
+  <h2>10 Creative Ways We Can Help Sweet Konfections Sell More Sweets</h2>
+  <p class="lead">Beyond the website — here are specific strategies we can implement to grow your revenue, reach new customers, and build loyalty with existing ones.</p>
+  <div class="ideas-grid">
+    <div class="idea-card">
+      <span class="tag">Social Media</span>
+      <h3>Weekly "Behind the Bake" Reels</h3>
+      <p>Short TikTok/Instagram Reels showing cake decorating, treat-making, and food truck prep. Behind-the-scenes content gets 3–5x more reach than product photos alone.</p>
+    </div>
+    <div class="idea-card">
+      <span class="tag">Seasonal Revenue</span>
+      <h3>Holiday Pre-Order Campaigns</h3>
+      <p>Automated email/SMS campaigns before Mother's Day, Thanksgiving, Christmas, and Valentine's Day. Capture early orders and avoid last-minute chaos with a pre-order window.</p>
+    </div>
+    <div class="idea-card">
+      <span class="tag">Corporate Sales</span>
+      <h3>B2B Dessert Packages for Offices</h3>
+      <p>Monthly dessert subscriptions for local businesses — office parties, employee appreciation, client gifting. One corporate client can equal 12 monthly orders on autopilot.</p>
+    </div>
+    <div class="idea-card">
+      <span class="tag">Festival Strategy</span>
+      <h3>Turn Festival Foot Traffic Into Bookings</h3>
+      <p>You're already at AFRAM, Moonewell, Hentastic Harvest, wine festivals, and more. A QR code at the truck + a simple SMS opt-in captures every visitor. That festival crowd becomes your private event pipeline — and makes every run more profitable.</p>
+    </div>
+    <div class="idea-card">
+      <span class="tag">Referral Growth</span>
+      <h3>"Share & Save" Referral Program</h3>
+      <p>Give existing customers a discount code to share with friends. Every referral gets tracked automatically — no manual work for you. Word-of-mouth is your strongest channel.</p>
+    </div>
+    <div class="idea-card">
+      <span class="tag">Event Bundling</span>
+      <h3>Wedding Vendor Partner Network</h3>
+      <p>Partner with local wedding venues, photographers, and planners to be their preferred dessert vendor. Each partner sends you a steady stream of qualified leads.</p>
+    </div>
+    <div class="idea-card">
+      <span class="tag">Digital Menu</span>
+      <h3>QR Menu Cards for the Food Truck</h3>
+      <p>Printed QR cards at the truck that take customers straight to your website to book the truck for their own event. Turn every food truck customer into a future booking.</p>
+    </div>
+    <div class="idea-card">
+      <span class="tag">Customer Retention</span>
+      <h3>Birthday & Anniversary Reminders</h3>
+      <p>Collect customer birthdays at checkout. Automated emails go out 2 weeks before their birthday with a special discount. Turns one-time buyers into yearly customers.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CITY SEO PAGES -->
+<div class="block-alt">
+  <p class="section-label">Local SEO Strategy</p>
+  <h2>Get Found When People Search in Your Backyard</h2>
+  <p class="lead">You're already showing up at festivals in Baltimore, Westminster, and Delaware — but when someone who saw your truck searches "dessert food truck near me" the next day, your website isn't there. City SEO pages fix that permanently. We build pages for every city you serve so you show up when people search.</p>
+  <div class="cities-grid">
+    <div class="city-pill"><span class="emoji">🏙️</span>Baltimore, MD</div>
+    <div class="city-pill"><span class="emoji">📍</span>Prince George's County</div>
+    <div class="city-pill"><span class="emoji">📍</span>Anne Arundel County</div>
+    <div class="city-pill"><span class="emoji">📍</span>Westminster, MD</div>
+    <div class="city-pill"><span class="emoji">📍</span>Howard County</div>
+    <div class="city-pill"><span class="emoji">📍</span>Bowie, MD</div>
+    <div class="city-pill"><span class="emoji">📍</span>Columbia, MD</div>
+    <div class="city-pill"><span class="emoji">📍</span>Laurel, MD</div>
+    <div class="city-pill"><span class="emoji">📍</span>Annapolis, MD</div>
+    <div class="city-pill"><span class="emoji">🏛️</span>Wilmington, DE</div>
+    <div class="city-pill"><span class="emoji">🏛️</span>Newark, DE</div>
+    <div class="city-pill"><span class="emoji">🏛️</span>Dover, DE</div>
+  </div>
+  <p style="font-size:13px;color:var(--gray);margin-top:20px;line-height:1.7;">Each city page targets searches like "custom cakes in Baltimore" or "dessert food truck Wilmington Delaware." People who discover you at a festival, search for you after — and these pages make sure they find you. They take 3–6 months to rank but deliver free, consistent traffic permanently.</p>
+</div>
+
+<!-- WORDPRESS NOTE -->
+<div class="block">
+  <p class="section-label">Your Options</p>
+  <h2>Built for You — And Easy for You to Manage</h2>
+  <p class="lead">Every website we build is delivered on <strong>WordPress + Elementor</strong> — the most popular website platform in the world. That means you get a professional, custom-designed site AND the ability to manage it yourself with zero coding.</p>
+  <div class="compare-grid">
+    <div style="background:var(--teal-l);border-radius:14px;padding:20px;border:1.5px solid rgba(45,181,160,.3);">
+      <h3 style="font-size:13px;font-weight:800;color:var(--teal-d);margin-bottom:10px;">✏️ What You Can Update Yourself</h3>
+      <ul style="font-size:12.5px;color:#374151;line-height:1.9;list-style:none;padding:0;">
+        <li>✓ Swap photos — drag and drop</li>
+        <li>✓ Update prices and menu items</li>
+        <li>✓ Add upcoming events to "Find Our Truck"</li>
+        <li>✓ Edit your About section anytime</li>
+        <li>✓ Add new gallery photos after festivals</li>
+        <li>✓ Post announcements and specials</li>
+      </ul>
+    </div>
+    <div style="background:var(--pink-l);border-radius:14px;padding:20px;border:1.5px solid rgba(240,98,146,.2);">
+      <h3 style="font-size:13px;font-weight:800;color:var(--pink-d);margin-bottom:10px;">🎓 What's Included at Launch</h3>
+      <ul style="font-size:12.5px;color:#374151;line-height:1.9;list-style:none;padding:0;">
+        <li>✓ WordPress + Elementor fully set up</li>
+        <li>✓ All 9 pages built and live on your domain</li>
+        <li>✓ Your login credentials + dashboard access</li>
+        <li>✓ Free "Get Started" setup guide included (or add a $100 live walkthrough session)</li>
+        <li>✓ "How to update your site" quick reference guide</li>
+        <li>✓ 30 days of support after launch</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="block-alt">
+  <p class="section-label">Investment Options</p>
+  <h2>Plans That Grow With You</h2>
+  <p class="lead">Every plan starts with your new website fully launched and ready. Choose the level of ongoing support that makes sense for your stage of business right now.</p>
+  <div class="pricing-grid">
+    <div class="price-card starter">
+      <div class="price-icon">🧁</div>
+      <p class="price-name">Starter</p>
+      <p class="price-amount">$197</p>
+      <p class="price-period">per month</p>
+      <div class="price-launch"><p>+ $200 Website Launch Fee (one-time)</p></div>
+      <ul class="price-includes">
+        <li><span class="checkmark">✓</span>Full 9-page website live on your domain</li>
+        <li><span class="checkmark">✓</span>Monthly website updates (photos, prices, menu)</li>
+        <li><span class="checkmark">✓</span>4 social media posts/month (Facebook + Instagram)</li>
+        <li><span class="checkmark">✓</span>Basic SEO setup + Google Business optimization</li>
+        <li><span class="checkmark">✓</span>Monthly performance check-in</li>
+      </ul>
+    </div>
+    <div class="price-card growth">
+      <div class="popular-badge">Most Popular</div>
+      <div class="price-icon">🎉</div>
+      <p class="price-name">Growth</p>
+      <p class="price-amount">$397</p>
+      <p class="price-period">per month</p>
+      <div class="price-launch"><p>+ $200 Website Launch Fee (one-time)</p></div>
+      <ul class="price-includes">
+        <li><span class="checkmark">✓</span>Everything in Starter</li>
+        <li><span class="checkmark">✓</span>8 social posts/month + Reels content</li>
+        <li><span class="checkmark">✓</span>3 city SEO pages (built monthly)</li>
+        <li><span class="checkmark">✓</span>Automated order confirmation emails</li>
+        <li><span class="checkmark">✓</span>Holiday pre-order campaigns (email/SMS)</li>
+        <li><span class="checkmark">✓</span>Monthly strategy call</li>
+        <li><span class="checkmark">✓</span>Google Ads setup (ad spend not included)</li>
+      </ul>
+    </div>
+    <div class="price-card full">
+      <div class="price-icon">🚀</div>
+      <p class="price-name">Full Service</p>
+      <p class="price-amount">$597</p>
+      <p class="price-period">per month</p>
+      <div class="price-launch"><p>+ $200 Website Launch Fee (one-time)</p></div>
+      <ul class="price-includes">
+        <li><span class="checkmark">✓</span>Everything in Growth</li>
+        <li><span class="checkmark">✓</span>Full social media management (daily)</li>
+        <li><span class="checkmark">✓</span>Launch AI Platform — booking automation</li>
+        <li><span class="checkmark">✓</span>Customer birthday/anniversary email campaigns</li>
+        <li><span class="checkmark">✓</span>Corporate outreach campaign setup</li>
+        <li><span class="checkmark">✓</span>Referral program setup and tracking</li>
+        <li><span class="checkmark">✓</span>Full 12-page city SEO buildout</li>
+        <li><span class="checkmark">✓</span>Bi-weekly strategy calls</li>
+      </ul>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:12px;color:var(--gray);margin-top:18px;">No long-term contracts. Cancel anytime with 30 days notice. All plans include the full 9-page website.</p>
+</div>
+
+<!-- WEBSITE LAUNCH FEE -->
+<div class="block">
+  <p class="section-label">One-Time Website Launch Fee</p>
+  <h2>Get Your Entire Website Live for $200</h2>
+  <p class="lead">One flat fee. No surprises. We build it, set it up on WordPress so you can manage it yourself, walk you through everything, and hand you the keys — all for $200.</p>
+  <div class="launch-fee-box">
+    <div class="amount">$200</div>
+    <h3>Website Launch Fee — One Time</h3>
+    <p>Everything built, live on your domain, on WordPress + Elementor so you're in full control. This is the starting point — monthly plans are available if you want us to grow with you, but the $200 gets you fully launched with no strings attached.</p>
+    <div class="launch-fee-includes">
+      <div class="item"><span class="check" style="color:var(--teal);font-weight:900;flex-shrink:0;">✓</span>All 9 fully designed pages live on your domain</div>
+      <div class="item"><span class="check" style="color:var(--teal);font-weight:900;flex-shrink:0;">✓</span>WordPress + Elementor setup (you can edit everything)</div>
+      <div class="item"><span class="check" style="color:var(--teal);font-weight:900;flex-shrink:0;">✓</span>AI chatbot + order forms included</div>
+      <div class="item"><span class="check" style="color:var(--teal);font-weight:900;flex-shrink:0;">✓</span>Mobile responsive — looks great on any device</div>
+      <div class="item"><span class="check" style="color:var(--teal);font-weight:900;flex-shrink:0;">✓</span>Free "Get Started" setup guide OR $100 live walkthrough session</div>
+      <div class="item"><span class="check" style="color:var(--teal);font-weight:900;flex-shrink:0;">✓</span>30 days of support after launch</div>
+    </div>
+  </div>
+  <p style="font-size:13px;color:var(--gray);margin-top:16px;line-height:1.7;text-align:center;">Want to start with the $200 Launch and add a monthly plan later? The launch fee applies toward any plan you choose within 60 days.</p>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Ready to Grow Sweet Konfections?</h2>
+  <p>Whether you start with the $200 website launch or jump straight into a monthly plan — the work is done and ready to go. Let's get your brand the visibility it deserves.</p>
+  <div class="payment-box">
+    <p>To get started, send the $200 Website Launch Fee via Zelle:</p>
+    <strong>📱 (313) 205-3355 · antg4life@yahoo.com</strong>
+    <p style="margin-top:6px;font-size:12px;opacity:.7;">Memo: Sweet Konfections — Website Launch</p>
+  </div>
+</div>
+
+<div style="text-align:center;padding:28px 24px 40px;font-size:12px;color:var(--gray);">
+  Prepared by Anthony Whitner · Launch AI Group · antg4life@yahoo.com · (443) 475-0455<br/>
+  <em>This proposal is confidential and prepared exclusively for Sweet Konfections.</em>
+</div>
+
+</body>
+</html>

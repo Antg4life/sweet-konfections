@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Place Your Order | Sweet Konfections Maryland</title>
+<meta name="description" content="Order custom cakes, treats, and desserts from Sweet Konfections. Place your order online — Maryland's favorite custom dessert bakery."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#2db5a0;--teal-d:#1a8a78;--teal-l:#e8f8f5;--pink:#f06292;--pink-d:#c2185b;--pink-l:#fce4ec;--cream:#fff9f5;--dark:#1a0a00;--gray:#6b7280;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,249,245,.97);backdrop-filter:blur(16px);border-bottom:2px solid #f3e8df;}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{font-family:'Dancing Script',cursive;font-size:1.7rem;font-weight:700;color:var(--teal);line-height:1;}
+.nav-logo span{color:var(--pink);display:block;font-size:1rem;}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-link{font-size:13px;font-weight:600;color:#5d4037;padding:7px 12px;border-radius:8px;transition:background .2s,color .2s;}
+.nav-link:hover,.nav-link.active{background:var(--teal-l);color:var(--teal-d);}
+.nav-cta{background:var(--pink);color:#fff!important;border-radius:20px;padding:9px 20px!important;font-size:13px;font-weight:700;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.ham span{display:block;width:24px;height:2.5px;background:var(--teal-d);border-radius:2px;}
+#mob-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #f3e8df;padding:12px 0 20px;}
+#mob-nav.open{display:block;}
+#mob-nav a{display:block;padding:12px 24px;font-weight:600;color:#5d4037;font-size:15px;border-bottom:1px solid #fdf6f0;}
+#mob-nav a:last-child{background:var(--pink);color:#fff;margin:12px 16px 0;border-radius:10px;text-align:center;border-bottom:none;}
+.page-wrap{max-width:1100px;margin:0 auto;padding:56px 24px;display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start;}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:900;color:var(--dark);margin-bottom:10px;}
+.subtitle{font-size:15px;color:#5d4037;line-height:1.8;margin-bottom:32px;}
+.form-section{background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 28px -6px rgba(0,0,0,.08);}
+.form-section h2{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;color:var(--dark);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid #f3e8df;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:12.5px;font-weight:700;color:var(--dark);margin-bottom:6px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s;background:#fff;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--teal);}
+.form-group textarea{resize:vertical;min-height:90px;}
+.submit-btn{width:100%;background:linear-gradient(135deg,var(--pink),var(--pink-d));color:#fff;border:none;border-radius:12px;padding:16px;font-size:16px;font-weight:800;cursor:pointer;margin-top:8px;box-shadow:0 6px 24px -6px rgba(240,98,146,.5);}
+.sidebar-card{background:#fff;border-radius:20px;padding:24px;box-shadow:0 4px 28px -6px rgba(0,0,0,.08);margin-bottom:20px;}
+.sidebar-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:var(--dark);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #f3e8df;}
+.info-row{display:flex;gap:10px;margin-bottom:12px;font-size:13px;color:#374151;line-height:1.5;}
+.info-row .icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+.info-row strong{display:block;font-size:11.5px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:1px;}
+.quick-links{list-style:none;}
+.quick-links li{border-bottom:1px solid #f3e8df;}
+.quick-links a{display:flex;align-items:center;justify-content:space-between;padding:11px 0;font-size:13px;font-weight:600;color:#5d4037;transition:color .2s;}
+.quick-links a:hover{color:var(--teal);}
+.success-box{display:none;background:linear-gradient(135deg,var(--teal-l),#f0fff4);border:2px solid var(--teal);border-radius:16px;padding:36px;text-align:center;}
+.success-box .icon{font-size:3.5rem;margin-bottom:14px;}
+.success-box h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--teal-d);margin-bottom:8px;}
+.success-box p{font-size:14px;color:var(--gray);line-height:1.7;}
+footer{background:#1a0a00;color:rgba(255,255,255,.5);padding:28px 24px;text-align:center;font-size:13px;}
+footer a{color:var(--teal);}
+@media(max-width:800px){.page-wrap{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}.nav-links{display:none;}.ham{display:flex!important;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Sweet<span>Konfections ✨</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="treats.html" class="nav-link">Treats</a>
+      <a href="traditional-cakes.html" class="nav-link">Cakes & Pies</a>
+      <a href="custom-cakes.html" class="nav-link">Custom Cakes</a>
+      <a href="party-packages.html" class="nav-link">Party Packages</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="order.html" class="nav-cta nav-link active">Order Now 🎂</a>
+    </div>
+    <button class="ham" onclick="document.getElementById('mob-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+  <div id="mob-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="treats.html">🍬 Treats</a>
+    <a href="traditional-cakes.html">🥧 Cakes & Pies</a>
+    <a href="custom-cakes.html">🎨 Custom Cakes</a>
+    <a href="party-packages.html">🎉 Party Packages</a>
+    <a href="gallery.html">📸 Gallery</a>
+    <a href="testimonials.html">⭐ Testimonials</a>
+    <a href="order.html">🎂 Order Now</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div>
+    <p class="eyebrow">Online Ordering</p>
+    <h1>Place Your Sweet Konfections Order</h1>
+    <p class="subtitle">Fill out the form below and we'll follow up within 24 hours to confirm your order, finalize details, and send your invoice. All orders are made fresh to order!</p>
+    <div class="form-section" id="order-form-section">
+      <h2>📋 Order Request Form</h2>
+      <form id="order-form" onsubmit="submitOrder(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name *</label>
+            <input type="text" required placeholder="First & Last Name"/>
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" required placeholder="(xxx) xxx-xxxx"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" required placeholder="your@email.com"/>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>What Are You Ordering? *</label>
+            <select required id="order-type">
+              <option value="">Select...</option>
+              <option>Custom Cake</option>
+              <option>Traditional Cake or Pie</option>
+              <option>Treats (candy apples, cake pops, etc.)</option>
+              <option>Cupcakes</option>
+              <option>Dessert Tray / Gift Box</option>
+              <option>Party Package</option>
+              <option>Food Truck Booking</option>
+              <option>Multiple Items</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Needed By Date *</label>
+            <input type="date" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Quantity / Servings Needed</label>
+            <input type="text" placeholder="e.g. 1 cake for 30 people, 3 dozen cake pops"/>
+          </div>
+          <div class="form-group">
+            <label>Pickup or Delivery?</label>
+            <select>
+              <option>Pickup</option>
+              <option>Delivery (additional fee may apply)</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Delivery Address (if applicable)</label>
+          <input type="text" placeholder="Street, City, State, Zip"/>
+        </div>
+        <div class="form-group">
+          <label>Order Details & Special Requests *</label>
+          <textarea required placeholder="Describe what you'd like — flavors, theme, colors, sizes, quantities, any dietary needs, occasion type. The more detail the better!"></textarea>
+        </div>
+        <div class="form-group">
+          <label>How did you hear about us?</label>
+          <select>
+            <option value="">Select...</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>TikTok</option>
+            <option>Google Search</option>
+            <option>Friend or Family Referral</option>
+            <option>Past Customer</option>
+            <option>Saw the Food Truck</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">🎂 Submit My Order Request</button>
+        <p style="font-size:12px;color:var(--gray);margin-top:12px;text-align:center;">We'll confirm your order and send a quote within 24 hours. A 50% deposit is required to confirm your order date.</p>
+      </form>
+      <div class="success-box" id="success-box">
+        <div class="icon">🎉</div>
+        <h2>Order Request Received!</h2>
+        <p>Thank you! We'll review your order and follow up within 24 hours to confirm details and send your quote. We can't wait to create something amazing for you!</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="sidebar-card">
+      <h3>📍 Order Info</h3>
+      <div class="info-row"><span class="icon">⏰</span><div><strong>Response Time</strong>Within 24 hours</div></div>
+      <div class="info-row"><span class="icon">📅</span><div><strong>Advance Notice</strong>5–7 days minimum for most orders. 2–4 weeks for weddings & large events.</div></div>
+      <div class="info-row"><span class="icon">💳</span><div><strong>Deposit</strong>50% deposit required to confirm. Balance due at pickup/delivery.</div></div>
+      <div class="info-row"><span class="icon">🚚</span><div><strong>Delivery</strong>Available throughout Maryland. Fee varies by distance.</div></div>
+    </div>
+    <div class="sidebar-card">
+      <h3>🔗 Quick Links</h3>
+      <ul class="quick-links">
+        <li><a href="treats.html">Treats Menu →</a></li>
+        <li><a href="traditional-cakes.html">Cakes & Pies →</a></li>
+        <li><a href="custom-cakes.html">Custom Cakes →</a></li>
+        <li><a href="party-packages.html">Party Packages →</a></li>
+        <li><a href="consultation.html">Book a Consult →</a></li>
+        <li><a href="gallery.html">See Our Work →</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card" style="background:linear-gradient(135deg,var(--teal-l),#f0fff4);border:1.5px solid var(--teal);">
+      <h3 style="color:var(--teal-d);">🎉 Not sure what you need?</h3>
+      <p style="font-size:13px;color:#374151;line-height:1.7;margin-bottom:14px;">Book a free 15-minute consultation and we'll help you plan the perfect dessert experience for your event.</p>
+      <a href="consultation.html" style="display:block;text-align:center;background:var(--teal);color:#fff;font-weight:700;font-size:13px;padding:10px;border-radius:10px;">📅 Book Free Consultation</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Sweet Konfections · Maryland, Delaware &amp; the DMV · <a href="index.html">Home</a> · <a href="party-packages.html">Packages</a> · Website by <strong>Launch AI Group</strong></p>
+</footer>
+<script>
+function submitOrder(e){
+  e.preventDefault();
+  document.getElementById('order-form').style.display='none';
+  document.getElementById('success-box').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>

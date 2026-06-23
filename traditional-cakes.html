@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Traditional Cakes & Pies | Sweet Konfections Maryland</title>
+<meta name="description" content="Southern-style cakes and pies made from scratch. Cupcakes, pound cake, bundt cakes, cheesecake, 4-layer cakes, and homemade pies. Fresh-baked in Maryland."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#2db5a0;--teal-d:#1a8a78;--teal-l:#e8f8f5;--pink:#f06292;--pink-d:#c2185b;--pink-l:#fce4ec;--yellow:#ffd54f;--cream:#fff9f5;--dark:#1a0a00;--gray:#6b7280;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,249,245,.97);backdrop-filter:blur(16px);border-bottom:2px solid #f3e8df;box-shadow:0 2px 16px -4px rgba(45,181,160,.1);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{font-family:'Dancing Script',cursive;font-size:1.7rem;font-weight:700;color:var(--teal);line-height:1;}
+.nav-logo span{color:var(--pink);display:block;font-size:1rem;}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-link{font-size:13px;font-weight:600;color:#5d4037;padding:7px 12px;border-radius:8px;transition:background .2s,color .2s;}
+.nav-link:hover,.nav-link.active{background:var(--teal-l);color:var(--teal-d);}
+.nav-cta{background:var(--pink);color:#fff!important;border-radius:20px;padding:9px 20px!important;font-size:13px;font-weight:700;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.ham span{display:block;width:24px;height:2.5px;background:var(--teal-d);border-radius:2px;}
+#mob-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #f3e8df;padding:12px 0 20px;box-shadow:0 8px 24px -4px rgba(0,0,0,.1);}
+#mob-nav.open{display:block;}
+#mob-nav a{display:block;padding:12px 24px;font-weight:600;color:#5d4037;font-size:15px;border-bottom:1px solid #fdf6f0;}
+#mob-nav a:last-child{background:var(--pink);color:#fff;margin:12px 16px 0;border-radius:10px;text-align:center;border-bottom:none;}
+.page-hero{background:linear-gradient(135deg,#fff8e1,#fff0f5,#f0faf9);padding:60px 24px;text-align:center;}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--dark);margin-bottom:12px;}
+.page-hero p{font-size:15px;color:#5d4037;max-width:540px;margin:0 auto 28px;line-height:1.8;}
+.btn-pink{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--pink),var(--pink-d));color:#fff;font-weight:800;font-size:15px;padding:14px 28px;border-radius:12px;box-shadow:0 6px 24px -6px rgba(240,98,146,.5);}
+.section{padding:64px 24px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;color:var(--dark);margin-bottom:14px;}
+.cakes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.cake-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px -6px rgba(0,0,0,.08);transition:transform .25s,box-shadow .25s;}
+.cake-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px -8px rgba(0,0,0,.14);}
+.cake-photo{width:100%;height:220px;object-fit:cover;display:block;}
+.cake-body{padding:20px;}
+.cake-header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:8px;}
+.cake-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:800;color:var(--dark);line-height:1.3;}
+.cake-price{font-size:13px;font-weight:800;color:var(--teal-d);white-space:nowrap;background:var(--teal-l);padding:3px 10px;border-radius:20px;}
+.cake-card p{font-size:13px;color:var(--gray);line-height:1.65;}
+.cake-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:8px;}
+.tag-pink{background:var(--pink-l);color:var(--pink-d);}
+.tag-teal{background:var(--teal-l);color:var(--teal-d);}
+.tag-yellow{background:#fff8e1;color:#e65100;}
+.flavors-section{background:linear-gradient(135deg,#fff0f5,#f0faf9);}
+.flavors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.flavor-pill{background:#fff;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 12px -4px rgba(0,0,0,.07);}
+.flavor-pill .icon{font-size:1.8rem;margin-bottom:8px;}
+.flavor-pill p{font-size:12px;font-weight:700;color:var(--dark);}
+.cta-banner{background:linear-gradient(135deg,var(--pink),var(--pink-d));padding:56px 24px;text-align:center;}
+.cta-banner h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;margin-bottom:12px;}
+.cta-banner p{font-size:15px;color:rgba(255,255,255,.85);margin-bottom:28px;}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--pink-d);font-weight:800;font-size:15px;padding:14px 32px;border-radius:12px;}
+footer{background:#1a0a00;color:rgba(255,255,255,.5);padding:28px 24px;text-align:center;font-size:13px;}
+footer a{color:var(--teal);}
+@media(max-width:900px){.cakes-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.cakes-grid{grid-template-columns:1fr;}.flavors-grid{grid-template-columns:repeat(2,1fr);}.nav-links{display:none;}.ham{display:flex!important;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Sweet<span>Konfections ✨</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="treats.html" class="nav-link">Treats</a>
+      <a href="traditional-cakes.html" class="nav-link active">Cakes & Pies</a>
+      <a href="custom-cakes.html" class="nav-link">Custom Cakes</a>
+      <a href="party-packages.html" class="nav-link">Party Packages</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="order.html" class="nav-cta nav-link">Order Now 🎂</a>
+    </div>
+    <button class="ham" onclick="document.getElementById('mob-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+  <div id="mob-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="treats.html">🍬 Treats</a>
+    <a href="traditional-cakes.html">🥧 Cakes & Pies</a>
+    <a href="custom-cakes.html">🎨 Custom Cakes</a>
+    <a href="party-packages.html">🎉 Party Packages</a>
+    <a href="gallery.html">📸 Gallery</a>
+    <a href="testimonials.html">⭐ Testimonials</a>
+    <a href="order.html">🎂 Order Now</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="eyebrow">Traditional Baked Goods</p>
+  <h1>Homemade Cakes & Pies, Made from Scratch</h1>
+  <p>Grandma's recipes, baked with love. Cupcakes, pound cakes, cheesecakes, 4-layer cakes, and homemade pies — made fresh to order for pickup, delivery, and events.</p>
+  <a href="order.html" class="btn-pink">🥧 Order Cakes & Pies</a>
+</div>
+
+<section class="section" style="background:#fff;">
+  <div class="section-inner">
+    <p class="eyebrow">What's on the Menu</p>
+    <h2 class="section-title">Classic Recipes. Real Ingredients. Zero Shortcuts.</h2>
+    <p style="color:var(--gray);font-size:14px;margin-bottom:32px;">Please inquire about additional desserts available!</p>
+    <div class="cakes-grid">
+
+      <div class="cake-card">
+        <img class="cake-photo" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-6a46a95.png" alt="Sweet Konfections Cupcakes" loading="lazy"/>
+        <div class="cake-body">
+          <span class="cake-tag tag-pink">Fan Favorite</span>
+          <div class="cake-header">
+            <h3>Cupcakes</h3>
+            <span class="cake-price">$30 & Up</span>
+          </div>
+          <p>Flavors: snickerdoodle, chocolate, vanilla, strawberry, lemon, 24karrot, red velvet, and many more flavors available.</p>
+        </div>
+      </div>
+
+      <div class="cake-card">
+        <img class="cake-photo" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-b29b936.png" alt="Sweet Konfections 10 inch Pound Cake" loading="lazy"/>
+        <div class="cake-body">
+          <span class="cake-tag tag-teal">Homemade Recipe</span>
+          <div class="cake-header">
+            <h3>10" Pound Cake</h3>
+            <span class="cake-price">$30 ea</span>
+          </div>
+          <p>Homemade &amp; freshly baked family recipes. Flavors: snickerdoodle, chocolate, vanilla, strawberry, lemon, 24karrot, red velvet, Grandma's 5 flavors and many more.</p>
+        </div>
+      </div>
+
+      <div class="cake-card">
+        <img class="cake-photo" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-027074d.png" alt="Sweet Konfections 4 inch Bundt Cakes" loading="lazy"/>
+        <div class="cake-body">
+          <span class="cake-tag tag-yellow">Individual Size</span>
+          <div class="cake-header">
+            <h3>4" Bundt Cakes</h3>
+            <span class="cake-price">$5.25</span>
+          </div>
+          <p>Homemade &amp; freshly baked family recipes. Perfect individual-size treat. Same great flavors — snickerdoodle, chocolate, vanilla, strawberry, lemon, red velvet, and more.</p>
+        </div>
+      </div>
+
+      <div class="cake-card">
+        <img class="cake-photo" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-13bdd59.png" alt="Sweet Konfections Creamy Cheesecake" loading="lazy"/>
+        <div class="cake-body">
+          <span class="cake-tag tag-pink">Crowd Pleaser</span>
+          <div class="cake-header">
+            <h3>Delicious Creamy Cheesecake</h3>
+            <span class="cake-price">Mini $8.25 / 10" $40+</span>
+          </div>
+          <p>Homemade &amp; freshly baked family recipes. Toppings include strawberry, cherry, and peach. Premium fillings available for an additional cost.</p>
+        </div>
+      </div>
+
+      <div class="cake-card">
+        <img class="cake-photo" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-8d2194f.png" alt="Sweet Konfections Traditional 4-Layer Cake" loading="lazy"/>
+        <div class="cake-body">
+          <span class="cake-tag tag-teal">Grandma's Recipe</span>
+          <div class="cake-header">
+            <h3>Traditional 4-Layer Cakes</h3>
+            <span class="cake-price">$30 & Up</span>
+          </div>
+          <p>Grandma's traditional recipe. Yellow with chocolate icing, strawberry shortcake, German chocolate, lemon, banana pudding, and 25karrot varieties.</p>
+        </div>
+      </div>
+
+      <div class="cake-card">
+        <img class="cake-photo" src="https://img1.wsimg.com/isteam/ip/1aab547f-2643-4b60-9cf4-4472fe5b1c9d/blob-e6af086.png" alt="Sweet Konfections Traditional Homemade Pies" loading="lazy"/>
+        <div class="cake-body">
+          <span class="cake-tag tag-yellow">Southern Staple</span>
+          <div class="cake-header">
+            <h3>Traditional Family Pies</h3>
+            <span class="cake-price">$25 & Up</span>
+          </div>
+          <p>Homemade pies baked from scratch. Apple, sweet potato, cherry, and blueberry fillings — made with a buttery homemade crust. Perfect for holidays and gatherings.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section flavors-section">
+  <div class="section-inner">
+    <p class="eyebrow" style="text-align:center;">Cake Flavors</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:10px;">All the Flavors You Love</h2>
+    <p style="text-align:center;font-size:14px;color:var(--gray);margin-bottom:32px;">Most cakes can be made in any of these flavors. Ask us about custom combinations!</p>
+    <div class="flavors-grid">
+      <div class="flavor-pill"><div class="icon">🍫</div><p>Chocolate</p></div>
+      <div class="flavor-pill"><div class="icon">🍦</div><p>Vanilla</p></div>
+      <div class="flavor-pill"><div class="icon">🍓</div><p>Strawberry</p></div>
+      <div class="flavor-pill"><div class="icon">🍋</div><p>Lemon</p></div>
+      <div class="flavor-pill"><div class="icon">🥕</div><p>24Karrot</p></div>
+      <div class="flavor-pill"><div class="icon">🎂</div><p>Red Velvet</p></div>
+      <div class="flavor-pill"><div class="icon">🍪</div><p>Snickerdoodle</p></div>
+      <div class="flavor-pill"><div class="icon">👵</div><p>Grandma's 5 Flavors</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Ready to Place Your Order?</h2>
+  <p>All cakes and pies are made to order. Order 5–7 days in advance. Need it sooner? Call us and we'll do our best!</p>
+  <a href="order.html" class="btn-white">🥧 Place Your Order Now</a>
+</div>
+
+<footer>
+  <p>© 2026 Sweet Konfections · Maryland, Delaware &amp; the DMV · <a href="index.html">Home</a> · <a href="order.html">Order</a> · Website by <strong>Launch AI Group</strong></p>
+</footer>
+</body>
+</html>
